@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Layers,
   ChevronLeft,
@@ -18,6 +18,7 @@ interface SidebarProps {
   corpFilter: CorpFilter;
   onChangeCorpFilter: (filter: CorpFilter) => void;
   onResetAll?: () => void;
+  isWardModalOpen?: boolean;
 }
 
 const CORP_OPTIONS: DropdownOption[] = [
@@ -73,8 +74,30 @@ export const Sidebar: React.FC<SidebarProps> = ({
   corpFilter,
   onChangeCorpFilter,
   onResetAll,
+  isWardModalOpen,
 }) => {
-  const [collapsed, setCollapsed] = useState(false);
+  // Automatically start collapsed on small screens (< 1024px)
+  const [collapsed, setCollapsed] = useState(() => {
+    return typeof window !== 'undefined' && window.innerWidth < 1024;
+  });
+
+  // Responsive window resize listener
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 900) {
+        setCollapsed(true);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // When ward table opens on viewports under 1280px, auto-collapse sidebar to give full room to the table
+  useEffect(() => {
+    if (isWardModalOpen && window.innerWidth < 1280) {
+      setCollapsed(true);
+    }
+  }, [isWardModalOpen]);
 
   const activeCount = Object.values(visibility).filter(Boolean).length;
 
@@ -106,10 +129,19 @@ export const Sidebar: React.FC<SidebarProps> = ({
   };
 
   return (
-    <>
-      <aside className={`sidebar-docked ${collapsed ? 'collapsed' : ''}`}>
-        {/* Sidebar Header */}
-        <div className="sidebar-header">
+    <aside className={`sidebar-docked ${collapsed ? 'collapsed' : ''}`}>
+      {/* Collapse/Expand Floating Button permanently anchored to the right border */}
+      <button
+        className="sidebar-docked-toggle"
+        onClick={() => setCollapsed(!collapsed)}
+        title={collapsed ? 'Expand Layer Controls' : 'Collapse Layer Controls'}
+        aria-label={collapsed ? 'Expand Layer Controls' : 'Collapse Layer Controls'}
+      >
+        {collapsed ? <ChevronRight size={16} /> : <ChevronLeft size={16} />}
+      </button>
+
+      {/* Sidebar Header */}
+      <div className="sidebar-header">
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <div className="sidebar-header-icon">
               <Layers size={15} color="#2563eb" />
@@ -395,16 +427,5 @@ export const Sidebar: React.FC<SidebarProps> = ({
           </div>
         </div>
       </aside>
-
-      {/* Collapse/Expand Floating Button */}
-      <button
-        className="sidebar-docked-toggle"
-        onClick={() => setCollapsed(!collapsed)}
-        title={collapsed ? 'Expand Layer Controls' : 'Collapse Layer Controls'}
-        style={{ left: collapsed ? '0px' : '330px' }}
-      >
-        {collapsed ? <ChevronRight size={16} /> : <ChevronLeft size={16} />}
-      </button>
-    </>
   );
 };

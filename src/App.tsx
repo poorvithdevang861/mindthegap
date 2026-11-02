@@ -226,6 +226,7 @@ export const App: React.FC = () => {
         corpFilter={corpFilter}
         onChangeCorpFilter={setCorpFilter}
         onResetAll={handleResetAll}
+        isWardModalOpen={!!selectedWard}
       />
 
       {/* Main GIS Map (OpenStreetMap) */}

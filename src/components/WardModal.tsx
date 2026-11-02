@@ -213,20 +213,22 @@ export const WardModal: React.FC<WardModalProps> = ({
           {/* TAB 1: Profile & Demographics Table (Clean & Authoritative) */}
           {activeTab === 'profile' && (
             <div className="tab-content active">
-              <table className="data-table">
-                <tbody>
-                  {rows.map((r, i) => (
-                    <tr key={i}>
-                      <th style={{ width: '40%' }}>{r.label}</th>
-                      <td>
-                        <strong style={{ color: r.color || (r.highlight ? '#1e293b' : 'inherit') }}>
-                          {r.value}
-                        </strong>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              <div className="table-responsive">
+                <table className="data-table">
+                  <tbody>
+                    {rows.map((r, i) => (
+                      <tr key={i}>
+                        <th style={{ width: '40%' }}>{r.label}</th>
+                        <td>
+                          <strong style={{ color: r.color || (r.highlight ? '#1e293b' : 'inherit') }}>
+                            {r.value}
+                          </strong>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           )}
 
@@ -289,7 +291,7 @@ export const WardModal: React.FC<WardModalProps> = ({
                       filteredStops.map((s, idx) => (
                         <tr key={idx}>
                           <td>
-                            <strong style={{ color: '#2563eb' }}>#{s.id}</strong>
+                            <strong style={{ color: '#2563eb' }}>{s.id}</strong>
                           </td>
                           <td>{s.name}</td>
                           <td
@@ -347,32 +349,34 @@ export const WardModal: React.FC<WardModalProps> = ({
                   </div>
 
                   {/* Climate Table */}
-                  <table className="data-table" style={{ marginTop: '16px' }}>
-                    <thead>
-                      <tr style={{ background: '#f1f5f9' }}>
-                        <th style={{ width: '25%' }}>Month</th>
-                        <th style={{ width: '25%' }}>Mean Temp (°C)</th>
-                        <th style={{ width: '25%' }}>Min Temp (°C)</th>
-                        <th style={{ width: '25%' }}>Max Temp (°C)</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {climateData.map((m) => (
-                        <tr key={m.key}>
-                          <td>
-                            <strong>{m.name}</strong>
-                          </td>
-                          <td>
-                            <span style={{ fontWeight: 700, color: '#dc2626' }}>
-                              {Number(m.mean).toFixed(1)} °C
-                            </span>
-                          </td>
-                          <td>{Number(m.min).toFixed(1)} °C</td>
-                          <td>{Number(m.max).toFixed(1)} °C</td>
+                  <div className="table-responsive">
+                    <table className="data-table" style={{ marginTop: '16px' }}>
+                      <thead>
+                        <tr style={{ background: '#f1f5f9' }}>
+                          <th style={{ width: '25%' }}>Month</th>
+                          <th style={{ width: '25%' }}>Mean Temp (°C)</th>
+                          <th style={{ width: '25%' }}>Min Temp (°C)</th>
+                          <th style={{ width: '25%' }}>Max Temp (°C)</th>
                         </tr>
-                      ))}
-                    </tbody>
-                  </table>
+                      </thead>
+                      <tbody>
+                        {climateData.map((m) => (
+                          <tr key={m.key}>
+                            <td>
+                              <strong>{m.name}</strong>
+                            </td>
+                            <td>
+                              <span style={{ fontWeight: 700, color: '#dc2626' }}>
+                                {Number(m.mean).toFixed(1)} °C
+                              </span>
+                            </td>
+                            <td>{Number(m.min).toFixed(1)} °C</td>
+                            <td>{Number(m.max).toFixed(1)} °C</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               ) : (
                 <div style={{ padding: '36px', textAlign: 'center', color: '#64748b' }}>

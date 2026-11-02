@@ -386,26 +386,27 @@ body, html, #root {
   left: 0;
   bottom: 0;
   width: var(--sidebar-width);
-  z-index: 999;
-  background: rgba(255, 255, 255, 0.96);
+  z-index: 1050;
+  background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-right: 1px solid #e2e8f0;
-  box-shadow: 4px 0 16px rgba(15, 23, 42, 0.05);
+  box-shadow: 4px 0 20px rgba(15, 23, 42, 0.08);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: visible;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sidebar-docked.collapsed {
-  transform: translateX(calc(-1 * var(--sidebar-width)));
+  transform: translateX(-100%);
 }
 
 .sidebar-docked-toggle {
   position: absolute;
-  top: calc(var(--header-height) + 12px);
-  z-index: 1000;
+  top: 14px;
+  right: -24px;
+  z-index: 1051;
   width: 24px;
   height: 48px;
   border-radius: 0 8px 8px 0;
@@ -418,7 +419,7 @@ body, html, #root {
   border: 1px solid #cbd5e1;
   border-left: none;
   box-shadow: 4px 0 10px rgba(15, 23, 42, 0.08);
-  transition: left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
 .sidebar-docked-toggle:hover {
@@ -1159,6 +1160,13 @@ input:checked + .slider:before {
   display: block;
 }
 
+/* Responsive Table Container */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* Data Tables */
 .data-table {
   width: 100%;
@@ -1491,14 +1499,64 @@ input:checked + .slider:before {
   background: #94a3b8;
 }
 
-@media (max-width: 900px) {
-  .gap-cards-grid {
-    grid-template-columns: 1fr;
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
+  :root {
+    --sidebar-width: 300px;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --sidebar-width: 280px;
   }
   .modal-kpi-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .sidebar-docked {
-    width: 280px;
+  .bottom-stats-bar {
+    left: 20px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 106px;
+    --sidebar-width: min(320px, 85vw);
+  }
+  .top-nav {
+    padding: 6px 14px;
+  }
+  .header-row-bottom {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .search-container {
+    width: 100%;
+    max-width: 100%;
+  }
+  .modal-overlay {
+    padding: 10px;
+  }
+  .ward-modal {
+    max-height: 92vh;
+  }
+  .modal-header {
+    padding: 12px 16px;
+  }
+  .modal-tabs {
+    padding: 10px 14px 0;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .modal-body {
+    padding: 14px 16px;
+  }
+  .modal-kpi-grid {
+    grid-template-columns: 1fr;
+    padding: 12px 16px 0;
+  }
+  .gap-cards-grid {
+    grid-template-columns: 1fr;
   }
 }
