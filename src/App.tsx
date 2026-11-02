@@ -64,28 +64,29 @@ export const App: React.FC = () => {
         }
 
         // Otherwise fetch via HTTP
+        const base = import.meta.env.BASE_URL;
         setLoadingMessage('Loading Pune Municipal Wards...');
-        const wardsRes = await fetch('/Full_Pune_1 (1).geojson');
+        const wardsRes = await fetch(`${base}Full_Pune_1 (1).geojson`);
         const wardsJson = await wardsRes.json();
         setWardsData(wardsJson);
 
         setLoadingMessage('Loading GTFS Bus Stops...');
-        const stopsRes = await fetch('/GTFS.geojson');
+        const stopsRes = await fetch(`${base}GTFS.geojson`);
         const stopsJson = await stopsRes.json();
         setStopsData(stopsJson);
 
         setLoadingMessage('Loading Transit Routes...');
-        const routesRes = await fetch('/GTFSRoutes.geojson');
+        const routesRes = await fetch(`${base}GTFSRoutes.geojson`);
         const routesJson = await routesRes.json();
         setRoutesData(routesJson);
 
         setLoadingMessage('Loading Major Road Arteries...');
-        const roadsRes = await fetch('/PuneRoads_Major.geojson');
+        const roadsRes = await fetch(`${base}PuneRoads_Major.geojson`);
         const roadsJson = await roadsRes.json();
         setMajorRoadsData(roadsJson);
 
         setLoadingMessage('Loading Metro Boundaries...');
-        const metroRes = await fetch('/Metro.geojson');
+        const metroRes = await fetch(`${base}Metro.geojson`);
         const metroJson = await metroRes.json();
         setMetroData(metroJson);
 
@@ -106,7 +107,7 @@ export const App: React.FC = () => {
         setLoading(true);
         setLoadingMessage('Loading full 75,000+ local road network (48MB)...');
         try {
-          const res = await fetch('/PuneRoadNetwork.geojson');
+          const res = await fetch(`${import.meta.env.BASE_URL}PuneRoadNetwork.geojson`);
           const data = await res.json();
           setAllRoadsData(data);
         } catch (err: any) {
