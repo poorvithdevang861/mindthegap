@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Flame, Bus, TrendingUp, ArrowRight } from 'lucide-react';
+import { X, Bus, TrendingUp, ArrowRight } from 'lucide-react';
 import type { WardMeta } from '../types';
 
 interface GapAnalysisModalProps {
@@ -13,10 +13,15 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
   onClose,
   onSelectWard,
 }) => {
-  // 1. High Heat Vulnerability Wards
-  const highHeatWards = wards
-    .filter((w) => w.vulnLevel === 'High')
-    .sort((a, b) => Number(b.amjMeanTemp || 0) - Number(a.amjMeanTemp || 0));
+  // 1. Transit Gap: Wards with lowest bus stops per 10k residents
+  const transitDeficitWards = [...wards]
+    .filter((w) => w.censusPop2026 > 25000)
+    .sort((a, b) => {
+      const rateA = a.busStopsCount / (a.censusPop2026 / 10000);
+      const rateB = b.busStopsCount / (b.censusPop2026 / 10000);
+      return rateA - rateB;
+    })
+    .slice(0, 4);
 
   // 2. High Growth Wards (Projected Growth: 2020 WorldPop to 2026 Census)
   const topGrowthWards = [...wards]
@@ -26,11 +31,11 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
       growthNumber: Math.round(((w.censusPop2026 - w.worldPop2020) / w.worldPop2020) * 100),
     }))
     .sort((a, b) => b.growthNumber - a.growthNumber)
-    .slice(0, 5);
+    .slice(0, 4);
 
   return (
     <div className="modal-overlay active" onClick={(e) => e.target === e.currentTarget && onClose()}>
-      <div className="ward-modal" style={{ maxWidth: '880px' }}>
+      <div className="ward-modal" style={{ maxWidth: '840px' }}>
         {/* Header */}
         <div className="modal-header">
           <div className="modal-title-area">
@@ -40,7 +45,7 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
                 Urban Equity & Spatial Gap Analysis
               </h2>
               <div style={{ fontSize: '12px', color: '#64748b' }}>
-                Bridging infrastructure, public transit access, and climate vulnerability across Pune Metropolitan Wards
+                Bridging infrastructure, public transit access, and municipal demographic growth across Pune Metropolitan Wards
               </div>
             </div>
           </div>
@@ -51,40 +56,9 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
 
         {/* Body */}
         <div className="modal-body" style={{ background: '#ffffff', color: '#1e293b' }}>
-          {/* Metaphor Cards */}
-          <div className="gap-cards-grid">
-            {/* Card 1: Heat Disparity Gap */}
-            <div className="gap-card">
-              <div className="gap-card-header">
-                <div className="gap-card-icon" style={{ background: '#fee2e2', color: '#dc2626' }}>
-                  <Flame size={18} />
-                </div>
-                <div>
-                  <div className="gap-card-title">Climate & Heat Gap</div>
-                  <div className="gap-card-subtitle">{highHeatWards.length} High Risk Wards in PCMC</div>
-                </div>
-              </div>
-              <p className="gap-card-desc">
-                Summer AMJ surface temperatures in industrial and dense PCMC wards exceed <strong>48°C - 50°C</strong>, creating severe urban heat islands compared to vegetated suburban areas.
-              </p>
-              <div className="gap-list">
-                {highHeatWards.slice(0, 4).map((w) => (
-                  <div
-                    key={w.id}
-                    className="gap-list-item"
-                    onClick={() => {
-                      onSelectWard(w);
-                      onClose();
-                    }}
-                  >
-                    <span>{w.wardName}</span>
-                    <span className="gap-pill-red">{w.amjMeanTemp || '48+'}°C</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Card 2: Transit Disparity Gap */}
+          {/* Metaphor Cards Grid (2-Column Layout) */}
+          <div className="gap-cards-grid gap-cards-grid-2col">
+            {/* Card 1: Transit Disparity Gap */}
             <div className="gap-card">
               <div className="gap-card-header">
                 <div className="gap-card-icon" style={{ background: '#eff6ff', color: '#2563eb' }}>
@@ -96,7 +70,7 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
                 </div>
               </div>
               <p className="gap-card-desc">
-                Transit density is heavily clustered in central urban corridors. Peripheral industrial and residential zones exhibit transit access gaps with first-mile/last-mile deficits.
+                Transit density is heavily clustered in central urban corridors. Rapidly expanding peripheral sectors exhibit first-mile/last-mile deficits relative to population.
               </p>
               <div className="gap-metrics-strip">
                 <div>
@@ -112,9 +86,27 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
                   <span className="metric-val" style={{ color: '#059669' }}>95 Stations</span>
                 </div>
               </div>
+              <div style={{ fontSize: '11px', fontWeight: 700, color: '#475569', marginTop: '10px', marginBottom: '4px', textTransform: 'uppercase' }}>
+                Highest Transit Deficit Wards:
+              </div>
+              <div className="gap-list">
+                {transitDeficitWards.map((w) => (
+                  <div
+                    key={w.id}
+                    className="gap-list-item"
+                    onClick={() => {
+                      onSelectWard(w);
+                      onClose();
+                    }}
+                  >
+                    <span>{w.wardName}</span>
+                    <span className="gap-pill-amber">{w.busStopsCount} stops</span>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            {/* Card 3: Demographic Pressure Gap */}
+            {/* Card 2: Demographic Pressure Gap */}
             <div className="gap-card">
               <div className="gap-card-header">
                 <div className="gap-card-icon" style={{ background: '#ecfdf5', color: '#059669' }}>
@@ -128,8 +120,25 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
               <p className="gap-card-desc">
                 Projected 2026 populations place unprecedented demand on road networks (75k+ segments) and municipal infrastructure capacities across Pune & Pimpri Chinchwad.
               </p>
+              <div className="gap-metrics-strip">
+                <div>
+                  <span className="metric-label">Total Population</span>
+                  <span className="metric-val" style={{ color: '#0f172a' }}>8.54M</span>
+                </div>
+                <div>
+                  <span className="metric-label">Metro Wards</span>
+                  <span className="metric-val" style={{ color: '#059669' }}>73 Wards</span>
+                </div>
+                <div>
+                  <span className="metric-label">Avg Growth</span>
+                  <span className="metric-val" style={{ color: '#2563eb' }}>+41.5%</span>
+                </div>
+              </div>
+              <div style={{ fontSize: '11px', fontWeight: 700, color: '#475569', marginTop: '10px', marginBottom: '4px', textTransform: 'uppercase' }}>
+                Fastest Growing Wards:
+              </div>
               <div className="gap-list">
-                {topGrowthWards.slice(0, 4).map((w) => (
+                {topGrowthWards.map((w) => (
                   <div
                     key={w.id}
                     className="gap-list-item"
@@ -153,7 +162,7 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
                 Spatial Planning Recommendations
               </strong>
               <span style={{ fontSize: '12px', color: '#64748b' }}>
-                Cross-reference high population density zones with bus stop distributions to prioritize rapid transit frequency and green shelter infrastructure.
+                Cross-reference high population density zones with bus stop distributions to prioritize rapid transit frequency and multimodal connectivity.
               </span>
             </div>
             <button className="btn btn-primary" onClick={onClose}>

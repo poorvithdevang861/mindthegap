@@ -1,13 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Globe, Crosshair, Search, X, Activity } from 'lucide-react';
+import { Crosshair, Search, X, Activity } from 'lucide-react';
 import type { WardMeta } from '../types';
 import { AnimatedLogo } from './AnimatedLogo';
-import { NavCornerPixels, PixelRowWing } from './PixelAccents';
 
 interface HeaderProps {
   wards: WardMeta[];
   onSelectWard: (ward: WardMeta) => void;
-  onIndiaView: () => void;
   onPuneView: () => void;
   onOpenGapModal: () => void;
 }
@@ -15,7 +13,6 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({
   wards,
   onSelectWard,
-  onIndiaView,
   onPuneView,
   onOpenGapModal,
 }) => {
@@ -62,17 +59,9 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="top-nav glass-nav">
-      {/* Extreme Corner Pixel Clusters for Navbar */}
-      <NavCornerPixels position="top-left" />
-      <NavCornerPixels position="top-right" />
-      <NavCornerPixels position="bottom-left" />
-      <NavCornerPixels position="bottom-right" />
-
-      {/* Row 1: Centered "MIND THE GAP" with Pixelated Wings to Extreme Corners */}
+      {/* Row 1: Centered "MIND THE GAP" Container */}
       <div className="header-row-top">
-        <PixelRowWing side="left" />
         <AnimatedLogo onOpenGapModal={onOpenGapModal} />
-        <PixelRowWing side="right" />
       </div>
 
       {/* Separator DIV to cleanly partition the title and navbar */}
@@ -152,11 +141,6 @@ export const Header: React.FC<HeaderProps> = ({
           >
             <Activity size={14} />
             <span>Gap Insights</span>
-          </button>
-
-          <button className="btn btn-nav-glass" onClick={onIndiaView} title="Zoom out to whole India view">
-            <Globe size={14} />
-            <span>India View</span>
           </button>
 
           <button className="btn btn-nav-primary" onClick={onPuneView} title="Zoom to Pune Metropolitan Wards">

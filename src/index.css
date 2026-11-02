@@ -76,15 +76,12 @@ body, html, #root {
   justify-content: center;
   align-items: center;
   padding: 8px 24px;
-  background-color: #ffffff;
-  background-image: 
-    radial-gradient(rgba(37, 99, 235, 0.12) 1.2px, transparent 1.2px),
-    radial-gradient(1200px 180px at 50% -20px, rgba(37, 99, 235, 0.08) 0%, rgba(14, 165, 233, 0.04) 50%, transparent 80%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.95) 100%);
-  background-size: 22px 22px, 100% 100%, 100% 100%;
+  background: 
+    radial-gradient(1000px 140px at 50% -20px, rgba(37, 99, 235, 0.07) 0%, rgba(14, 165, 233, 0.03) 45%, transparent 75%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(246, 249, 252, 0.94) 100%);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.85);
   box-shadow: 
     0 4px 20px -2px rgba(15, 23, 42, 0.05),
     0 1px 3px rgba(15, 23, 42, 0.03);
@@ -101,11 +98,9 @@ body, html, #root {
   background: linear-gradient(
     90deg, 
     transparent 0%, 
-    rgba(37, 99, 235, 0.15) 15%, 
-    rgba(37, 99, 235, 0.45) 45%, 
-    rgba(124, 58, 237, 0.5) 50%, 
-    rgba(37, 99, 235, 0.45) 55%, 
-    rgba(37, 99, 235, 0.15) 85%, 
+    rgba(37, 99, 235, 0.2) 20%, 
+    rgba(37, 99, 235, 0.45) 50%, 
+    rgba(37, 99, 235, 0.2) 80%, 
     transparent 100%
   );
   pointer-events: none;
@@ -117,8 +112,6 @@ body, html, #root {
   justify-content: center;
   width: 100%;
   padding-bottom: 4px;
-  position: relative;
-  overflow: hidden;
 }
 
 .header-nav-divider {
@@ -149,7 +142,7 @@ body, html, #root {
 /* ============================================================
    CENTERED JUMPING TYPOGRAPHY ("MIND THE GAP")
    SOLID ONE COLOR WITH STYLE (#0f172a)
-   NO BACKGROUND BOX (CLEAN AIR) + BLUE PIXEL CORNERS
+   CLEAN & TASTEFUL CONTAINER BACKGROUND
    ============================================================ */
 
 .logo-container {
@@ -159,110 +152,35 @@ body, html, #root {
   justify-content: center;
   cursor: pointer;
   user-select: none;
-  padding: 0 4px;
-  gap: 14px;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  border-radius: 0;
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 4px 20px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(241, 245, 249, 0.88) 100%);
+  border: 1px solid rgba(203, 213, 225, 0.75);
+  box-shadow: 
+    0 2px 8px -2px rgba(15, 23, 42, 0.06),
+    0 1px 2px rgba(15, 23, 42, 0.03),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .logo-container:hover {
+  background: linear-gradient(135deg, #ffffff 0%, rgba(239, 246, 255, 0.92) 100%);
+  border-color: rgba(37, 99, 235, 0.35);
+  box-shadow: 
+    0 4px 16px -2px rgba(37, 99, 235, 0.15),
+    0 2px 4px rgba(15, 23, 42, 0.04),
+    inset 0 1px 0 #ffffff;
   transform: translateY(-1px);
 }
 
 .logo-container:active,
 .logo-container.logo-clicking {
-  transform: translateY(0) scale(0.98);
-}
-
-/* Pixelated Corner Brackets Flanking "MIND THE GAP" */
-.pixel-bracket {
-  display: block;
-  flex-shrink: 0;
-  overflow: visible;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.logo-container:hover .pixel-bracket-left {
-  transform: translateX(-3px);
-}
-
-.logo-container:hover .pixel-bracket-right {
-  transform: translateX(3px);
-}
-
-.pixel-block {
-  transition: opacity 0.2s ease, filter 0.2s ease, transform 0.2s ease;
-}
-
-.logo-container:hover .pixel-block {
-  animation: pixelTwinkle 1.4s ease-in-out infinite alternate;
-  animation-delay: var(--pixel-delay, 0ms);
-}
-
-@keyframes pixelTwinkle {
-  0% {
-    opacity: 0.75;
-    filter: drop-shadow(0 0 0 transparent);
-  }
-  50% {
-    opacity: 1;
-    filter: drop-shadow(0 0 2.5px rgba(37, 99, 235, 0.75));
-  }
-  100% {
-    opacity: 0.9;
-    filter: drop-shadow(0 0 1px rgba(59, 130, 246, 0.5));
-  }
-}
-
-/* Extreme Corner Pixels for Navbar */
-.nav-corner-pixels {
-  pointer-events: none;
-  z-index: 1;
-  transition: opacity 0.3s ease;
-}
-
-.top-nav:hover .corner-pixel-block {
-  animation: cornerPixelTwinkle 2.2s infinite ease-in-out alternate;
-}
-
-@keyframes cornerPixelTwinkle {
-  0% {
-    opacity: 0.55;
-  }
-  50% {
-    opacity: 1;
-    filter: drop-shadow(0 0 2px rgba(37, 99, 235, 0.65));
-  }
-  100% {
-    opacity: 0.7;
-  }
-}
-
-/* Pixelated Side Wings for "MIND THE GAP" */
-.pixel-row-wing {
-  pointer-events: none;
-  z-index: 1;
-  transition: opacity 0.25s ease;
-}
-
-.header-row-top:hover .wing-pixel-block,
-.logo-container:hover ~ .pixel-row-wing .wing-pixel-block {
-  animation: wingPixelPulse 2s infinite ease-in-out alternate;
-}
-
-@keyframes wingPixelPulse {
-  0% {
-    filter: drop-shadow(0 0 0 transparent);
-  }
-  50% {
-    filter: drop-shadow(0 0 2px rgba(59, 130, 246, 0.75));
-  }
-  100% {
-    filter: drop-shadow(0 0 0 transparent);
-  }
+  transform: translateY(0) scale(0.985);
+  box-shadow: 
+    0 2px 6px -1px rgba(37, 99, 235, 0.2),
+    inset 0 1px 1px rgba(15, 23, 42, 0.06);
 }
 
 .jumping-text {
@@ -1446,9 +1364,19 @@ input:checked + .slider:before {
 
 .gap-cards-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
   margin-bottom: 20px;
+}
+
+.gap-pill-amber {
+  background: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 9999px;
 }
 
 .gap-card {

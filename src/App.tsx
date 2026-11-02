@@ -217,7 +217,6 @@ export const App: React.FC = () => {
       <Header
         wards={wardsList}
         onSelectWard={handleSelectWard}
-        onIndiaView={() => setMapAction({ type: 'india', timestamp: Date.now() })}
         onPuneView={() => setMapAction({ type: 'pune', timestamp: Date.now() })}
         onOpenGapModal={() => setIsGapModalOpen(true)}
       />
