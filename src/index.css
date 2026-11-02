@@ -117,6 +117,8 @@ body, html, #root {
   justify-content: center;
   width: 100%;
   padding-bottom: 4px;
+  position: relative;
+  overflow: hidden;
 }
 
 .header-nav-divider {
@@ -212,6 +214,54 @@ body, html, #root {
   100% {
     opacity: 0.9;
     filter: drop-shadow(0 0 1px rgba(59, 130, 246, 0.5));
+  }
+}
+
+/* Extreme Corner Pixels for Navbar */
+.nav-corner-pixels {
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.top-nav:hover .corner-pixel-block {
+  animation: cornerPixelTwinkle 2.2s infinite ease-in-out alternate;
+}
+
+@keyframes cornerPixelTwinkle {
+  0% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 2px rgba(37, 99, 235, 0.65));
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+/* Pixelated Side Wings for "MIND THE GAP" */
+.pixel-row-wing {
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.25s ease;
+}
+
+.header-row-top:hover .wing-pixel-block,
+.logo-container:hover ~ .pixel-row-wing .wing-pixel-block {
+  animation: wingPixelPulse 2s infinite ease-in-out alternate;
+}
+
+@keyframes wingPixelPulse {
+  0% {
+    filter: drop-shadow(0 0 0 transparent);
+  }
+  50% {
+    filter: drop-shadow(0 0 2px rgba(59, 130, 246, 0.75));
+  }
+  100% {
+    filter: drop-shadow(0 0 0 transparent);
   }
 }
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Globe, Crosshair, Search, X, Activity } from 'lucide-react';
 import type { WardMeta } from '../types';
 import { AnimatedLogo } from './AnimatedLogo';
+import { NavCornerPixels, PixelRowWing } from './PixelAccents';
 
 interface HeaderProps {
   wards: WardMeta[];
@@ -61,9 +62,17 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="top-nav glass-nav">
-      {/* Row 1: Centered "MIND THE GAP" in Solid Stylish Color */}
+      {/* Extreme Corner Pixel Clusters for Navbar */}
+      <NavCornerPixels position="top-left" />
+      <NavCornerPixels position="top-right" />
+      <NavCornerPixels position="bottom-left" />
+      <NavCornerPixels position="bottom-right" />
+
+      {/* Row 1: Centered "MIND THE GAP" with Pixelated Wings to Extreme Corners */}
       <div className="header-row-top">
+        <PixelRowWing side="left" />
         <AnimatedLogo onOpenGapModal={onOpenGapModal} />
+        <PixelRowWing side="right" />
       </div>
 
       {/* Separator DIV to cleanly partition the title and navbar */}
