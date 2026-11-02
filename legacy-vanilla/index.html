@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pune Metropolitan Spatial GIS & Ward Analytics</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- App Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Fullscreen Map Container -->
+  <div id="map"></div>
+
+  <!-- Loading Indicator -->
+  <div id="loadingIndicator" class="spinner-container glass">
+    <div class="spinner"></div>
+    <div id="loadingText" style="font-size: 13px; font-weight: 600; color: #1e293b;">Loading spatial layers...</div>
+  </div>
+
+  <!-- Top Navigation Bar -->
+  <header class="top-nav glass">
+    <div class="logo-area">
+      <div class="logo-icon">
+        <i class="fa-solid fa-map-location-dot"></i>
+      </div>
+      <div class="title-group">
+        <h1>Pune Ward & Mobility GIS</h1>
+        <p>Interactive Metropolitan Analytics Platform</p>
+      </div>
+    </div>
+
+    <!-- Ward & Transit Quick Search -->
+    <div class="search-container">
+      <div class="search-input-wrapper">
+        <i class="fa-solid fa-magnifying-glass" style="color: #94a3b8; font-size: 13px;"></i>
+        <input type="text" id="wardSearchInput"
+          placeholder="Search ward by name or number (e.g. Kalyani Nagar, Ward 5)..." autocomplete="off" />
+        <button id="clearSearchBtn"
+          style="display: none; background: none; border: none; cursor: pointer; color: #94a3b8;">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div id="searchResults" class="search-results glass"></div>
+    </div>
+
+    <!-- Quick Navigation View Actions -->
+    <div class="nav-actions">
+      <button class="btn btn-outline" id="btnIndiaView" title="Zoom out to entire India map">
+        <i class="fa-solid fa-globe"></i>
+        <span>India View</span>
+      </button>
+      <button class="btn btn-primary" id="btnPuneView" title="Zoom directly to Pune Metropolitan Wards">
+        <i class="fa-solid fa-crosshairs"></i>
+        <span>Pune Wards</span>
+      </button>
+      <select id="basemapSelect" class="btn btn-outline" style="outline: none;">
+        <option value="positron">🗺️ Carto Light</option>
+        <option value="osm">🌍 OpenStreetMap</option>
+        <option value="dark">🌑 Carto Dark</option>
+        <option value="satellite">🛰️ Satellite</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- Left Sidebar: Layer Controller -->
+  <aside id="sidebarPanel" class="sidebar-panel glass">
+    <div class="sidebar-header">
+      <h2><i class="fa-solid fa-layer-group" style="color: #2563eb; margin-right: 6px;"></i> Layer Controls</h2>
+      <span id="activeLayersCount"
+        style="font-size: 11px; background: #eff6ff; color: #2563eb; padding: 2px 8px; border-radius: 12px; font-weight: 700;">4
+        Active</span>
+    </div>
+
+    <div class="sidebar-content">
+      <!-- Ward Thematic Layer -->
+      <div>
+        <div class="section-label">Primary Boundary Layer</div>
+        <div class="layer-card">
+          <div class="layer-info">
+            <span class="layer-badge-dot" style="background: linear-gradient(135deg, #059669, #7c3aed);"></span>
+            <div>
+              <div class="layer-title-text">Municipal Wards</div>
+              <div class="layer-subtext">97 Wards (PMC & PCMC)</div>
+            </div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="layerToggleWards" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <!-- Thematic Styling Dropdown -->
+        <div class="theme-selector" style="margin-top: 6px;">
+          <div style="font-size: 11px; font-weight: 600; color: #475569; margin-bottom: 2px;">Color Wards By:</div>
+          <label class="theme-pill">
+            <input type="radio" name="wardColorTheme" value="corp" checked />
+            <span>Corporation (PMC / PCMC)</span>
+          </label>
+          <label class="theme-pill">
+            <input type="radio" name="wardColorTheme" value="pop" />
+            <span>Population Heat Density</span>
+          </label>
+          <label class="theme-pill">
+            <input type="radio" name="wardColorTheme" value="vuln" />
+            <span>Heat Vulnerability (PCMC)</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Transit Layers -->
+      <div>
+        <div class="section-label">Public Transit (GTFS)</div>
+
+        <div class="layer-card">
+          <div class="layer-info">
+            <span class="layer-badge-dot" style="background: #2563eb;"></span>
+            <div>
+              <div class="layer-title-text">Bus Stops (GTFS)</div>
+              <div class="layer-subtext">3,407 transit stops</div>
+            </div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="layerToggleStops" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="layer-card">
+          <div class="layer-info">
+            <span class="layer-badge-dot" style="background: #ec4899;"></span>
+            <div>
+              <div class="layer-title-text">Bus Routes (GTFS)</div>
+              <div class="layer-subtext">555 transit routes</div>
+            </div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="layerToggleRoutes" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="layer-card">
+          <div class="layer-info">
+            <span class="layer-badge-dot" style="background: #0284c7;"></span>
+            <div>
+              <div class="layer-title-text">Metro / Boundary Layer</div>
+              <div class="layer-subtext">Metro alignment / zones</div>
+            </div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="layerToggleMetro" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Road Networks -->
+      <div>
+        <div class="section-label">Road Infrastructure</div>
+
+        <div class="layer-card">
+          <div class="layer-info">
+            <span class="layer-badge-dot" style="background: #f59e0b;"></span>
+            <div>
+              <div class="layer-title-text">Major Arterial Roads</div>
+              <div class="layer-subtext">6,136 Highways & Primaries</div>
+            </div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="layerToggleMajorRoads" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="layer-card">
+          <div class="layer-info">
+            <span class="layer-badge-dot" style="background: #94a3b8;"></span>
+            <div>
+              <div class="layer-title-text">All Local Streets</div>
+              <div class="layer-subtext">75,359 roads (Full 48MB)</div>
+            </div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="layerToggleAllRoads" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Ward Filter By Corporation -->
+      <div>
+        <div class="section-label">Filter Wards</div>
+        <select id="filterCorporation" class="btn btn-outline" style="width: 100%; padding: 7px; font-size: 12px;">
+          <option value="all">Show All 97 Wards</option>
+          <option value="PMC">Pune Municipal Corp (PMC - 63)</option>
+          <option value="PCMC">Pimpri Chinchwad (PCMC - 34)</option>
+        </select>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sidebar Toggle Button -->
+  <button id="sidebarToggleBtn" class="sidebar-toggle-btn glass" title="Toggle Layer Controls">
+    <i class="fa-solid fa-chevron-left" id="toggleIcon"></i>
+  </button>
+
+  <!-- Hover HUD Card -->
+  <div id="hoverHUD" class="hover-hud glass">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+      <span id="hudBadgeCorp" class="hover-badge badge-pmc">PMC</span>
+      <span id="hudWardNo" style="font-size: 11px; font-weight: 700; color: #64748b;">Ward #--</span>
+    </div>
+    <div id="hudWardName"
+      style="font-size: 14px; font-weight: 700; color: #0f172a; line-height: 1.3; margin-bottom: 8px;">
+      Hover over any ward
+    </div>
+
+    <div
+      style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 11px; border-top: 1px solid #f1f5f9; padding-top: 8px;">
+      <div>
+        <span style="color: #64748b; font-size: 10px; display: block;">Population</span>
+        <strong id="hudPopulation" style="color: #0f172a;">--</strong>
+      </div>
+      <div>
+        <span style="color: #64748b; font-size: 10px; display: block;">Area</span>
+        <strong id="hudArea" style="color: #0f172a;">-- km²</strong>
+      </div>
+      <div id="hudVulnContainer">
+        <span style="color: #64748b; font-size: 10px; display: block;">Heat Risk</span>
+        <span id="hudVulnerability" class="hover-badge badge-vuln-med">Medium</span>
+      </div>
+      <div>
+        <span style="color: #64748b; font-size: 10px; display: block;">2026 Est.</span>
+        <strong id="hudPop2026" style="color: #0f172a;">--</strong>
+      </div>
+    </div>
+    <div
+      style="font-size: 10px; color: #2563eb; font-weight: 600; margin-top: 10px; text-align: center; background: #eff6ff; padding: 4px; border-radius: 4px;">
+      <i class="fa-solid fa-arrow-pointer"></i> Click ward for detailed data table
+    </div>
+  </div>
+
+  <!-- Bottom Key Stats Strip -->
+  <div class="bottom-stats-bar glass">
+    <div class="stat-chip">
+      <i class="fa-solid fa-city" style="color: #2563eb;"></i>
+      <span>Wards: <strong>97</strong></span>
+    </div>
+    <div class="stat-chip">
+      <i class="fa-solid fa-users" style="color: #7c3aed;"></i>
+      <span>Total Pop: <strong>7.35M</strong></span>
+    </div>
+    <div class="stat-chip">
+      <i class="fa-solid fa-bus" style="color: #059669;"></i>
+      <span>Stops: <strong>3,407</strong></span>
+    </div>
+    <div class="stat-chip">
+      <i class="fa-solid fa-route" style="color: #ec4899;"></i>
+      <span>Routes: <strong>555</strong></span>
+    </div>
+    <div class="stat-chip">
+      <i class="fa-solid fa-road" style="color: #f59e0b;"></i>
+      <span>Road Segments: <strong>75,359</strong></span>
+    </div>
+  </div>
+
+  <!-- Detailed Ward Modal Popup Table -->
+  <div id="wardModalOverlay" class="modal-overlay">
+    <div class="ward-modal">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="modal-title-area">
+          <span id="modalCorpBadge" class="hover-badge badge-pmc" style="font-size: 12px; padding: 4px 10px;">PMC</span>
+          <div>
+            <h2 id="modalWardTitle">Ward Details</h2>
+            <div id="modalWardSubtitle" style="font-size: 12px; color: #64748b; font-weight: 500;">Municipal Corporation
+              of Pune</div>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <button id="modalZoomBtn" class="btn btn-outline" style="padding: 6px 10px;">
+            <i class="fa-solid fa-magnifying-glass-location"></i> Zoom to Ward
+          </button>
+          <button id="modalCloseBtn" class="modal-close-btn" title="Close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- KPI Summary Cards -->
+      <div class="modal-kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Current Population</div>
+          <div id="modalKpiPop" class="kpi-val">--</div>
+          <div class="kpi-sub">Census / Official Estimate</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Projected 2026 Pop</div>
+          <div id="modalKpiPop2026" class="kpi-val">--</div>
+          <div class="kpi-sub">Metropolitan Projection</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Ward Land Area</div>
+          <div id="modalKpiArea" class="kpi-val">-- km²</div>
+          <div id="modalKpiAreaAcres" class="kpi-sub">-- acres</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Heat Vulnerability</div>
+          <div id="modalKpiVuln" class="kpi-val" style="font-size: 16px;">--</div>
+          <div id="modalKpiTemp" class="kpi-sub">Summer AMJ Temp</div>
+        </div>
+      </div>
+
+      <!-- Modal Navigation Tabs -->
+      <div class="modal-tabs">
+        <button class="tab-btn active" data-tab="tabProfile">
+          <i class="fa-solid fa-id-card"></i> Profile & Demographics
+        </button>
+        <button class="tab-btn" data-tab="tabClimate">
+          <i class="fa-solid fa-temperature-high"></i> Climate & Heat
+        </button>
+        <button class="tab-btn" data-tab="tabTransit">
+          <i class="fa-solid fa-bus-simple"></i> Transit Connectivity
+        </button>
+        <button class="tab-btn" data-tab="tabRaw">
+          <i class="fa-solid fa-database"></i> All GeoJSON Properties
+        </button>
+      </div>
+
+      <!-- Modal Content Body -->
+      <div class="modal-body">
+
+        <!-- Tab 1: Profile & Demographics -->
+        <div id="tabProfile" class="tab-content active">
+          <table class="data-table">
+            <tbody id="profileTableBody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Tab 2: Climate & Heat Vulnerability -->
+        <div id="tabClimate" class="tab-content">
+          <div id="climateAvailableSection">
+            <div style="margin-bottom: 12px; font-size: 13px; color: #475569;">
+              Monthly surface temperature profile and summer vulnerability indicators:
+            </div>
+
+            <!-- Temperature Bar Graph -->
+            <div id="tempBars" class="temp-bars-container">
+              <!-- Monthly bars populated by JS -->
+            </div>
+
+            <!-- Climate Table -->
+            <table class="data-table" style="margin-top: 16px;">
+              <thead>
+                <tr style="background: #f1f5f9;">
+                  <th style="width: 25%;">Month</th>
+                  <th style="width: 25%;">Mean Temp (°C)</th>
+                  <th style="width: 25%;">Min Temp (°C)</th>
+                  <th style="width: 25%;">Max Temp (°C)</th>
+                </tr>
+              </thead>
+              <tbody id="climateTableBody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+
+          <div id="climateUnavailableSection" style="display: none; padding: 28px; text-align: center; color: #64748b;">
+            <i class="fa-solid fa-circle-info" style="font-size: 28px; color: #94a3b8; margin-bottom: 10px;"></i>
+            <p>Detailed micro-climate and heat vulnerability data is specifically modeled for PCMC wards in this
+              dataset.</p>
+          </div>
+        </div>
+
+        <!-- Tab 3: Transit Connectivity -->
+        <div id="tabTransit" class="tab-content">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <div style="font-size: 13px; font-weight: 600; color: #0f172a;">
+              Bus Stops Located in this Ward: <span id="wardStopCount" style="color: #2563eb;">0</span>
+            </div>
+            <input type="text" id="filterWardStopsInput" placeholder="Filter stops in ward..."
+              style="padding: 4px 8px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 12px;" />
+          </div>
+
+          <div style="max-height: 250px; overflow-y: auto; border: 1px solid #e2e8f0; border-radius: 8px;">
+            <table class="data-table">
+              <thead>
+                <tr style="background: #f8fafc; position: sticky; top: 0;">
+                  <th style="width: 20%;">Stop ID</th>
+                  <th style="width: 55%;">Stop Name</th>
+                  <th style="width: 25%;">Coordinates</th>
+                </tr>
+              </thead>
+              <tbody id="wardStopsTableBody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Tab 4: All Raw Properties Table -->
+        <div id="tabRaw" class="tab-content">
+          <div style="margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-size: 12px; color: #64748b;">Search raw property key or value:</div>
+            <input type="text" id="rawPropSearchInput" placeholder="Filter properties..."
+              style="padding: 4px 8px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 12px; width: 220px;" />
+          </div>
+          <div style="max-height: 300px; overflow-y: auto; border: 1px solid #e2e8f0; border-radius: 8px;">
+            <table class="data-table">
+              <thead>
+                <tr style="background: #f8fafc; position: sticky; top: 0;">
+                  <th style="width: 45%;">Attribute Key</th>
+                  <th style="width: 55%;">Value</th>
+                </tr>
+              </thead>
+              <tbody id="rawPropsTableBody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="modal-footer">
+        <div style="font-size: 11px; color: #64748b;">
+          Coordinate Bounds: <span id="modalCoordBounds">--</span>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button id="copyWardJsonBtn" class="btn btn-outline" style="padding: 6px 12px;">
+            <i class="fa-solid fa-copy"></i> Copy JSON Data
+          </button>
+          <button id="closeModalFooterBtn" class="btn btn-primary" style="padding: 6px 14px;">
+            Done
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Leaflet & Clustering Scripts -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+
+  <!-- Offline Data Preload for zero-friction file:// and http:// execution -->
+  <script src="data.js"></script>
+  <!-- Main Application Script -->
+  <script src="app.js"></script>
+</body>
+
+</html>
