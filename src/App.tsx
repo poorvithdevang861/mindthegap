@@ -196,8 +196,13 @@ export const App: React.FC = () => {
     setMapAction({ type: 'pune', timestamp: Date.now() });
   }, []);
 
+  // Ensure viewport scroll is always anchored to top left (prevent scroll displacement)
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [selectedWard]);
+
   return (
-    <div style={{ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden' }}>
+    <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, width: '100vw', height: '100vh', overflow: 'hidden' }}>
       {/* Loading Spinner */}
       {loading && (
         <div className="spinner-container glass">
@@ -226,7 +231,6 @@ export const App: React.FC = () => {
         corpFilter={corpFilter}
         onChangeCorpFilter={setCorpFilter}
         onResetAll={handleResetAll}
-        isWardModalOpen={!!selectedWard}
       />
 
       {/* Main GIS Map (OpenStreetMap) */}

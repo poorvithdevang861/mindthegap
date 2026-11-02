@@ -424,5 +424,5 @@ export const GISMap: React.FC<MapProps> = ({
     }
   }, [mapAction, selectedWard]);
 
-  return <div ref={mapContainerRef} id="map" style={{ width: '100%', height: '100%' }} />;
+  return <div ref={mapContainerRef} id="map" />;
 };

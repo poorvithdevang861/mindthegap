@@ -18,7 +18,6 @@ interface SidebarProps {
   corpFilter: CorpFilter;
   onChangeCorpFilter: (filter: CorpFilter) => void;
   onResetAll?: () => void;
-  isWardModalOpen?: boolean;
 }
 
 const CORP_OPTIONS: DropdownOption[] = [
@@ -74,30 +73,11 @@ export const Sidebar: React.FC<SidebarProps> = ({
   corpFilter,
   onChangeCorpFilter,
   onResetAll,
-  isWardModalOpen,
 }) => {
-  // Automatically start collapsed on small screens (< 1024px)
+  // Respect user's collapse preference; only collapse by default on small mobile screens (< 768px)
   const [collapsed, setCollapsed] = useState(() => {
-    return typeof window !== 'undefined' && window.innerWidth < 1024;
+    return typeof window !== 'undefined' && window.innerWidth < 768;
   });
-
-  // Responsive window resize listener
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 900) {
-        setCollapsed(true);
-      }
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  // When ward table opens on viewports under 1280px, auto-collapse sidebar to give full room to the table
-  useEffect(() => {
-    if (isWardModalOpen && window.innerWidth < 1280) {
-      setCollapsed(true);
-    }
-  }, [isWardModalOpen]);
 
   const activeCount = Object.values(visibility).filter(Boolean).length;
 
