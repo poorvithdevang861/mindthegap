@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import { X, Crosshair, Users, ThermometerSun, Bus, Info, FileText, FileSpreadsheet } from 'lucide-react';
+import { X, Crosshair, Users, Bus, FileText, FileSpreadsheet } from 'lucide-react';
 import type { WardMeta, BusStop } from '../types';
-import { extractClimateData } from '../utils/geo';
 import { downloadTableAsPdf, downloadTableAsExcel } from '../utils/exportTable';
 
 interface WardModalProps {
@@ -12,7 +11,7 @@ interface WardModalProps {
   onZoomToWard: () => void;
 }
 
-type TabKey = 'profile' | 'transit' | 'climate';
+type TabKey = 'profile' | 'transit';
 
 export const WardModal: React.FC<WardModalProps> = ({
   ward,
@@ -25,9 +24,6 @@ export const WardModal: React.FC<WardModalProps> = ({
   const [transitFilter, setTransitFilter] = useState('');
 
   if (!ward) return null;
-
-  const rawProps = ward.raw || {};
-  const climateData = extractClimateData(rawProps);
 
   // Filtered transit stops
   const filteredStops = useMemo(() => {
@@ -101,20 +97,6 @@ export const WardModal: React.FC<WardModalProps> = ({
       label: 'Transit Stop Density',
       value: `${ward.transitDensity} stops per km²`,
     },
-    ...(ward.vulnLevel && ward.vulnLevel !== 'N/A'
-      ? [
-          {
-            label: 'Summer Heat Vulnerability',
-            value: `${ward.vulnLevel} Risk (${ward.amjMeanTemp || '48+'}°C surface mean)`,
-            color:
-              ward.vulnLevel === 'High'
-                ? '#dc2626'
-                : ward.vulnLevel === 'Medium'
-                ? '#d97706'
-                : '#059669',
-          },
-        ]
-      : []),
   ];
 
   return (
@@ -198,13 +180,6 @@ export const WardModal: React.FC<WardModalProps> = ({
           >
             <Bus size={14} style={{ display: 'inline', marginRight: 4 }} />
             Transit Stops ({ward.busStopsCount})
-          </button>
-          <button
-            className={`tab-btn ${activeTab === 'climate' ? 'active' : ''}`}
-            onClick={() => setActiveTab('climate')}
-          >
-            <ThermometerSun size={14} style={{ display: 'inline', marginRight: 4 }} />
-            Microclimate & Heat
           </button>
         </div>
 
@@ -320,75 +295,6 @@ export const WardModal: React.FC<WardModalProps> = ({
                   </tbody>
                 </table>
               </div>
-            </div>
-          )}
-
-          {/* TAB 3: Microclimate & Heat Vulnerability */}
-          {activeTab === 'climate' && (
-            <div className="tab-content active">
-              {climateData ? (
-                <div>
-                  <div style={{ marginBottom: '12px', fontSize: '13px', color: '#475569' }}>
-                    Monthly surface temperature profile and summer vulnerability indicators for{' '}
-                    <strong>{ward.wardName}</strong>:
-                  </div>
-
-                  {/* Monthly Temperature Bar Graph */}
-                  <div className="temp-bars-container">
-                    {climateData.map((m) => {
-                      const val = Number(m.mean).toFixed(1);
-                      const heightPct = Math.min(Math.max((Number(m.mean) / 55) * 100, 15), 100);
-                      return (
-                        <div key={m.key} className="temp-bar-col">
-                          <span className="temp-val-text">{val}°</span>
-                          <div className="temp-bar" style={{ height: `${heightPct}%` }} />
-                          <span className="temp-month-name">{m.key}</span>
-                        </div>
-                      );
-                    })}
-                  </div>
-
-                  {/* Climate Table */}
-                  <div className="table-responsive">
-                    <table className="data-table" style={{ marginTop: '16px' }}>
-                      <thead>
-                        <tr style={{ background: '#f1f5f9' }}>
-                          <th style={{ width: '25%' }}>Month</th>
-                          <th style={{ width: '25%' }}>Mean Temp (°C)</th>
-                          <th style={{ width: '25%' }}>Min Temp (°C)</th>
-                          <th style={{ width: '25%' }}>Max Temp (°C)</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {climateData.map((m) => (
-                          <tr key={m.key}>
-                            <td>
-                              <strong>{m.name}</strong>
-                            </td>
-                            <td>
-                              <span style={{ fontWeight: 700, color: '#dc2626' }}>
-                                {Number(m.mean).toFixed(1)} °C
-                              </span>
-                            </td>
-                            <td>{Number(m.min).toFixed(1)} °C</td>
-                            <td>{Number(m.max).toFixed(1)} °C</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              ) : (
-                <div style={{ padding: '36px', textAlign: 'center', color: '#64748b' }}>
-                  <Info size={32} color="#94a3b8" style={{ margin: '0 auto 12px' }} />
-                  <p style={{ fontWeight: 600, color: '#1e293b', marginBottom: '6px' }}>
-                    Microclimate surface data not modeled for this sector
-                  </p>
-                  <p style={{ fontSize: '12px' }}>
-                    Detailed satellite surface thermal readings in this dataset are modeled specifically for Pimpri-Chinchwad (PCMC) industrial corridors.
-                  </p>
-                </div>
-              )}
             </div>
           )}
         </div>

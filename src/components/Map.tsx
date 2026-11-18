@@ -123,6 +123,14 @@ export const GISMap: React.FC<MapProps> = ({
         else if (p > 85000) fillColor = '#818cf8';
         else fillColor = '#c7d2fe';
         fillOpacity = 0.65;
+      } else if (thematic === 'transit') {
+        const density = parseFloat(meta.transitDensity) || 0;
+        if (density >= 12) fillColor = '#064e3b';
+        else if (density >= 8) fillColor = '#059669';
+        else if (density >= 5) fillColor = '#10b981';
+        else if (density >= 2) fillColor = '#6ee7b7';
+        else fillColor = '#d1fae5';
+        fillOpacity = 0.65;
       } else if (thematic === 'vuln') {
         if (meta.vulnLevel === 'High') {
           fillColor = '#dc2626';
@@ -309,19 +317,65 @@ export const GISMap: React.FC<MapProps> = ({
     }
 
     const metroLayer = L.geoJSON(metroData, {
-      style: {
-        color: '#0284c7',
-        weight: 2,
-        dashArray: '5, 5',
-        fillColor: '#38bdf8',
-        fillOpacity: 0.1,
+      style: (feature) => {
+        const geomType = feature?.geometry?.type;
+        if (geomType === 'LineString' || geomType === 'MultiLineString') {
+          const color =
+            feature?.properties?.color ||
+            (feature?.properties?.line_name?.toLowerCase().includes('purple')
+              ? '#7c3aed'
+              : '#0284c7');
+          return {
+            color,
+            weight: 4.5,
+            opacity: 0.95,
+          };
+        }
+        return {
+          color: '#0284c7',
+          weight: 2,
+          fillColor: '#38bdf8',
+          fillOpacity: 0.08,
+        };
       },
-      onEachFeature: (_feature, layer) => {
-        layer.bindTooltip(
-          `<div style="font-weight:700; color:#0284c7; font-size:12px;">Metro Rapid Transit Corridor</div>
-           <div style="font-size:10px; color:#475569; margin-top:2px;">Metro Alignment & Station Influence Zone</div>`,
-          { className: 'leaflet-tooltip-ward' }
-        );
+      pointToLayer: (feature, latlng) => {
+        const isInterchange = Boolean(feature?.properties?.is_interchange);
+        const color =
+          feature?.properties?.color ||
+          (feature?.properties?.line_name?.toLowerCase().includes('purple')
+            ? '#7c3aed'
+            : '#0284c7');
+        return L.circleMarker(latlng, {
+          radius: isInterchange ? 6.5 : 4.5,
+          fillColor: '#ffffff',
+          color: color,
+          weight: isInterchange ? 3 : 2,
+          opacity: 1,
+          fillOpacity: 1,
+        });
+      },
+      onEachFeature: (feature, layer) => {
+        const p = feature?.properties || {};
+        const isPoint = feature?.geometry?.type === 'Point';
+
+        if (isPoint) {
+          const stype = p.station_type || 'Transit Station';
+          const interchangeBadge = p.is_interchange
+            ? '<span style="background:#eff6ff; color:#1d4ed8; font-weight:700; font-size:9.5px; padding:1px 5px; border-radius:3px; margin-left:6px;">INTERCHANGE</span>'
+            : '';
+          layer.bindTooltip(
+            `<div style="font-weight:700; color:#0f172a; font-size:12px;">${p.station_name || p.name}${interchangeBadge}</div>
+             <div style="font-size:10.5px; color:#64748b; margin-top:2px;">${p.line_name} • ${stype}</div>`,
+            { className: 'leaflet-tooltip-ward' }
+          );
+        } else {
+          layer.bindTooltip(
+            `<div style="font-weight:700; color:${p.color || '#0284c7'}; font-size:12px;">${p.name || p.line_name}</div>
+             <div style="font-size:10.5px; color:#475569; margin-top:2px;">${p.corridor || 'Corridor Alignment'}</div>
+             <div style="font-size:10px; color:#059669; font-weight:600; margin-top:2px;">${p.length_km ? `${p.length_km} km • ` : ''}${p.stations_count ? `${p.stations_count} Stations • ` : ''}${p.status || 'Operational'}</div>`,
+            { className: 'leaflet-tooltip-ward', sticky: true }
+          );
+        }
       },
     });
 

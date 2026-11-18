@@ -47,21 +47,21 @@ const CORP_OPTIONS: DropdownOption[] = [
 const THEMATIC_OPTIONS: DropdownOption[] = [
   {
     value: 'corp',
-    label: 'Municipal Corporation',
-    sublabel: 'PMC Purple vs PCMC Green',
+    label: 'Municipal Jurisdiction',
+    sublabel: 'PMC (41 Wards) vs PCMC (32 Wards)',
     dotColor: '#7c3aed',
   },
   {
     value: 'pop',
-    label: 'Population Density (2026)',
-    sublabel: 'Census 2026 Density Choropleth',
+    label: 'Population Density',
+    sublabel: 'Census 2026 Density (people / km²)',
     dotColor: '#2563eb',
   },
   {
-    value: 'vuln',
-    label: 'Heat Vulnerability Index',
-    sublabel: 'PCMC Surface Thermal Risk',
-    dotColor: '#dc2626',
+    value: 'transit',
+    label: 'Transit Coverage Density',
+    sublabel: 'Transit Access (stops / km²)',
+    dotColor: '#059669',
   },
 ];
 
@@ -122,97 +122,98 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
       {/* Sidebar Header */}
       <div className="sidebar-header">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <div className="sidebar-header-icon">
-              <Layers size={15} color="#2563eb" />
-            </div>
-            <div>
-              <h2>Control Center</h2>
-              <span style={{ fontSize: '10.5px', color: '#64748b' }}>Layers & Visualization</span>
-            </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <div className="sidebar-header-icon">
+            <Layers size={15} color="#2563eb" />
           </div>
-          <span className="badge-active-count">{activeCount} of 6 Active</span>
+          <div>
+            <h2>Layer Controls</h2>
+            <span style={{ fontSize: '10.5px', color: '#64748b' }}>Spatial Data Overlays</span>
+          </div>
+        </div>
+        <span className="badge-active-count">{activeCount} of 6 Active</span>
+      </div>
+
+      {/* Sidebar Scrollable Body */}
+      <div className="sidebar-content">
+        {/* SECTION 1: JURISDICTION & THEMATIC VIEWS */}
+        <div className="sidebar-section">
+          <div className="section-label">Jurisdiction & Thematic Views</div>
+
+          {/* Dropdown 1: Jurisdiction Filter */}
+          <CustomDropdown
+            label="Municipal Jurisdiction"
+            icon={<Building2 size={13} color="#2563eb" />}
+            headerBadge={corpFilter === 'all' ? '73 Wards' : corpFilter === 'PMC' ? '41 Wards' : '32 Wards'}
+            value={corpFilter}
+            onChange={onChangeCorpFilter}
+            options={CORP_OPTIONS}
+          />
+
+          {/* Dropdown 2: Thematic Choropleth */}
+          <div style={{ marginTop: '10px' }}>
+            <CustomDropdown
+              label="Thematic Choropleth"
+              icon={<Palette size={13} color="#7c3aed" />}
+              value={thematic}
+              onChange={onChangeThematic}
+              options={THEMATIC_OPTIONS}
+            />
+          </div>
+
+          {/* Intuitive Dynamic Legend for Currently Selected Thematic Theme */}
+          <div className="thematic-legend-card">
+            <div className="thematic-legend-title">Active Map Legend:</div>
+
+            {thematic === 'corp' && (
+              <div className="legend-items-grid">
+                <div className="legend-item">
+                  <span className="legend-swatch" style={{ background: '#7c3aed' }} />
+                  <span className="legend-text">PMC Wards (41)</span>
+                </div>
+                <div className="legend-item">
+                  <span className="legend-swatch" style={{ background: '#059669' }} />
+                  <span className="legend-text">PCMC Wards (32)</span>
+                </div>
+              </div>
+            )}
+
+            {thematic === 'pop' && (
+              <div>
+                <div className="legend-bar-container">
+                  <span className="legend-gradient-bar" />
+                </div>
+                <div className="legend-bar-labels">
+                  <span>Sparse (&lt; 85k)</span>
+                  <span>125k</span>
+                  <span>Dense (&gt; 150k)</span>
+                </div>
+              </div>
+            )}
+
+            {thematic === 'transit' && (
+              <div>
+                <div className="legend-bar-container">
+                  <span
+                    className="legend-gradient-bar"
+                    style={{
+                      background: 'linear-gradient(to right, #d1fae5, #6ee7b7, #10b981, #059669, #064e3b)',
+                    }}
+                  />
+                </div>
+                <div className="legend-bar-labels">
+                  <span>Gap (&lt; 2 / km²)</span>
+                  <span>6 / km²</span>
+                  <span>High (&gt; 12 / km²)</span>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
 
-        {/* Sidebar Scrollable Body */}
-        <div className="sidebar-content">
-          {/* SECTION 1: MAP VIEW SETTINGS (DROPDOWNS WITH CONSISTENT STYLING) */}
-          <div className="sidebar-section">
-            <div className="section-label">Map View Settings</div>
-
-            {/* Dropdown 1: Corporation Filter (Custom styled dropdown) */}
-            <CustomDropdown
-              label="Filter Corporation Wards"
-              icon={<Building2 size={13} color="#2563eb" />}
-              headerBadge={corpFilter === 'all' ? '73 Wards' : corpFilter === 'PMC' ? '41 Wards' : '32 Wards'}
-              value={corpFilter}
-              onChange={onChangeCorpFilter}
-              options={CORP_OPTIONS}
-            />
-
-            {/* Dropdown 2: Thematic Color Mode (Custom styled dropdown) */}
-            <div style={{ marginTop: '10px' }}>
-              <CustomDropdown
-                label="Ward Map Color Theme"
-                icon={<Palette size={13} color="#7c3aed" />}
-                value={thematic}
-                onChange={onChangeThematic}
-                options={THEMATIC_OPTIONS}
-              />
-            </div>
-
-            {/* Intuitive Dynamic Legend for Currently Selected Thematic Theme */}
-            <div className="thematic-legend-card">
-              <div className="thematic-legend-title">Active Map Legend:</div>
-
-              {thematic === 'corp' && (
-                <div className="legend-items-grid">
-                  <div className="legend-item">
-                    <span className="legend-swatch" style={{ background: '#7c3aed' }} />
-                    <span className="legend-text">PMC Wards (41)</span>
-                  </div>
-                  <div className="legend-item">
-                    <span className="legend-swatch" style={{ background: '#059669' }} />
-                    <span className="legend-text">PCMC Wards (32)</span>
-                  </div>
-                </div>
-              )}
-
-              {thematic === 'pop' && (
-                <div>
-                  <div className="legend-bar-container">
-                    <span className="legend-gradient-bar" />
-                  </div>
-                  <div className="legend-bar-labels">
-                    <span>Low (&lt; 85k)</span>
-                    <span>125k</span>
-                    <span>High (&gt; 150k)</span>
-                  </div>
-                </div>
-              )}
-
-              {thematic === 'vuln' && (
-                <div className="legend-items-grid">
-                  <div className="legend-item">
-                    <span className="legend-swatch" style={{ background: '#dc2626' }} />
-                    <span className="legend-text">High Risk (&gt;49°C)</span>
-                  </div>
-                  <div className="legend-item">
-                    <span className="legend-swatch" style={{ background: '#f59e0b' }} />
-                    <span className="legend-text">Medium Risk</span>
-                  </div>
-                  <div className="legend-item">
-                    <span className="legend-swatch" style={{ background: '#10b981' }} />
-                    <span className="legend-text">Low Risk</span>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* SECTION 2: PRIMARY BOUNDARY LAYER */}
-          <div className="sidebar-section">
-            <div className="section-label">Primary Boundary Layer</div>
+        {/* SECTION 2: ADMINISTRATIVE BOUNDARIES */}
+        <div className="sidebar-section">
+          <div className="section-label">Administrative Boundaries</div>
 
             <div
               className={`layer-card ${visibility.wards ? 'active' : ''}`}
@@ -246,7 +247,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
           {/* SECTION 3: PUBLIC TRANSIT NETWORK */}
           <div className="sidebar-section">
-            <div className="section-label">Public Transit (GTFS & Metro)</div>
+            <div className="section-label">Public Transit Network</div>
 
             {/* Bus Stops */}
             <div
@@ -257,7 +258,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 <span className="layer-badge-dot" style={{ background: '#2563eb' }} />
                 <div>
                   <div className="layer-title-text">Bus Stops (GTFS)</div>
-                  <div className="layer-subtext">3,320 Verified Transit Stops</div>
+                  <div className="layer-subtext">3,320 Transit Stops</div>
                 </div>
               </div>
               <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
@@ -283,8 +284,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
               <div className="layer-info">
                 <span className="layer-badge-dot" style={{ background: '#ec4899' }} />
                 <div>
-                  <div className="layer-title-text">Bus Transit Routes</div>
-                  <div className="layer-subtext">555 Active Bus Corridors</div>
+                  <div className="layer-title-text">Bus Corridors</div>
+                  <div className="layer-subtext">555 Transit Routes</div>
                 </div>
               </div>
               <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
@@ -308,10 +309,13 @@ export const Sidebar: React.FC<SidebarProps> = ({
               onClick={() => onToggleLayer('metro')}
             >
               <div className="layer-info">
-                <span className="layer-badge-dot" style={{ background: '#0284c7' }} />
+                <span
+                  className="layer-badge-dot"
+                  style={{ background: 'linear-gradient(135deg, #7c3aed, #0284c7)' }}
+                />
                 <div>
-                  <div className="layer-title-text">Metro Rail Corridors</div>
-                  <div className="layer-subtext">95 Metro Stations & Alignments</div>
+                  <div className="layer-title-text">Metro Rail Network</div>
+                  <div className="layer-subtext">Purple & Aqua Lines (29 Stations)</div>
                 </div>
               </div>
               <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
@@ -330,9 +334,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
             </div>
           </div>
 
-          {/* SECTION 4: ROAD INFRASTRUCTURE */}
+          {/* SECTION 4: ROAD NETWORK & ARTERIALS */}
           <div className="sidebar-section">
-            <div className="section-label">Road Infrastructure</div>
+            <div className="section-label">Street & Highway Network</div>
 
             {/* Major Roads */}
             <div
@@ -342,8 +346,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
               <div className="layer-info">
                 <span className="layer-badge-dot" style={{ background: '#f59e0b' }} />
                 <div>
-                  <div className="layer-title-text">Major Arterial Roads</div>
-                  <div className="layer-subtext">6,136 Highways & Arteries</div>
+                  <div className="layer-title-text">Primary Arterials</div>
+                  <div className="layer-subtext">6,136 Major Corridors</div>
                 </div>
               </div>
               <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>

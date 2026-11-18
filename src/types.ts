@@ -43,7 +43,7 @@ export interface LayerVisibility {
   allRoads: boolean;
 }
 
-export type ThematicOption = 'corp' | 'pop' | 'vuln';
+export type ThematicOption = 'corp' | 'pop' | 'transit' | 'vuln';
 export type BasemapOption = 'positron' | 'osm' | 'dark' | 'satellite';
 export type CorpFilter = 'all' | 'PMC' | 'PCMC';
 
