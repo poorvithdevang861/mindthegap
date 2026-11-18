@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Crosshair, Search, X, Activity } from 'lucide-react';
+import { Compass, Search, X, BarChart3 } from 'lucide-react';
 import type { WardMeta } from '../types';
 import { AnimatedLogo } from './AnimatedLogo';
 
@@ -128,7 +128,7 @@ export const Header: React.FC<HeaderProps> = ({
           title="Open municipal equity and transit gap analysis"
           type="button"
         >
-          <Activity size={15} />
+          <BarChart3 size={15} />
           <span>Gap Analysis</span>
         </button>
 
@@ -138,7 +138,7 @@ export const Header: React.FC<HeaderProps> = ({
           title="Zoom to Pune Metropolitan Area"
           type="button"
         >
-          <Crosshair size={15} />
+          <Compass size={15} />
           <span>Pune View</span>
         </button>
       </div>

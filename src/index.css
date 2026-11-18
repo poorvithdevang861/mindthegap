@@ -89,20 +89,26 @@ body, html, #root {
 }
 
 .brand-mark {
-  width: 32px;
-  height: 32px;
-  border-radius: 6px;
-  background: #f8fafc;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #ffffff;
   border: 1px solid #e2e8f0;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: border-color 0.15s ease, background 0.15s ease;
+  transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.brand-emblem-svg {
+  display: block;
 }
 
 .brand-lockup:hover .brand-mark {
-  background: #f1f5f9;
+  background: #f8fafc;
   border-color: #cbd5e1;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
 }
 
 .brand-datum {
@@ -747,6 +753,21 @@ body, html, #root {
   height: 12px;
   border-radius: 3px;
   flex-shrink: 0;
+}
+
+.layer-badge-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+
+.layer-card:hover .layer-badge-icon {
+  transform: scale(1.05);
 }
 
 .layer-title-text {

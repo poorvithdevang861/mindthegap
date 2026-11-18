@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { X, Crosshair, Users, Bus, FileText, FileSpreadsheet } from 'lucide-react';
+import { X, Crosshair, Users, BusFront, TrainFront, LandPlot, Building2, FileText, FileSpreadsheet } from 'lucide-react';
 import type { WardMeta, BusStop } from '../types';
 import { downloadTableAsPdf, downloadTableAsExcel } from '../utils/exportTable';
 
@@ -135,7 +135,10 @@ export const WardModal: React.FC<WardModalProps> = ({
         {/* Top KPI Cards with Accurate Values */}
         <div className="modal-kpi-grid">
           <div className="kpi-card">
-            <div className="kpi-label">Census 2026 population</div>
+            <div className="kpi-label">
+              <Users size={12} style={{ display: 'inline', marginRight: 4, verticalAlign: -1, color: '#64748b' }} />
+              Census 2026 population
+            </div>
             <div className="kpi-val">
               {ward.censusPop2026.toLocaleString()}
             </div>
@@ -143,7 +146,10 @@ export const WardModal: React.FC<WardModalProps> = ({
           </div>
 
           <div className="kpi-card">
-            <div className="kpi-label">WorldPop 2020 baseline</div>
+            <div className="kpi-label">
+              <Building2 size={12} style={{ display: 'inline', marginRight: 4, verticalAlign: -1, color: '#64748b' }} />
+              WorldPop 2020 baseline
+            </div>
             <div className="kpi-val">
               {ward.worldPop2020.toLocaleString()}
             </div>
@@ -151,13 +157,19 @@ export const WardModal: React.FC<WardModalProps> = ({
           </div>
 
           <div className="kpi-card">
-            <div className="kpi-label">Land area & density</div>
+            <div className="kpi-label">
+              <LandPlot size={12} style={{ display: 'inline', marginRight: 4, verticalAlign: -1, color: '#64748b' }} />
+              Land area &amp; density
+            </div>
             <div className="kpi-val">{ward.areaKm2} km²</div>
             <div className="kpi-sub">{ward.popDensityCensus.toLocaleString()} / km²</div>
           </div>
 
           <div className="kpi-card">
-            <div className="kpi-label">Public transit access</div>
+            <div className="kpi-label">
+              <BusFront size={12} style={{ display: 'inline', marginRight: 4, verticalAlign: -1, color: '#64748b' }} />
+              Public transit access
+            </div>
             <div className="kpi-val">
               {ward.busStopsCount} bus • {ward.metroStopsCount} metro
             </div>
@@ -172,13 +184,13 @@ export const WardModal: React.FC<WardModalProps> = ({
             onClick={() => setActiveTab('profile')}
           >
             <Users size={14} style={{ display: 'inline', marginRight: 4 }} />
-            Ward Metrics & Demographics
+            Ward Demographics
           </button>
           <button
             className={`tab-btn ${activeTab === 'transit' ? 'active' : ''}`}
             onClick={() => setActiveTab('transit')}
           >
-            <Bus size={14} style={{ display: 'inline', marginRight: 4 }} />
+            <BusFront size={14} style={{ display: 'inline', marginRight: 4 }} />
             Transit Stops ({ward.busStopsCount})
           </button>
         </div>

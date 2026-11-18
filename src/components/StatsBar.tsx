@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, Users, Bus, Route, Milestone } from 'lucide-react';
+import { LandPlot, Users, BusFront, Route, Milestone } from 'lucide-react';
 
 interface StatsBarProps {
   wardCount: number;
@@ -19,7 +19,7 @@ export const StatsBar: React.FC<StatsBarProps> = ({
   return (
     <div className="bottom-stats-bar">
       <div className="stat-chip">
-        <Building2 size={14} className="stat-icon" />
+        <LandPlot size={14} className="stat-icon" />
         <span className="stat-label">Wards</span>
         <span className="stat-num">{wardCount}</span>
       </div>
@@ -31,7 +31,7 @@ export const StatsBar: React.FC<StatsBarProps> = ({
       </div>
       <div className="stat-divider" />
       <div className="stat-chip">
-        <Bus size={14} className="stat-icon" />
+        <BusFront size={14} className="stat-icon" />
         <span className="stat-label">Bus Stops</span>
         <span className="stat-num">{stopCount.toLocaleString()}</span>
       </div>

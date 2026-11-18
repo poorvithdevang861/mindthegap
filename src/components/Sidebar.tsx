@@ -6,6 +6,12 @@ import {
   Building2,
   Palette,
   RotateCcw,
+  LandPlot,
+  BusFront,
+  TrainFront,
+  Route,
+  Milestone,
+  Network,
 } from 'lucide-react';
 import type { LayerVisibility, ThematicOption, CorpFilter } from '../types';
 import { CustomDropdown, type DropdownOption } from './CustomDropdown';
@@ -215,178 +221,184 @@ export const Sidebar: React.FC<SidebarProps> = ({
         <div className="sidebar-section">
           <div className="section-label">Administrative Boundaries</div>
 
-            <div
-              className={`layer-card ${visibility.wards ? 'active' : ''}`}
-              onClick={() => onToggleLayer('wards')}
-            >
-              <div className="layer-info">
-                <span
-                  className="layer-badge-dot"
-                  style={{ background: 'linear-gradient(135deg, #059669, #7c3aed)' }}
+          <div
+            className={`layer-card ${visibility.wards ? 'active' : ''}`}
+            onClick={() => onToggleLayer('wards')}
+          >
+            <div className="layer-info">
+              <div className="layer-badge-icon" style={{ background: '#f0fdf4', color: '#059669', border: '1px solid #bbf7d0' }}>
+                <LandPlot size={14} />
+              </div>
+              <div>
+                <div className="layer-title-text">Municipal Wards</div>
+                <div className="layer-subtext">73 Unified Wards (41 PMC & 32 PCMC)</div>
+              </div>
+            </div>
+            <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
+              <span className={`status-pill ${visibility.wards ? 'pill-active' : ''}`}>
+                {visibility.wards ? 'ON' : 'OFF'}
+              </span>
+              <label className="switch">
+                <input
+                  type="checkbox"
+                  checked={visibility.wards}
+                  onChange={() => onToggleLayer('wards')}
                 />
-                <div>
-                  <div className="layer-title-text">Municipal Wards</div>
-                  <div className="layer-subtext">73 Unified Wards (41 PMC & 32 PCMC)</div>
-                </div>
+                <span className="slider" />
+              </label>
+            </div>
+          </div>
+        </div>
+
+        {/* SECTION 3: PUBLIC TRANSIT NETWORK */}
+        <div className="sidebar-section">
+          <div className="section-label">Public Transit Network</div>
+
+          {/* Bus Stops */}
+          <div
+            className={`layer-card ${visibility.stops ? 'active' : ''}`}
+            onClick={() => onToggleLayer('stops')}
+          >
+            <div className="layer-info">
+              <div className="layer-badge-icon" style={{ background: '#eff6ff', color: '#2563eb', border: '1px solid #bfdbfe' }}>
+                <BusFront size={14} />
               </div>
-              <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
-                <span className={`status-pill ${visibility.wards ? 'pill-active' : ''}`}>
-                  {visibility.wards ? 'ON' : 'OFF'}
-                </span>
-                <label className="switch">
-                  <input
-                    type="checkbox"
-                    checked={visibility.wards}
-                    onChange={() => onToggleLayer('wards')}
-                  />
-                  <span className="slider" />
-                </label>
+              <div>
+                <div className="layer-title-text">Bus Stops (GTFS)</div>
+                <div className="layer-subtext">3,320 Transit Stops</div>
               </div>
+            </div>
+            <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
+              <span className={`status-pill ${visibility.stops ? 'pill-active' : ''}`}>
+                {visibility.stops ? 'ON' : 'OFF'}
+              </span>
+              <label className="switch">
+                <input
+                  type="checkbox"
+                  checked={visibility.stops}
+                  onChange={() => onToggleLayer('stops')}
+                />
+                <span className="slider" />
+              </label>
             </div>
           </div>
 
-          {/* SECTION 3: PUBLIC TRANSIT NETWORK */}
-          <div className="sidebar-section">
-            <div className="section-label">Public Transit Network</div>
-
-            {/* Bus Stops */}
-            <div
-              className={`layer-card ${visibility.stops ? 'active' : ''}`}
-              onClick={() => onToggleLayer('stops')}
-            >
-              <div className="layer-info">
-                <span className="layer-badge-dot" style={{ background: '#2563eb' }} />
-                <div>
-                  <div className="layer-title-text">Bus Stops (GTFS)</div>
-                  <div className="layer-subtext">3,320 Transit Stops</div>
-                </div>
+          {/* Bus Routes */}
+          <div
+            className={`layer-card ${visibility.routes ? 'active' : ''}`}
+            onClick={() => onToggleLayer('routes')}
+          >
+            <div className="layer-info">
+              <div className="layer-badge-icon" style={{ background: '#fdf2f8', color: '#db2777', border: '1px solid #fbcfe8' }}>
+                <Route size={14} />
               </div>
-              <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
-                <span className={`status-pill ${visibility.stops ? 'pill-active' : ''}`}>
-                  {visibility.stops ? 'ON' : 'OFF'}
-                </span>
-                <label className="switch">
-                  <input
-                    type="checkbox"
-                    checked={visibility.stops}
-                    onChange={() => onToggleLayer('stops')}
-                  />
-                  <span className="slider" />
-                </label>
+              <div>
+                <div className="layer-title-text">Bus Corridors</div>
+                <div className="layer-subtext">555 Transit Routes</div>
               </div>
             </div>
-
-            {/* Bus Routes */}
-            <div
-              className={`layer-card ${visibility.routes ? 'active' : ''}`}
-              onClick={() => onToggleLayer('routes')}
-            >
-              <div className="layer-info">
-                <span className="layer-badge-dot" style={{ background: '#ec4899' }} />
-                <div>
-                  <div className="layer-title-text">Bus Corridors</div>
-                  <div className="layer-subtext">555 Transit Routes</div>
-                </div>
-              </div>
-              <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
-                <span className={`status-pill ${visibility.routes ? 'pill-active' : ''}`}>
-                  {visibility.routes ? 'ON' : 'OFF'}
-                </span>
-                <label className="switch">
-                  <input
-                    type="checkbox"
-                    checked={visibility.routes}
-                    onChange={() => onToggleLayer('routes')}
-                  />
-                  <span className="slider" />
-                </label>
-              </div>
-            </div>
-
-            {/* Metro Corridors */}
-            <div
-              className={`layer-card ${visibility.metro ? 'active' : ''}`}
-              onClick={() => onToggleLayer('metro')}
-            >
-              <div className="layer-info">
-                <span
-                  className="layer-badge-dot"
-                  style={{ background: 'linear-gradient(135deg, #7c3aed, #0284c7)' }}
+            <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
+              <span className={`status-pill ${visibility.routes ? 'pill-active' : ''}`}>
+                {visibility.routes ? 'ON' : 'OFF'}
+              </span>
+              <label className="switch">
+                <input
+                  type="checkbox"
+                  checked={visibility.routes}
+                  onChange={() => onToggleLayer('routes')}
                 />
-                <div>
-                  <div className="layer-title-text">Metro Rail Network</div>
-                  <div className="layer-subtext">Purple & Aqua Lines (29 Stations)</div>
-                </div>
-              </div>
-              <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
-                <span className={`status-pill ${visibility.metro ? 'pill-active' : ''}`}>
-                  {visibility.metro ? 'ON' : 'OFF'}
-                </span>
-                <label className="switch">
-                  <input
-                    type="checkbox"
-                    checked={visibility.metro}
-                    onChange={() => onToggleLayer('metro')}
-                  />
-                  <span className="slider" />
-                </label>
-              </div>
+                <span className="slider" />
+              </label>
             </div>
           </div>
 
-          {/* SECTION 4: ROAD NETWORK & ARTERIALS */}
-          <div className="sidebar-section">
-            <div className="section-label">Street & Highway Network</div>
-
-            {/* Major Roads */}
-            <div
-              className={`layer-card ${visibility.majorRoads ? 'active' : ''}`}
-              onClick={() => onToggleLayer('majorRoads')}
-            >
-              <div className="layer-info">
-                <span className="layer-badge-dot" style={{ background: '#f59e0b' }} />
-                <div>
-                  <div className="layer-title-text">Primary Arterials</div>
-                  <div className="layer-subtext">6,136 Major Corridors</div>
-                </div>
+          {/* Metro Corridors */}
+          <div
+            className={`layer-card ${visibility.metro ? 'active' : ''}`}
+            onClick={() => onToggleLayer('metro')}
+          >
+            <div className="layer-info">
+              <div className="layer-badge-icon" style={{ background: '#f5f3ff', color: '#7c3aed', border: '1px solid #ddd6fe' }}>
+                <TrainFront size={14} />
               </div>
-              <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
-                <span className={`status-pill ${visibility.majorRoads ? 'pill-active' : ''}`}>
-                  {visibility.majorRoads ? 'ON' : 'OFF'}
-                </span>
-                <label className="switch">
-                  <input
-                    type="checkbox"
-                    checked={visibility.majorRoads}
-                    onChange={() => onToggleLayer('majorRoads')}
-                  />
-                  <span className="slider" />
-                </label>
+              <div>
+                <div className="layer-title-text">Metro Rail Network</div>
+                <div className="layer-subtext">Purple & Aqua Lines (29 Stations)</div>
               </div>
             </div>
+            <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
+              <span className={`status-pill ${visibility.metro ? 'pill-active' : ''}`}>
+                {visibility.metro ? 'ON' : 'OFF'}
+              </span>
+              <label className="switch">
+                <input
+                  type="checkbox"
+                  checked={visibility.metro}
+                  onChange={() => onToggleLayer('metro')}
+                />
+                <span className="slider" />
+              </label>
+            </div>
+          </div>
+        </div>
 
-            {/* All Roads */}
-            <div
-              className={`layer-card ${visibility.allRoads ? 'active' : ''}`}
-              onClick={() => onToggleLayer('allRoads')}
-            >
-              <div className="layer-info">
-                <span className="layer-badge-dot" style={{ background: '#94a3b8' }} />
-                <div>
-                  <div className="layer-title-text">All Local Streets</div>
-                  <div className="layer-subtext">75,359 Streets (Complete 48MB)</div>
-                </div>
+        {/* SECTION 4: ROAD NETWORK & ARTERIALS */}
+        <div className="sidebar-section">
+          <div className="section-label">Street & Highway Network</div>
+
+          {/* Major Roads */}
+          <div
+            className={`layer-card ${visibility.majorRoads ? 'active' : ''}`}
+            onClick={() => onToggleLayer('majorRoads')}
+          >
+            <div className="layer-info">
+              <div className="layer-badge-icon" style={{ background: '#fffbeb', color: '#d97706', border: '1px solid #fde68a' }}>
+                <Milestone size={14} />
               </div>
-              <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
-                <span className={`status-pill ${visibility.allRoads ? 'pill-active' : ''}`}>
-                  {visibility.allRoads ? 'ON' : 'OFF'}
-                </span>
-                <label className="switch">
-                  <input
-                    type="checkbox"
-                    checked={visibility.allRoads}
-                    onChange={() => onToggleLayer('allRoads')}
-                  />
+              <div>
+                <div className="layer-title-text">Primary Arterials</div>
+                <div className="layer-subtext">6,136 Major Corridors</div>
+              </div>
+            </div>
+            <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
+              <span className={`status-pill ${visibility.majorRoads ? 'pill-active' : ''}`}>
+                {visibility.majorRoads ? 'ON' : 'OFF'}
+              </span>
+              <label className="switch">
+                <input
+                  type="checkbox"
+                  checked={visibility.majorRoads}
+                  onChange={() => onToggleLayer('majorRoads')}
+                />
+                <span className="slider" />
+              </label>
+            </div>
+          </div>
+
+          {/* All Roads */}
+          <div
+            className={`layer-card ${visibility.allRoads ? 'active' : ''}`}
+            onClick={() => onToggleLayer('allRoads')}
+          >
+            <div className="layer-info">
+              <div className="layer-badge-icon" style={{ background: '#f8fafc', color: '#64748b', border: '1px solid #e2e8f0' }}>
+                <Network size={14} />
+              </div>
+              <div>
+                <div className="layer-title-text">All Local Streets</div>
+                <div className="layer-subtext">75,359 Streets (Complete 48MB)</div>
+              </div>
+            </div>
+            <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
+              <span className={`status-pill ${visibility.allRoads ? 'pill-active' : ''}`}>
+                {visibility.allRoads ? 'ON' : 'OFF'}
+              </span>
+              <label className="switch">
+                <input
+                  type="checkbox"
+                  checked={visibility.allRoads}
+                  onChange={() => onToggleLayer('allRoads')}
+                />
                   <span className="slider" />
                 </label>
               </div>

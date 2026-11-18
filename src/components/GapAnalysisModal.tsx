@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Bus, TrendingUp, ArrowRight } from 'lucide-react';
+import { X, BusFront, TrainFront, TrendingUp, Users, ArrowRight } from 'lucide-react';
 import type { WardMeta } from '../types';
 
 interface GapAnalysisModalProps {
@@ -61,12 +61,12 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
             {/* Card 1: Transit Disparity Gap */}
             <div className="gap-card">
               <div className="gap-card-header">
-                <div className="gap-card-icon" style={{ background: '#eff6ff', color: '#2563eb' }}>
-                  <Bus size={18} />
+                <div className="gap-card-icon" style={{ background: '#eff6ff', color: '#1d4ed8' }}>
+                  <BusFront size={18} />
                 </div>
                 <div>
                   <div className="gap-card-title">Transit Accessibility Gap</div>
-                  <div className="gap-card-subtitle">3,320 Bus Stops & 95 Metro Stations</div>
+                  <div className="gap-card-subtitle">3,320 Bus Stops &amp; 29 Metro Stations (Purple &amp; Aqua)</div>
                 </div>
               </div>
               <p className="gap-card-desc">
@@ -83,7 +83,7 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
                 </div>
                 <div>
                   <span className="metric-label">Metro Alignment</span>
-                  <span className="metric-val" style={{ color: '#059669' }}>95 Stations</span>
+                  <span className="metric-val" style={{ color: '#7c3aed' }}>29 Stations</span>
                 </div>
               </div>
               <div style={{ fontSize: '11px', fontWeight: 700, color: '#475569', marginTop: '10px', marginBottom: '4px', textTransform: 'uppercase' }}>
