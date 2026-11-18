@@ -1,50 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 interface AnimatedLogoProps {
   onOpenGapModal?: () => void;
 }
 
 export const AnimatedLogo: React.FC<AnimatedLogoProps> = ({ onOpenGapModal }) => {
-  const [isClicking, setIsClicking] = useState(false);
-
-  const text = 'MIND THE GAP';
-  const chars = text.split('');
-
-  const handleClick = () => {
-    setIsClicking(true);
-    setTimeout(() => setIsClicking(false), 700);
-    if (onOpenGapModal) {
-      setTimeout(() => onOpenGapModal(), 300);
-    }
-  };
-
   return (
     <div
-      className={`logo-container ${isClicking ? 'logo-clicking' : ''}`}
-      onClick={handleClick}
-      title="MIND THE GAP - Hover to animate, click for Urban Gap Analysis"
+      className="brand-lockup"
+      onClick={onOpenGapModal}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onOpenGapModal?.();
+        }
+      }}
+      title="Mind the Gap - Municipal Spatial Equity Analysis"
     >
-      {/* Pure Typography: Solid One Color with Style, Animates ONLY on Hover */}
-      <div className="jumping-text">
-        {chars.map((char, index) => {
-          if (char === ' ') {
-            return (
-              <span key={index} className="jumping-text__space">
-                &nbsp;
-              </span>
-            );
-          }
-
-          return (
-            <span
-              key={index}
-              className="jumping-text__char"
-              style={{ '--char-index': index } as React.CSSProperties}
-            >
-              {char}
-            </span>
-          );
-        })}
+      <div className="brand-mark" aria-hidden="true">
+        <span className="brand-datum">+</span>
+      </div>
+      <div className="brand-text">
+        <span className="brand-title">Mind the Gap</span>
+        <span className="brand-subtitle">Pune Metropolitan Spatial Equity</span>
       </div>
     </div>
   );

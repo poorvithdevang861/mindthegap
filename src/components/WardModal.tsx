@@ -153,33 +153,33 @@ export const WardModal: React.FC<WardModalProps> = ({
         {/* Top KPI Cards with Accurate Values */}
         <div className="modal-kpi-grid">
           <div className="kpi-card">
-            <div className="kpi-label">Census 2026 Pop</div>
-            <div className="kpi-val" style={{ color: '#0f172a' }}>
+            <div className="kpi-label">Census 2026 population</div>
+            <div className="kpi-val">
               {ward.censusPop2026.toLocaleString()}
             </div>
-            <div className="kpi-sub">Rounded Citizen Count</div>
+            <div className="kpi-sub">Rounded citizen count</div>
           </div>
 
           <div className="kpi-card">
-            <div className="kpi-label">WorldPop 2020 Pop</div>
-            <div className="kpi-val" style={{ color: '#4338ca' }}>
+            <div className="kpi-label">WorldPop 2020 baseline</div>
+            <div className="kpi-val">
               {ward.worldPop2020.toLocaleString()}
             </div>
-            <div className="kpi-sub">Baseline Benchmark</div>
+            <div className="kpi-sub">Gridded spatial benchmark</div>
           </div>
 
           <div className="kpi-card">
-            <div className="kpi-label">Land Area & Density</div>
+            <div className="kpi-label">Land area & density</div>
             <div className="kpi-val">{ward.areaKm2} km²</div>
             <div className="kpi-sub">{ward.popDensityCensus.toLocaleString()} / km²</div>
           </div>
 
           <div className="kpi-card">
-            <div className="kpi-label">Public Transit Access</div>
-            <div className="kpi-val" style={{ color: '#059669' }}>
-              {ward.busStopsCount} Bus • {ward.metroStopsCount} Metro
+            <div className="kpi-label">Public transit access</div>
+            <div className="kpi-val">
+              {ward.busStopsCount} bus • {ward.metroStopsCount} metro
             </div>
-            <div className="kpi-sub">{ward.transitDensity} stops per km²</div>
+            <div className="kpi-sub">{ward.transitDensity} stops / km²</div>
           </div>
         </div>
 

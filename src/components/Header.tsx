@@ -21,7 +21,6 @@ export const Header: React.FC<HeaderProps> = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Keyboard shortcut: Cmd+K or Ctrl+K to focus search
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
@@ -58,96 +57,90 @@ export const Header: React.FC<HeaderProps> = ({
   }, []);
 
   return (
-    <header className="top-nav glass-nav">
-      {/* Row 1: Centered "MIND THE GAP" Container */}
-      <div className="header-row-top">
-        <AnimatedLogo onOpenGapModal={onOpenGapModal} />
-      </div>
+    <header className="top-nav">
+      {/* Brand Lockup */}
+      <AnimatedLogo onOpenGapModal={onOpenGapModal} />
 
-      {/* Separator DIV to cleanly partition the title and navbar */}
-      <div className="header-nav-divider" />
-
-      {/* Row 2: Search Bar and Navigation Actions Below the Divider */}
-      <div className="header-row-bottom">
-        {/* Ward Search Input */}
-        <div className="search-container" ref={containerRef}>
-          <div className="search-input-wrapper">
-            <Search size={14} color="#2563eb" />
-            <input
-              ref={inputRef}
-              type="text"
-              placeholder="Search 73 wards (e.g. Kalyani Nagar, Talwade, Ward 5)..."
-              value={searchQuery}
-              onChange={(e) => {
-                setSearchQuery(e.target.value);
-                setIsOpen(true);
+      {/* Ward Search Input */}
+      <div className="search-container" ref={containerRef}>
+        <div className="search-input-wrapper">
+          <Search size={15} className="search-icon" />
+          <input
+            ref={inputRef}
+            type="text"
+            placeholder="Search 73 wards by name or number..."
+            value={searchQuery}
+            onChange={(e) => {
+              setSearchQuery(e.target.value);
+              setIsOpen(true);
+            }}
+            onFocus={() => setIsOpen(true)}
+            aria-label="Search wards"
+          />
+          <kbd className="search-kbd-hint">⌘K</kbd>
+          {searchQuery && (
+            <button
+              className="clear-search-btn"
+              onClick={() => {
+                setSearchQuery('');
+                setIsOpen(false);
               }}
-              onFocus={() => setIsOpen(true)}
-            />
-            <div className="search-kbd-hint">⌘K</div>
-            {searchQuery && (
-              <button
-                className="clear-search-btn"
-                onClick={() => {
-                  setSearchQuery('');
-                  setIsOpen(false);
-                }}
-                title="Clear search"
-              >
-                <X size={14} />
-              </button>
-            )}
-          </div>
-
-          {isOpen && searchQuery.trim() && (
-            <div className="search-results glass-dropdown">
-              {filteredWards.length > 0 ? (
-                filteredWards.map((w) => (
-                  <div
-                    key={w.id}
-                    className="search-item"
-                    onClick={() => {
-                      onSelectWard(w);
-                      setSearchQuery(w.wardName);
-                      setIsOpen(false);
-                    }}
-                  >
-                    <div>
-                      <strong>{w.wardName}</strong>
-                      <span style={{ fontSize: '11px', color: '#64748b', marginLeft: '6px' }}>
-                        (Ward {w.wardNo || 'N/A'})
-                      </span>
-                    </div>
-                    <span className={`hover-badge ${w.corp === 'PCMC' ? 'badge-pcmc' : 'badge-pmc'}`}>
-                      {w.corp}
-                    </span>
-                  </div>
-                ))
-              ) : (
-                <div style={{ padding: '12px 14px', color: '#94a3b8', fontSize: '12px', textAlign: 'center' }}>
-                  No wards match "{searchQuery}"
-                </div>
-              )}
-            </div>
+              title="Clear search"
+              type="button"
+            >
+              <X size={14} />
+            </button>
           )}
         </div>
 
-        {/* Navigation Actions */}
-        <div className="nav-actions">
-          <button
-            className="btn btn-gap-accent"
-            onClick={onOpenGapModal}
-            title="Open Mind the GAP Disparity & Equity Analysis"
-          >
-            <Activity size={14} />
-            <span>Gap Insights</span>
-          </button>
+        {isOpen && searchQuery.trim() && (
+          <div className="search-results">
+            {filteredWards.length > 0 ? (
+              filteredWards.map((w) => (
+                <div
+                  key={w.id}
+                  className="search-item"
+                  onClick={() => {
+                    onSelectWard(w);
+                    setSearchQuery(w.wardName);
+                    setIsOpen(false);
+                  }}
+                >
+                  <div>
+                    <strong>{w.wardName}</strong>
+                    <span className="search-item-sub">Ward {w.wardNo || 'N/A'}</span>
+                  </div>
+                  <span className="search-item-corp">{w.corp}</span>
+                </div>
+              ))
+            ) : (
+              <div className="search-empty">No wards match "{searchQuery}"</div>
+            )}
+          </div>
+        )}
+      </div>
 
-          <button className="btn btn-nav-primary" onClick={onPuneView} title="Zoom to Pune Metropolitan Wards">
-            <Crosshair size={14} />
-            <span>Pune Wards</span>
-          </button>
-        </div>
+      {/* Navigation Actions */}
+      <div className="nav-actions">
+        <button
+          className="btn btn-outline"
+          onClick={onOpenGapModal}
+          title="Open municipal equity and transit gap analysis"
+          type="button"
+        >
+          <Activity size={15} />
+          <span>Gap Analysis</span>
+        </button>
+
+        <button
+          className="btn btn-primary"
+          onClick={onPuneView}
+          title="Zoom to Pune Metropolitan Area"
+          type="button"
+        >
+          <Crosshair size={15} />
+          <span>Pune View</span>
+        </button>
       </div>
     </header>
   );

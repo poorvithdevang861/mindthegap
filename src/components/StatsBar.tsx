@@ -17,38 +17,36 @@ export const StatsBar: React.FC<StatsBarProps> = ({
   roadCount,
 }) => {
   return (
-    <div className="bottom-stats-bar glass">
+    <div className="bottom-stats-bar">
       <div className="stat-chip">
-        <Building2 size={13} color="#2563eb" />
-        <span>
-          Wards: <strong>{wardCount}</strong>
-        </span>
+        <Building2 size={14} className="stat-icon" />
+        <span className="stat-label">Wards</span>
+        <span className="stat-num">{wardCount}</span>
       </div>
+      <div className="stat-divider" />
       <div className="stat-chip">
-        <Users size={13} color="#7c3aed" />
-        <span>
-          Total Pop: <strong>{(totalPopulation / 1_000_000).toFixed(2)}M</strong>
-        </span>
+        <Users size={14} className="stat-icon" />
+        <span className="stat-label">Population</span>
+        <span className="stat-num">{(totalPopulation / 1_000_000).toFixed(2)}M</span>
       </div>
+      <div className="stat-divider" />
       <div className="stat-chip">
-        <Bus size={13} color="#059669" />
-        <span>
-          Stops: <strong>{stopCount.toLocaleString()}</strong>
-        </span>
+        <Bus size={14} className="stat-icon" />
+        <span className="stat-label">Bus Stops</span>
+        <span className="stat-num">{stopCount.toLocaleString()}</span>
       </div>
+      <div className="stat-divider" />
       <div className="stat-chip">
-        <Route size={13} color="#ec4899" />
-        <span>
-          Routes: <strong>{routeCount}</strong>
-        </span>
+        <Route size={14} className="stat-icon" />
+        <span className="stat-label">Transit Routes</span>
+        <span className="stat-num">{routeCount}</span>
       </div>
+      <div className="stat-divider" />
       <div className="stat-chip">
-        <Milestone size={13} color="#f59e0b" />
-        <span>
-          Road Segments: <strong>{roadCount.toLocaleString()}</strong>
-        </span>
+        <Milestone size={14} className="stat-icon" />
+        <span className="stat-label">Road Segments</span>
+        <span className="stat-num">{roadCount.toLocaleString()}</span>
       </div>
     </div>
   );
 };
-
