@@ -72,10 +72,22 @@ body, html, #root {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  background: #ffffff;
-  border-bottom: 1px solid #e2e8f0;
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  background-color: #f7a256;
+  background-image: 
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.02) 50%, rgba(255, 255, 255, 0.15) 100%),
+    url('./assets/navbar-metro-bg.png');
+  background-position: left bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid rgba(203, 213, 225, 0.85);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
   pointer-events: auto;
+}
+
+@media (min-width: 1800px) {
+  .top-nav {
+    background-size: 100% 100%;
+  }
 }
 
 /* Brand Lockup */
@@ -86,12 +98,26 @@ body, html, #root {
   cursor: pointer;
   user-select: none;
   text-decoration: none;
+  padding: 4px 12px 4px 6px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 9px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+  transition: all 0.15s ease;
+}
+
+.brand-lockup:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
 }
 
 .brand-mark {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
+  width: 34px;
+  height: 34px;
+  border-radius: 7px;
   background: #ffffff;
   border: 1px solid #e2e8f0;
   display: flex;
@@ -152,17 +178,20 @@ body, html, #root {
   display: flex;
   align-items: center;
   height: 36px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(203, 213, 225, 0.95);
+  border-radius: 8px;
   padding: 0 10px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
   transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
 }
 
 .search-input-wrapper:focus-within {
   background: #ffffff;
   border-color: var(--primary);
-  box-shadow: 0 0 0 2px rgba(29, 78, 216, 0.1);
+  box-shadow: 0 0 0 2px rgba(29, 78, 216, 0.18), 0 2px 6px rgba(15, 23, 42, 0.1);
 }
 
 .search-icon {
@@ -312,16 +341,19 @@ body, html, #root {
 }
 
 .btn-outline {
-  background: #ffffff;
-  color: #334155;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #1e293b;
+  border: 1px solid rgba(203, 213, 225, 0.95);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
 }
 
 .btn-outline:hover {
-  background: #f8fafc;
-  border-color: #cbd5e1;
+  background: #ffffff;
+  border-color: #94a3b8;
   color: var(--text-main);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.12);
 }
 
 .btn-outline:active {
