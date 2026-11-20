@@ -1,1 +1,2190 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","id":1,"geometry":{"type":"Point","coordinates":[73.932552900000076,18.530287474000033]},"properties":{"OBJECTID":1,"Name":"Hadapsar Railway Station","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":2,"geometry":{"type":"Point","coordinates":[73.848571100000072,18.53047470000007]},"properties":{"OBJECTID":2,"Name":"Shivajinagar","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":3,"geometry":{"type":"Point","coordinates":[73.761541800000032,18.579709200000025]},"properties":{"OBJECTID":3,"Name":"Mitcon Balewadi","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":4,"geometry":{"type":"Point","coordinates":[73.844458000000031,18.51642570000007]},"properties":{"OBJECTID":4,"Name":"Deccan Gymkhana","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":5,"geometry":{"type":"Point","coordinates":[73.841486700000075,18.533006000000057]},"properties":{"OBJECTID":5,"Name":"Agriculture College","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":6,"geometry":{"type":"Point","coordinates":[73.836691900000062,18.536370700000077]},"properties":{"OBJECTID":6,"Name":"Bhosalenagar RBI","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":7,"geometry":{"type":"Point","coordinates":[73.757558700000061,18.59029860000004]},"properties":{"OBJECTID":7,"Name":"Shree Shiv Chhatrapati Sports Complex Mahalunge","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":8,"geometry":{"type":"Point","coordinates":[73.792952500000069,18.508126400000037]},"properties":{"OBJECTID":8,"Name":"Kothrud Bus Depot","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":9,"geometry":{"type":"Point","coordinates":[73.83806160000006,18.511973700000055]},"properties":{"OBJECTID":9,"Name":"Garware College","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":10,"geometry":{"type":"Point","coordinates":[73.805226900000036,18.507174400000054]},"properties":{"OBJECTID":10,"Name":"Vanaz","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":11,"geometry":{"type":"Point","coordinates":[73.81407930000006,18.509552800000051]},"properties":{"OBJECTID":11,"Name":"Anandnagar","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":12,"geometry":{"type":"Point","coordinates":[73.822125400000061,18.508877100000063]},"properties":{"OBJECTID":12,"Name":"Paud Phata","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":13,"geometry":{"type":"Point","coordinates":[73.828788900000063,18.507341000000054]},"properties":{"OBJECTID":13,"Name":"SNDT College","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":14,"geometry":{"type":"Point","coordinates":[73.803300900000067,18.629329700000028]},"properties":{"OBJECTID":14,"Name":"PCMC","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":15,"geometry":{"type":"Point","coordinates":[73.815757800000029,18.614536000000044]},"properties":{"OBJECTID":15,"Name":"Sant Tukaram Nagar","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":16,"geometry":{"type":"Point","coordinates":[73.831164200000046,18.591112000000066]},"properties":{"OBJECTID":16,"Name":"Phugewadi","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":17,"geometry":{"type":"Point","coordinates":[73.827279700000076,18.599627300000066]},"properties":{"OBJECTID":17,"Name":"Kasarwadi","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":18,"geometry":{"type":"Point","coordinates":[73.820112100000074,18.609315200000026]},"properties":{"OBJECTID":18,"Name":"Nashik Phata","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":19,"geometry":{"type":"Point","coordinates":[73.849726000000032,18.532182500000033]},"properties":{"OBJECTID":19,"Name":"Shivaji Nagar","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":20,"geometry":{"type":"Point","coordinates":[73.856914900000049,18.526849500000026]},"properties":{"OBJECTID":20,"Name":"District Court (Purple Line)","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":21,"geometry":{"type":"Point","coordinates":[73.877763300000083,18.532706800000028]},"properties":{"OBJECTID":21,"Name":"Ruby Hall Clinic","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":22,"geometry":{"type":"Point","coordinates":[73.872597000000042,18.529723400000023]},"properties":{"OBJECTID":22,"Name":"Pune Railway Station","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":23,"geometry":{"type":"Point","coordinates":[73.865058300000044,18.530052000000069]},"properties":{"OBJECTID":23,"Name":"RTO (Pune)","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":24,"geometry":{"type":"Point","coordinates":[73.846971200000041,18.519659200000035]},"properties":{"OBJECTID":24,"Name":"Chhatrapati Sambhaji Udyan","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":25,"geometry":{"type":"Point","coordinates":[73.857556900000077,18.526413900000023]},"properties":{"OBJECTID":25,"Name":"District Court (Aqua Line)","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":26,"geometry":{"type":"Point","coordinates":[73.852822600000081,18.522497200000032]},"properties":{"OBJECTID":26,"Name":"PMC","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":27,"geometry":{"type":"Point","coordinates":[73.833795700000053,18.583747100000039]},"properties":{"OBJECTID":27,"Name":"Dapodi","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":28,"geometry":{"type":"Point","coordinates":[73.838314600000047,18.569166900000027]},"properties":{"OBJECTID":28,"Name":"Bopodi","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":29,"geometry":{"type":"Point","coordinates":[73.883454400000062,18.540580200000022]},"properties":{"OBJECTID":29,"Name":"Bund Garden","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":30,"geometry":{"type":"Point","coordinates":[73.886623900000075,18.545282200000031]},"properties":{"OBJECTID":30,"Name":"Yerawada","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":31,"geometry":{"type":"Point","coordinates":[73.905712200000039,18.544449300000053]},"properties":{"OBJECTID":31,"Name":"Kalyani Nagar","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":32,"geometry":{"type":"Point","coordinates":[73.908124900000075,18.556727100000046]},"properties":{"OBJECTID":32,"Name":"Ramwadi","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":33,"geometry":{"type":"Point","coordinates":[73.857079600000077,18.512918900000045]},"properties":{"OBJECTID":33,"Name":"Mahatma Phule Mandai","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":34,"geometry":{"type":"Point","coordinates":[73.859682700000064,18.521362800000077]},"properties":{"OBJECTID":34,"Name":"Kasaba Peth","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":35,"geometry":{"type":"Point","coordinates":[73.857519300000035,18.499730200000045]},"properties":{"OBJECTID":35,"Name":"Swargate","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":36,"geometry":{"type":"Point","coordinates":[73.856420200000059,18.528296900000043]},"properties":{"OBJECTID":36,"Name":"District Court (Pink Line)","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":37,"geometry":{"type":"Point","coordinates":[73.827172900000051,18.54234660000003]},"properties":{"OBJECTID":37,"Name":"Savitribai Phule Pune University","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":38,"geometry":{"type":"Point","coordinates":[73.819665400000076,18.546325100000047]},"properties":{"OBJECTID":38,"Name":"Sakalnagar","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":39,"geometry":{"type":"Point","coordinates":[73.808227000000045,18.550269200000059]},"properties":{"OBJECTID":39,"Name":"Aundh","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":40,"geometry":{"type":"Point","coordinates":[73.797938100000067,18.554964300000051]},"properties":{"OBJECTID":40,"Name":"Baner Pashan Link Road","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":41,"geometry":{"type":"Point","coordinates":[73.790598200000034,18.559196100000065]},"properties":{"OBJECTID":41,"Name":"Baner Gaon","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":42,"geometry":{"type":"Point","coordinates":[73.779766500000051,18.564185900000041]},"properties":{"OBJECTID":42,"Name":"Balewadi Phata","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":43,"geometry":{"type":"Point","coordinates":[73.774838200000033,18.570512000000065]},"properties":{"OBJECTID":43,"Name":"Balewadi High Street","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":44,"geometry":{"type":"Point","coordinates":[73.766062400000067,18.57503360000004]},"properties":{"OBJECTID":44,"Name":"R K Laxman Museum Balewadi","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":45,"geometry":{"type":"Point","coordinates":[73.774574500000028,18.662560600000063]},"properties":{"OBJECTID":45,"Name":"Bhakti Shakti","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":46,"geometry":{"type":"Point","coordinates":[73.778398000000038,18.658398600000055]},"properties":{"OBJECTID":46,"Name":"Nigdi","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":47,"geometry":{"type":"Point","coordinates":[73.784746700000085,18.651160000000061]},"properties":{"OBJECTID":47,"Name":"Akurdi","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":48,"geometry":{"type":"Point","coordinates":[73.794931400000053,18.639173200000073]},"properties":{"OBJECTID":48,"Name":"Chinchwad","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":49,"geometry":{"type":"Point","coordinates":[74.004573900000082,18.598036000000036]},"properties":{"OBJECTID":49,"Name":"Vitthalwadi","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":50,"geometry":{"type":"Point","coordinates":[73.997801300000049,18.590216200000043]},"properties":{"OBJECTID":50,"Name":"Bakori Phata","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":51,"geometry":{"type":"Point","coordinates":[73.988708600000052,18.582664300000033]},"properties":{"OBJECTID":51,"Name":"Siddharth Nagar","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":52,"geometry":{"type":"Point","coordinates":[73.983648600000038,18.580610000000036]},"properties":{"OBJECTID":52,"Name":"Wagholi","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":53,"geometry":{"type":"Point","coordinates":[73.978999000000044,18.580695800000058]},"properties":{"OBJECTID":53,"Name":"Wagheshwar Temple","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":54,"geometry":{"type":"Point","coordinates":[73.962640600000043,18.575657600000056]},"properties":{"OBJECTID":54,"Name":"Upper Kharadi Rd","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":55,"geometry":{"type":"Point","coordinates":[73.955940400000031,18.572609100000022]},"properties":{"OBJECTID":55,"Name":"Ubale Nagar","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":56,"geometry":{"type":"Point","coordinates":[73.946837000000073,18.567096800000058]},"properties":{"OBJECTID":56,"Name":"Tulaja Bhavani","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":57,"geometry":{"type":"Point","coordinates":[73.937808700000062,18.562358600000039]},"properties":{"OBJECTID":57,"Name":"Kharadi Bypass","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":58,"geometry":{"type":"Point","coordinates":[73.928400800000077,18.562864000000047]},"properties":{"OBJECTID":58,"Name":"Somnath Nagar","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":59,"geometry":{"type":"Point","coordinates":[73.920387700000049,18.561482300000023]},"properties":{"OBJECTID":59,"Name":"Viman Nagar","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":60,"geometry":{"type":"Point","coordinates":[73.817815000000053,18.502603200000067]},"properties":{"OBJECTID":60,"Name":"Karve Putala","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":61,"geometry":{"type":"Point","coordinates":[73.824284500000033,18.505487600000038]},"properties":{"OBJECTID":61,"Name":"Nal Stop","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":62,"geometry":{"type":"Point","coordinates":[73.813479600000051,18.495987500000069]},"properties":{"OBJECTID":62,"Name":"Dahanukar Colony","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":63,"geometry":{"type":"Point","coordinates":[73.813460500000076,18.488076200000023]},"properties":{"OBJECTID":63,"Name":"Karve Nagar","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":64,"geometry":{"type":"Point","coordinates":[73.805507800000044,18.479960100000028]},"properties":{"OBJECTID":64,"Name":"Warje","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":65,"geometry":{"type":"Point","coordinates":[73.811384600000054,18.472615800000028]},"properties":{"OBJECTID":65,"Name":"Daulat Nagar","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":66,"geometry":{"type":"Point","coordinates":[73.817952000000048,18.467137800000046]},"properties":{"OBJECTID":66,"Name":"Manik Baug","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":67,"geometry":{"type":"Point","coordinates":[73.797143000000062,18.454998600000067]},"properties":{"OBJECTID":67,"Name":"Dalvewadi","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":68,"geometry":{"type":"Point","coordinates":[73.802868800000056,18.457184600000062]},"properties":{"OBJECTID":68,"Name":"Nanded City","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":69,"geometry":{"type":"Point","coordinates":[73.809395600000073,18.458919800000047]},"properties":{"OBJECTID":69,"Name":"Dhayari Phata","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":70,"geometry":{"type":"Point","coordinates":[73.825801700000056,18.48105570000007]},"properties":{"OBJECTID":70,"Name":"Hingane Chowk","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":71,"geometry":{"type":"Point","coordinates":[73.82939790000006,18.488103100000046]},"properties":{"OBJECTID":71,"Name":"Rajaram Pul","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":72,"geometry":{"type":"Point","coordinates":[73.837047700000085,18.494875000000036]},"properties":{"OBJECTID":72,"Name":"Deshpande Udyan","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":73,"geometry":{"type":"Point","coordinates":[73.845180200000073,18.500840400000072]},"properties":{"OBJECTID":73,"Name":"Dandekar Pul","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":74,"geometry":{"type":"Point","coordinates":[73.856871700000056,18.500704300000052]},"properties":{"OBJECTID":74,"Name":"Swargate North","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":75,"geometry":{"type":"Point","coordinates":[73.78669780000007,18.507636400000024]},"properties":{"OBJECTID":75,"Name":"Chandani Chowk","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":76,"geometry":{"type":"Point","coordinates":[73.857517700000074,18.487785900000063]},"properties":{"OBJECTID":76,"Name":"Market Yard","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":77,"geometry":{"type":"Point","coordinates":[73.856248600000072,18.475232900000037]},"properties":{"OBJECTID":77,"Name":"Bibwewadi","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":78,"geometry":{"type":"Point","coordinates":[73.858097300000054,18.461006900000029]},"properties":{"OBJECTID":78,"Name":"Padmavati","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":79,"geometry":{"type":"Point","coordinates":[73.858379300000081,18.453226700000073]},"properties":{"OBJECTID":79,"Name":"Balaji Nagar","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":80,"geometry":{"type":"Point","coordinates":[73.859008900000049,18.446573500000056]},"properties":{"OBJECTID":80,"Name":"Katraj","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":81,"geometry":{"type":"Point","coordinates":[73.86961610000003,18.501458100000036]},"properties":{"OBJECTID":81,"Name":"Seven Loves Chowk","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":82,"geometry":{"type":"Point","coordinates":[73.911627800000076,18.506307900000024]},"properties":{"OBJECTID":82,"Name":"Ramtekadi","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":83,"geometry":{"type":"Point","coordinates":[73.922774600000082,18.503670200000045]},"properties":{"OBJECTID":83,"Name":"Hadapsar","FolderPath":"overpass-turbo.eu export","SymbolID":0,"AltMode":-1,"Base":0,"Snippet":"","PopupInfo":"","HasLabel":-1,"LabelID":0}},{"type":"Feature","id":84,"geometry":{"type":"Point","coordinates":[73.92967051100004,18.508287304000078]},"properties":{"OBJECTID":84,"Name":"Magarpatta South","FolderPath":null,"SymbolID":0,"AltMode":null,"Base":null,"Snippet":null,"PopupInfo":null,"HasLabel":null,"LabelID":null}},{"type":"Feature","id":85,"geometry":{"type":"Point","coordinates":[73.93186976700008,18.522652778000065]},"properties":{"OBJECTID":85,"Name":"Magarpatta North","FolderPath":null,"SymbolID":0,"AltMode":null,"Base":null,"Snippet":null,"PopupInfo":null,"HasLabel":null,"LabelID":null}},{"type":"Feature","id":86,"geometry":{"type":"Point","coordinates":[73.934923511000079,18.541326755000057]},"properties":{"OBJECTID":86,"Name":"Sainath Nagar","FolderPath":null,"SymbolID":0,"AltMode":null,"Base":null,"Snippet":null,"PopupInfo":null,"HasLabel":null,"LabelID":null}},{"type":"Feature","id":87,"geometry":{"type":"Point","coordinates":[73.937374911000063,18.553113155000062]},"properties":{"OBJECTID":87,"Name":"Kharadi Chowk","FolderPath":null,"SymbolID":0,"AltMode":null,"Base":null,"Snippet":null,"PopupInfo":null,"HasLabel":null,"LabelID":null}},{"type":"Feature","id":88,"geometry":{"type":"Point","coordinates":[73.93265815500007,18.501531278000073]},"properties":{"OBJECTID":88,"Name":"Hadapsar Phata","FolderPath":null,"SymbolID":0,"AltMode":null,"Base":null,"Snippet":null,"PopupInfo":null,"HasLabel":null,"LabelID":null}},{"type":"Feature","id":89,"geometry":{"type":"Point","coordinates":[73.938469286000043,18.500877455000023]},"properties":{"OBJECTID":89,"Name":"Hadapsar Bus Depot","FolderPath":null,"SymbolID":0,"AltMode":null,"Base":null,"Snippet":null,"PopupInfo":null,"HasLabel":null,"LabelID":null}},{"type":"Feature","id":90,"geometry":{"type":"Point","coordinates":[73.946490371000039,18.494368277000035]},"properties":{"OBJECTID":90,"Name":"Hadapsar Gliding Club","FolderPath":null,"SymbolID":0,"AltMode":null,"Base":null,"Snippet":null,"PopupInfo":null,"HasLabel":null,"LabelID":null}},{"type":"Feature","id":91,"geometry":{"type":"Point","coordinates":[73.950385876000041,18.499640584000076]},"properties":{"OBJECTID":91,"Name":"Akashwani","FolderPath":null,"SymbolID":0,"AltMode":null,"Base":null,"Snippet":null,"PopupInfo":null,"HasLabel":null,"LabelID":null}},{"type":"Feature","id":92,"geometry":{"type":"Point","coordinates":[73.956481008000083,18.498429651000038]},"properties":{"OBJECTID":92,"Name":"Laxmi Colony","FolderPath":null,"SymbolID":0,"AltMode":null,"Base":null,"Snippet":null,"PopupInfo":null,"HasLabel":null,"LabelID":null}},{"type":"Feature","id":93,"geometry":{"type":"Point","coordinates":[73.991070937000075,18.493590634000043]},"properties":{"OBJECTID":93,"Name":"Draksha Baug","FolderPath":null,"SymbolID":0,"AltMode":null,"Base":null,"Snippet":null,"PopupInfo":null,"HasLabel":null,"LabelID":null}},{"type":"Feature","id":94,"geometry":{"type":"Point","coordinates":[73.976302157000077,18.495711738000068]},"properties":{"OBJECTID":94,"Name":"Manjari Phata","FolderPath":null,"SymbolID":0,"AltMode":null,"Base":null,"Snippet":null,"PopupInfo":null,"HasLabel":null,"LabelID":null}},{"type":"Feature","id":95,"geometry":{"type":"Point","coordinates":[73.966537578000043,18.497036176000051]},"properties":{"OBJECTID":95,"Name":"Stud Farm","FolderPath":null,"SymbolID":0,"AltMode":null,"Base":null,"Snippet":null,"PopupInfo":null,"HasLabel":null,"LabelID":null}}]}
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "id": 1,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.932552900000076,
+                    18.530287474000033
+                ]
+            },
+            "properties": {
+                "OBJECTID": 1,
+                "Name": "Hadapsar Railway Station",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 2,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.848571100000072,
+                    18.53047470000007
+                ]
+            },
+            "properties": {
+                "OBJECTID": 2,
+                "Name": "Shivajinagar",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 3,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.761541800000032,
+                    18.579709200000025
+                ]
+            },
+            "properties": {
+                "OBJECTID": 3,
+                "Name": "Mitcon Balewadi",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 4,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.844458000000031,
+                    18.51642570000007
+                ]
+            },
+            "properties": {
+                "OBJECTID": 4,
+                "Name": "Deccan Gymkhana",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 5,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.841486700000075,
+                    18.533006000000057
+                ]
+            },
+            "properties": {
+                "OBJECTID": 5,
+                "Name": "Agriculture College",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 6,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.836691900000062,
+                    18.536370700000077
+                ]
+            },
+            "properties": {
+                "OBJECTID": 6,
+                "Name": "Bhosalenagar RBI",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 7,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.757558700000061,
+                    18.59029860000004
+                ]
+            },
+            "properties": {
+                "OBJECTID": 7,
+                "Name": "Shree Shiv Chhatrapati Sports Complex Mahalunge",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 8,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.792952500000069,
+                    18.508126400000037
+                ]
+            },
+            "properties": {
+                "OBJECTID": 8,
+                "Name": "Kothrud Bus Depot",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 9,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.83806160000006,
+                    18.511973700000055
+                ]
+            },
+            "properties": {
+                "OBJECTID": 9,
+                "Name": "Garware College",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 10,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.805226900000036,
+                    18.507174400000054
+                ]
+            },
+            "properties": {
+                "OBJECTID": 10,
+                "Name": "Vanaz",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 11,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.81407930000006,
+                    18.509552800000051
+                ]
+            },
+            "properties": {
+                "OBJECTID": 11,
+                "Name": "Anandnagar",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 12,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.822125400000061,
+                    18.508877100000063
+                ]
+            },
+            "properties": {
+                "OBJECTID": 12,
+                "Name": "Paud Phata",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 13,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.828788900000063,
+                    18.507341000000054
+                ]
+            },
+            "properties": {
+                "OBJECTID": 13,
+                "Name": "SNDT College",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 14,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.803300900000067,
+                    18.629329700000028
+                ]
+            },
+            "properties": {
+                "OBJECTID": 14,
+                "Name": "PCMC",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 15,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.815757800000029,
+                    18.614536000000044
+                ]
+            },
+            "properties": {
+                "OBJECTID": 15,
+                "Name": "Sant Tukaram Nagar",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 16,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.831164200000046,
+                    18.591112000000066
+                ]
+            },
+            "properties": {
+                "OBJECTID": 16,
+                "Name": "Phugewadi",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 17,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.827279700000076,
+                    18.599627300000066
+                ]
+            },
+            "properties": {
+                "OBJECTID": 17,
+                "Name": "Kasarwadi",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 18,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.820112100000074,
+                    18.609315200000026
+                ]
+            },
+            "properties": {
+                "OBJECTID": 18,
+                "Name": "Nashik Phata",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 19,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.849726000000032,
+                    18.532182500000033
+                ]
+            },
+            "properties": {
+                "OBJECTID": 19,
+                "Name": "Shivaji Nagar",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 20,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.856914900000049,
+                    18.526849500000026
+                ]
+            },
+            "properties": {
+                "OBJECTID": 20,
+                "Name": "District Court (Purple Line)",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 21,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.877763300000083,
+                    18.532706800000028
+                ]
+            },
+            "properties": {
+                "OBJECTID": 21,
+                "Name": "Ruby Hall Clinic",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 22,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.872597000000042,
+                    18.529723400000023
+                ]
+            },
+            "properties": {
+                "OBJECTID": 22,
+                "Name": "Pune Railway Station",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 23,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.865058300000044,
+                    18.530052000000069
+                ]
+            },
+            "properties": {
+                "OBJECTID": 23,
+                "Name": "RTO (Pune)",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 24,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.846971200000041,
+                    18.519659200000035
+                ]
+            },
+            "properties": {
+                "OBJECTID": 24,
+                "Name": "Chhatrapati Sambhaji Udyan",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 25,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.857556900000077,
+                    18.526413900000023
+                ]
+            },
+            "properties": {
+                "OBJECTID": 25,
+                "Name": "District Court (Aqua Line)",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 26,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.852822600000081,
+                    18.522497200000032
+                ]
+            },
+            "properties": {
+                "OBJECTID": 26,
+                "Name": "PMC",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 27,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.833795700000053,
+                    18.583747100000039
+                ]
+            },
+            "properties": {
+                "OBJECTID": 27,
+                "Name": "Dapodi",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 28,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.838314600000047,
+                    18.569166900000027
+                ]
+            },
+            "properties": {
+                "OBJECTID": 28,
+                "Name": "Bopodi",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 29,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.883454400000062,
+                    18.540580200000022
+                ]
+            },
+            "properties": {
+                "OBJECTID": 29,
+                "Name": "Bund Garden",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 30,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.886623900000075,
+                    18.545282200000031
+                ]
+            },
+            "properties": {
+                "OBJECTID": 30,
+                "Name": "Yerawada",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 31,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.905712200000039,
+                    18.544449300000053
+                ]
+            },
+            "properties": {
+                "OBJECTID": 31,
+                "Name": "Kalyani Nagar",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 32,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.908124900000075,
+                    18.556727100000046
+                ]
+            },
+            "properties": {
+                "OBJECTID": 32,
+                "Name": "Ramwadi",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 33,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.857079600000077,
+                    18.512918900000045
+                ]
+            },
+            "properties": {
+                "OBJECTID": 33,
+                "Name": "Mahatma Phule Mandai",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 34,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.859682700000064,
+                    18.521362800000077
+                ]
+            },
+            "properties": {
+                "OBJECTID": 34,
+                "Name": "Kasaba Peth",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 35,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.857519300000035,
+                    18.499730200000045
+                ]
+            },
+            "properties": {
+                "OBJECTID": 35,
+                "Name": "Swargate",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 36,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.856420200000059,
+                    18.528296900000043
+                ]
+            },
+            "properties": {
+                "OBJECTID": 36,
+                "Name": "District Court (Pink Line)",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 37,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.827172900000051,
+                    18.54234660000003
+                ]
+            },
+            "properties": {
+                "OBJECTID": 37,
+                "Name": "Savitribai Phule Pune University",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 38,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.819665400000076,
+                    18.546325100000047
+                ]
+            },
+            "properties": {
+                "OBJECTID": 38,
+                "Name": "Sakalnagar",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 39,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.808227000000045,
+                    18.550269200000059
+                ]
+            },
+            "properties": {
+                "OBJECTID": 39,
+                "Name": "Aundh",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 40,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.797938100000067,
+                    18.554964300000051
+                ]
+            },
+            "properties": {
+                "OBJECTID": 40,
+                "Name": "Baner Pashan Link Road",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 41,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.790598200000034,
+                    18.559196100000065
+                ]
+            },
+            "properties": {
+                "OBJECTID": 41,
+                "Name": "Baner Gaon",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 42,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.779766500000051,
+                    18.564185900000041
+                ]
+            },
+            "properties": {
+                "OBJECTID": 42,
+                "Name": "Balewadi Phata",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 43,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.774838200000033,
+                    18.570512000000065
+                ]
+            },
+            "properties": {
+                "OBJECTID": 43,
+                "Name": "Balewadi High Street",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 44,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.766062400000067,
+                    18.57503360000004
+                ]
+            },
+            "properties": {
+                "OBJECTID": 44,
+                "Name": "R K Laxman Museum Balewadi",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 45,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.774574500000028,
+                    18.662560600000063
+                ]
+            },
+            "properties": {
+                "OBJECTID": 45,
+                "Name": "Bhakti Shakti",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 46,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.778398000000038,
+                    18.658398600000055
+                ]
+            },
+            "properties": {
+                "OBJECTID": 46,
+                "Name": "Nigdi",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 47,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.784746700000085,
+                    18.651160000000061
+                ]
+            },
+            "properties": {
+                "OBJECTID": 47,
+                "Name": "Akurdi",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 48,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.794931400000053,
+                    18.639173200000073
+                ]
+            },
+            "properties": {
+                "OBJECTID": 48,
+                "Name": "Chinchwad",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 49,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    74.004573900000082,
+                    18.598036000000036
+                ]
+            },
+            "properties": {
+                "OBJECTID": 49,
+                "Name": "Vitthalwadi",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 50,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.997801300000049,
+                    18.590216200000043
+                ]
+            },
+            "properties": {
+                "OBJECTID": 50,
+                "Name": "Bakori Phata",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 51,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.988708600000052,
+                    18.582664300000033
+                ]
+            },
+            "properties": {
+                "OBJECTID": 51,
+                "Name": "Siddharth Nagar",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 52,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.983648600000038,
+                    18.580610000000036
+                ]
+            },
+            "properties": {
+                "OBJECTID": 52,
+                "Name": "Wagholi",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 53,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.978999000000044,
+                    18.580695800000058
+                ]
+            },
+            "properties": {
+                "OBJECTID": 53,
+                "Name": "Wagheshwar Temple",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 54,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.962640600000043,
+                    18.575657600000056
+                ]
+            },
+            "properties": {
+                "OBJECTID": 54,
+                "Name": "Upper Kharadi Rd",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 55,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.955940400000031,
+                    18.572609100000022
+                ]
+            },
+            "properties": {
+                "OBJECTID": 55,
+                "Name": "Ubale Nagar",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 56,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.946837000000073,
+                    18.567096800000058
+                ]
+            },
+            "properties": {
+                "OBJECTID": 56,
+                "Name": "Tulaja Bhavani",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 57,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.937808700000062,
+                    18.562358600000039
+                ]
+            },
+            "properties": {
+                "OBJECTID": 57,
+                "Name": "Kharadi Bypass",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 58,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.928400800000077,
+                    18.562864000000047
+                ]
+            },
+            "properties": {
+                "OBJECTID": 58,
+                "Name": "Somnath Nagar",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 59,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.920387700000049,
+                    18.561482300000023
+                ]
+            },
+            "properties": {
+                "OBJECTID": 59,
+                "Name": "Viman Nagar",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 60,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.817815000000053,
+                    18.502603200000067
+                ]
+            },
+            "properties": {
+                "OBJECTID": 60,
+                "Name": "Karve Putala",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 61,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.824284500000033,
+                    18.505487600000038
+                ]
+            },
+            "properties": {
+                "OBJECTID": 61,
+                "Name": "Nal Stop",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 62,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.813479600000051,
+                    18.495987500000069
+                ]
+            },
+            "properties": {
+                "OBJECTID": 62,
+                "Name": "Dahanukar Colony",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 63,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.813460500000076,
+                    18.488076200000023
+                ]
+            },
+            "properties": {
+                "OBJECTID": 63,
+                "Name": "Karve Nagar",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 64,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.805507800000044,
+                    18.479960100000028
+                ]
+            },
+            "properties": {
+                "OBJECTID": 64,
+                "Name": "Warje",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 65,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.811384600000054,
+                    18.472615800000028
+                ]
+            },
+            "properties": {
+                "OBJECTID": 65,
+                "Name": "Daulat Nagar",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 66,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.817952000000048,
+                    18.467137800000046
+                ]
+            },
+            "properties": {
+                "OBJECTID": 66,
+                "Name": "Manik Baug",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 67,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.797143000000062,
+                    18.454998600000067
+                ]
+            },
+            "properties": {
+                "OBJECTID": 67,
+                "Name": "Dalvewadi",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 68,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.802868800000056,
+                    18.457184600000062
+                ]
+            },
+            "properties": {
+                "OBJECTID": 68,
+                "Name": "Nanded City",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 69,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.809395600000073,
+                    18.458919800000047
+                ]
+            },
+            "properties": {
+                "OBJECTID": 69,
+                "Name": "Dhayari Phata",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 70,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.825801700000056,
+                    18.48105570000007
+                ]
+            },
+            "properties": {
+                "OBJECTID": 70,
+                "Name": "Hingane Chowk",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 71,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.82939790000006,
+                    18.488103100000046
+                ]
+            },
+            "properties": {
+                "OBJECTID": 71,
+                "Name": "Rajaram Pul",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 72,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.837047700000085,
+                    18.494875000000036
+                ]
+            },
+            "properties": {
+                "OBJECTID": 72,
+                "Name": "Deshpande Udyan",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 73,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.845180200000073,
+                    18.500840400000072
+                ]
+            },
+            "properties": {
+                "OBJECTID": 73,
+                "Name": "Dandekar Pul",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 74,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.856871700000056,
+                    18.500704300000052
+                ]
+            },
+            "properties": {
+                "OBJECTID": 74,
+                "Name": "Swargate North",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 75,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.78669780000007,
+                    18.507636400000024
+                ]
+            },
+            "properties": {
+                "OBJECTID": 75,
+                "Name": "Chandani Chowk",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 76,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.857517700000074,
+                    18.487785900000063
+                ]
+            },
+            "properties": {
+                "OBJECTID": 76,
+                "Name": "Market Yard",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 77,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.856248600000072,
+                    18.475232900000037
+                ]
+            },
+            "properties": {
+                "OBJECTID": 77,
+                "Name": "Bibwewadi",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 78,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.858097300000054,
+                    18.461006900000029
+                ]
+            },
+            "properties": {
+                "OBJECTID": 78,
+                "Name": "Padmavati",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 79,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.858379300000081,
+                    18.453226700000073
+                ]
+            },
+            "properties": {
+                "OBJECTID": 79,
+                "Name": "Balaji Nagar",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 80,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.859008900000049,
+                    18.446573500000056
+                ]
+            },
+            "properties": {
+                "OBJECTID": 80,
+                "Name": "Katraj",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 81,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.86961610000003,
+                    18.501458100000036
+                ]
+            },
+            "properties": {
+                "OBJECTID": 81,
+                "Name": "Seven Loves Chowk",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 82,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.911627800000076,
+                    18.506307900000024
+                ]
+            },
+            "properties": {
+                "OBJECTID": 82,
+                "Name": "Ramtekadi",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 83,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.922774600000082,
+                    18.503670200000045
+                ]
+            },
+            "properties": {
+                "OBJECTID": 83,
+                "Name": "Hadapsar",
+                "FolderPath": "overpass-turbo.eu export",
+                "SymbolID": 0,
+                "AltMode": -1,
+                "Base": 0,
+                "Snippet": "",
+                "PopupInfo": "",
+                "HasLabel": -1,
+                "LabelID": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 84,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.92967051100004,
+                    18.508287304000078
+                ]
+            },
+            "properties": {
+                "OBJECTID": 84,
+                "Name": "Magarpatta South",
+                "FolderPath": null,
+                "SymbolID": 0,
+                "AltMode": null,
+                "Base": null,
+                "Snippet": null,
+                "PopupInfo": null,
+                "HasLabel": null,
+                "LabelID": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 85,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.93186976700008,
+                    18.522652778000065
+                ]
+            },
+            "properties": {
+                "OBJECTID": 85,
+                "Name": "Magarpatta North",
+                "FolderPath": null,
+                "SymbolID": 0,
+                "AltMode": null,
+                "Base": null,
+                "Snippet": null,
+                "PopupInfo": null,
+                "HasLabel": null,
+                "LabelID": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 86,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.934923511000079,
+                    18.541326755000057
+                ]
+            },
+            "properties": {
+                "OBJECTID": 86,
+                "Name": "Sainath Nagar",
+                "FolderPath": null,
+                "SymbolID": 0,
+                "AltMode": null,
+                "Base": null,
+                "Snippet": null,
+                "PopupInfo": null,
+                "HasLabel": null,
+                "LabelID": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 87,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.937374911000063,
+                    18.553113155000062
+                ]
+            },
+            "properties": {
+                "OBJECTID": 87,
+                "Name": "Kharadi Chowk",
+                "FolderPath": null,
+                "SymbolID": 0,
+                "AltMode": null,
+                "Base": null,
+                "Snippet": null,
+                "PopupInfo": null,
+                "HasLabel": null,
+                "LabelID": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 88,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.93265815500007,
+                    18.501531278000073
+                ]
+            },
+            "properties": {
+                "OBJECTID": 88,
+                "Name": "Hadapsar Phata",
+                "FolderPath": null,
+                "SymbolID": 0,
+                "AltMode": null,
+                "Base": null,
+                "Snippet": null,
+                "PopupInfo": null,
+                "HasLabel": null,
+                "LabelID": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 89,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.938469286000043,
+                    18.500877455000023
+                ]
+            },
+            "properties": {
+                "OBJECTID": 89,
+                "Name": "Hadapsar Bus Depot",
+                "FolderPath": null,
+                "SymbolID": 0,
+                "AltMode": null,
+                "Base": null,
+                "Snippet": null,
+                "PopupInfo": null,
+                "HasLabel": null,
+                "LabelID": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 90,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.946490371000039,
+                    18.494368277000035
+                ]
+            },
+            "properties": {
+                "OBJECTID": 90,
+                "Name": "Hadapsar Gliding Club",
+                "FolderPath": null,
+                "SymbolID": 0,
+                "AltMode": null,
+                "Base": null,
+                "Snippet": null,
+                "PopupInfo": null,
+                "HasLabel": null,
+                "LabelID": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 91,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.950385876000041,
+                    18.499640584000076
+                ]
+            },
+            "properties": {
+                "OBJECTID": 91,
+                "Name": "Akashwani",
+                "FolderPath": null,
+                "SymbolID": 0,
+                "AltMode": null,
+                "Base": null,
+                "Snippet": null,
+                "PopupInfo": null,
+                "HasLabel": null,
+                "LabelID": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 92,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.956481008000083,
+                    18.498429651000038
+                ]
+            },
+            "properties": {
+                "OBJECTID": 92,
+                "Name": "Laxmi Colony",
+                "FolderPath": null,
+                "SymbolID": 0,
+                "AltMode": null,
+                "Base": null,
+                "Snippet": null,
+                "PopupInfo": null,
+                "HasLabel": null,
+                "LabelID": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 93,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.991070937000075,
+                    18.493590634000043
+                ]
+            },
+            "properties": {
+                "OBJECTID": 93,
+                "Name": "Draksha Baug",
+                "FolderPath": null,
+                "SymbolID": 0,
+                "AltMode": null,
+                "Base": null,
+                "Snippet": null,
+                "PopupInfo": null,
+                "HasLabel": null,
+                "LabelID": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 94,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.976302157000077,
+                    18.495711738000068
+                ]
+            },
+            "properties": {
+                "OBJECTID": 94,
+                "Name": "Manjari Phata",
+                "FolderPath": null,
+                "SymbolID": 0,
+                "AltMode": null,
+                "Base": null,
+                "Snippet": null,
+                "PopupInfo": null,
+                "HasLabel": null,
+                "LabelID": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 95,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.966537578000043,
+                    18.497036176000051
+                ]
+            },
+            "properties": {
+                "OBJECTID": 95,
+                "Name": "Stud Farm",
+                "FolderPath": null,
+                "SymbolID": 0,
+                "AltMode": null,
+                "Base": null,
+                "Snippet": null,
+                "PopupInfo": null,
+                "HasLabel": null,
+                "LabelID": null
+            }
+        }
+    ]
+}

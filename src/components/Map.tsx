@@ -71,8 +71,28 @@ export const GISMap: React.FC<MapProps> = ({
       center: [18.553, 73.864],
       zoom: 11,
       zoomControl: false,
-      preferCanvas: true,
     });
+
+    // Custom Map Panes with explicit z-index stacking hierarchy
+    // Guarantees high-priority transit features (Metro corridors & stations)
+    // always render permanently above ward shapefiles and road polygons.
+    const wardsPane = map.createPane('wardsPane');
+    wardsPane.style.zIndex = '400';
+
+    const roadsPane = map.createPane('roadsPane');
+    roadsPane.style.zIndex = '420';
+
+    const busRoutesPane = map.createPane('busRoutesPane');
+    busRoutesPane.style.zIndex = '430';
+
+    const busStopsPane = map.createPane('busStopsPane');
+    busStopsPane.style.zIndex = '440';
+
+    const metroRoutesPane = map.createPane('metroRoutesPane');
+    metroRoutesPane.style.zIndex = '500';
+
+    const metroStationsPane = map.createPane('metroStationsPane');
+    metroStationsPane.style.zIndex = '520';
 
     // Single Authoritative Basemap: OpenStreetMap
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -167,6 +187,7 @@ export const GISMap: React.FC<MapProps> = ({
       }
 
       return {
+        pane: 'wardsPane',
         fillColor,
         fillOpacity,
         color: strokeColor,
@@ -176,6 +197,7 @@ export const GISMap: React.FC<MapProps> = ({
     };
 
     const wardsLayer = L.geoJSON(wardsData, {
+      pane: 'wardsPane',
       style: getStyle,
       onEachFeature: (feature, layer) => {
         const meta = extractWardMeta(feature.properties);
@@ -242,8 +264,10 @@ export const GISMap: React.FC<MapProps> = ({
 
     const group = L.layerGroup();
     L.geoJSON(stopsData, {
+      pane: 'busStopsPane',
       pointToLayer: (_feature, latlng) => {
         return L.circleMarker(latlng, {
+          pane: 'busStopsPane',
           radius: 3.5,
           fillColor: '#2563eb',
           color: '#ffffff',
@@ -280,7 +304,9 @@ export const GISMap: React.FC<MapProps> = ({
     }
 
     const routesLayer = L.geoJSON(routesData, {
+      pane: 'busRoutesPane',
       style: {
+        pane: 'busRoutesPane',
         color: '#ec4899',
         weight: 2,
         opacity: 0.65,
@@ -325,6 +351,7 @@ export const GISMap: React.FC<MapProps> = ({
     const isVisible = Boolean(visibility.metroRoutes ?? visibility.metro);
 
     const routesLayer = L.geoJSON(data, {
+      pane: 'metroRoutesPane',
       filter: (feature) => {
         const geomType = feature?.geometry?.type;
         return geomType === 'LineString' || geomType === 'MultiLineString';
@@ -333,14 +360,17 @@ export const GISMap: React.FC<MapProps> = ({
         const p = feature?.properties || {};
         const color = p.color || '#0284c7';
         const isSiding = Boolean(p.is_siding);
-        const weight = p.weight || (isSiding ? 2.2 : 4.5);
-        const opacity = isSiding ? 0.65 : 0.95;
+        const weight = p.weight || (isSiding ? 2.5 : 4.5);
+        const opacity = isSiding ? 0.75 : 1.0;
         const dashArray = p.dash_array || undefined;
         return {
+          pane: 'metroRoutesPane',
           color,
           weight,
           opacity,
           dashArray,
+          lineCap: 'round',
+          lineJoin: 'round',
         };
       },
       onEachFeature: (feature, layer) => {
@@ -351,19 +381,37 @@ export const GISMap: React.FC<MapProps> = ({
           p.status === 'Operational' ? '#ecfdf5' : p.status?.includes('Construction') ? '#fffbeb' : '#eff6ff';
 
         layer.bindTooltip(
-          `<div style="font-weight:700; color:${p.color || '#0284c7'}; font-size:12px;">${p.name || p.line_name}</div>
-           <div style="font-size:10.5px; color:#475569; margin-top:2px;">${p.corridor || 'Corridor Alignment'}</div>
+          `<div style="font-weight:700; color:${p.color || '#0284c7'}; font-size:12.5px;">${p.name || p.line_name}</div>
+           <div style="font-size:11px; color:#475569; margin-top:2px; font-weight:600;">${p.corridor || 'Corridor Alignment'}</div>
            <div style="display:flex; align-items:center; gap:6px; margin-top:4px;">
-             <span style="font-size:9.5px; font-weight:700; padding:1px 5px; border-radius:3px; background:${statusBadgeBg}; color:${statusBadgeColor};">${p.status || 'Active Corridor'}</span>
+             <span style="font-size:9.5px; font-weight:700; padding:1px 6px; border-radius:3px; background:${statusBadgeBg}; color:${statusBadgeColor};">${p.status || 'Active Corridor'}</span>
              ${p.length_km ? `<span style="font-size:10px; color:#64748b; font-weight:600;">${p.length_km} km</span>` : ''}
            </div>`,
           { className: 'leaflet-tooltip-ward', sticky: true }
         );
+
+        layer.on({
+          mouseover: (e) => {
+            const l = e.target as L.Path;
+            l.setStyle({
+              weight: (p.weight || (p.is_siding ? 2.5 : 4.5)) + 2.5,
+              opacity: 1.0,
+            });
+            if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+              l.bringToFront();
+            }
+          },
+          mouseout: (e) => {
+            const l = e.target as L.Path;
+            routesLayer.resetStyle(l);
+          },
+        });
       },
     });
 
     if (isVisible) {
       routesLayer.addTo(map);
+      routesLayer.bringToFront();
     }
     metroRoutesLayerRef.current = routesLayer;
   }, [metroRoutesData, metroData, visibility.metroRoutes, visibility.metro]);
@@ -381,6 +429,7 @@ export const GISMap: React.FC<MapProps> = ({
     const isVisible = Boolean(visibility.metroStations ?? visibility.metro);
 
     const stationsLayer = L.geoJSON(data, {
+      pane: 'metroStationsPane',
       filter: (feature) => {
         return feature?.geometry?.type === 'Point';
       },
@@ -389,12 +438,13 @@ export const GISMap: React.FC<MapProps> = ({
         const isInterchange = Boolean(p.is_interchange);
         const color = p.color || '#0284c7';
         return L.circleMarker(latlng, {
+          pane: 'metroStationsPane',
           radius: isInterchange ? 6.5 : 4.5,
           fillColor: '#ffffff',
           color: color,
-          weight: isInterchange ? 3.2 : 2.2,
-          opacity: 1,
-          fillOpacity: 1,
+          weight: isInterchange ? 3.5 : 2.5,
+          opacity: 1.0,
+          fillOpacity: 1.0,
         });
       },
       onEachFeature: (feature, layer) => {
@@ -411,28 +461,48 @@ export const GISMap: React.FC<MapProps> = ({
           : '';
 
         layer.bindTooltip(
-          `<div style="font-weight:700; color:#0f172a; font-size:12px;">${p.station_name || p.name}</div>
-           <div style="font-size:10.5px; color:#475569; margin-top:2px; font-weight:600;">
+          `<div style="font-weight:700; color:#0f172a; font-size:12.5px;">${p.station_name || p.name}</div>
+           <div style="font-size:11px; color:#475569; margin-top:2px; font-weight:600;">
              <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:${p.color || '#0284c7'}; margin-right:5px;"></span>${p.line_name}
            </div>
            <div style="display:flex; align-items:center; gap:6px; margin-top:4px;">
-             <span style="font-size:9.5px; font-weight:700; padding:1px 5px; border-radius:3px; background:${statusBadgeBg}; color:${statusBadgeColor};">${p.status}</span>
+             <span style="font-size:9.5px; font-weight:700; padding:1px 6px; border-radius:3px; background:${statusBadgeBg}; color:${statusBadgeColor};">${p.status}</span>
              <span style="font-size:10px; color:#64748b;">${stype}</span>
            </div>
            ${p.ward_name ? `<div style="font-size:9.5px; color:#64748b; margin-top:3px;">Ward: <strong>${p.ward_name}</strong></div>` : ''}
            ${interchangeBadge}`,
           { className: 'leaflet-tooltip-ward' }
         );
+
+        layer.on({
+          mouseover: (e) => {
+            const l = e.target as L.CircleMarker;
+            l.setStyle({
+              radius: (p.is_interchange ? 6.5 : 4.5) + 2,
+              fillColor: p.color || '#0284c7',
+              color: '#ffffff',
+              weight: 3.5,
+            });
+            if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+              l.bringToFront();
+            }
+          },
+          mouseout: (e) => {
+            const l = e.target as L.CircleMarker;
+            stationsLayer.resetStyle(l);
+          },
+        });
       },
     });
 
     if (isVisible) {
       stationsLayer.addTo(map);
+      stationsLayer.bringToFront();
     }
     metroStationsLayerRef.current = stationsLayer;
   }, [metroStationsData, metroData, visibility.metroStations, visibility.metro]);
 
-  // 7. Render Major Roads
+  // 8. Render Major Roads
   useEffect(() => {
     const map = mapRef.current;
     if (!map || !majorRoadsData) return;
@@ -442,6 +512,7 @@ export const GISMap: React.FC<MapProps> = ({
     }
 
     const majorRoadsLayer = L.geoJSON(majorRoadsData, {
+      pane: 'roadsPane',
       style: (feature) => {
         const fclass = (feature?.properties?.fclass || '').toLowerCase();
         let color = '#f59e0b';
@@ -458,7 +529,7 @@ export const GISMap: React.FC<MapProps> = ({
           weight = 1.8;
         }
 
-        return { color, weight, opacity: 0.75 };
+        return { pane: 'roadsPane', color, weight, opacity: 0.75 };
       },
       onEachFeature: (feature, layer) => {
         const p = feature.properties || {};
@@ -477,7 +548,7 @@ export const GISMap: React.FC<MapProps> = ({
     majorRoadsLayerRef.current = majorRoadsLayer;
   }, [majorRoadsData, visibility.majorRoads]);
 
-  // 8. Render All Local Roads
+  // 9. Render All Local Roads
   useEffect(() => {
     const map = mapRef.current;
     if (!map || !allRoadsData) return;
@@ -487,7 +558,9 @@ export const GISMap: React.FC<MapProps> = ({
     }
 
     const allRoadsLayer = L.geoJSON(allRoadsData, {
+      pane: 'roadsPane',
       style: {
+        pane: 'roadsPane',
         color: '#94a3b8',
         weight: 0.8,
         opacity: 0.4,
