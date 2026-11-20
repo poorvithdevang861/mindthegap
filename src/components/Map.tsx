@@ -320,15 +320,17 @@ export const GISMap: React.FC<MapProps> = ({
       style: (feature) => {
         const geomType = feature?.geometry?.type;
         if (geomType === 'LineString' || geomType === 'MultiLineString') {
-          const color =
-            feature?.properties?.color ||
-            (feature?.properties?.line_name?.toLowerCase().includes('purple')
-              ? '#7c3aed'
-              : '#0284c7');
+          const p = feature?.properties || {};
+          const color = p.color || '#0284c7';
+          const isSiding = Boolean(p.is_siding);
+          const weight = p.weight || (isSiding ? 2.2 : 4.5);
+          const opacity = isSiding ? 0.65 : 0.95;
+          const dashArray = p.dash_array || undefined;
           return {
             color,
-            weight: 4.5,
-            opacity: 0.95,
+            weight,
+            opacity,
+            dashArray,
           };
         }
         return {
@@ -339,17 +341,14 @@ export const GISMap: React.FC<MapProps> = ({
         };
       },
       pointToLayer: (feature, latlng) => {
-        const isInterchange = Boolean(feature?.properties?.is_interchange);
-        const color =
-          feature?.properties?.color ||
-          (feature?.properties?.line_name?.toLowerCase().includes('purple')
-            ? '#7c3aed'
-            : '#0284c7');
+        const p = feature?.properties || {};
+        const isInterchange = Boolean(p.is_interchange);
+        const color = p.color || '#0284c7';
         return L.circleMarker(latlng, {
           radius: isInterchange ? 6.5 : 4.5,
           fillColor: '#ffffff',
           color: color,
-          weight: isInterchange ? 3 : 2,
+          weight: isInterchange ? 3.2 : 2.2,
           opacity: 1,
           fillOpacity: 1,
         });
@@ -359,20 +358,43 @@ export const GISMap: React.FC<MapProps> = ({
         const isPoint = feature?.geometry?.type === 'Point';
 
         if (isPoint) {
-          const stype = p.station_type || 'Transit Station';
+          const stype = p.station_type || 'Elevated Station';
+          const statusBadgeColor =
+            p.status === 'Operational' ? '#059669' : p.status === 'Under Construction' ? '#d97706' : '#2563eb';
+          const statusBadgeBg =
+            p.status === 'Operational' ? '#ecfdf5' : p.status === 'Under Construction' ? '#fffbeb' : '#eff6ff';
           const interchangeBadge = p.is_interchange
-            ? '<span style="background:#eff6ff; color:#1d4ed8; font-weight:700; font-size:9.5px; padding:1px 5px; border-radius:3px; margin-left:6px;">INTERCHANGE</span>'
+            ? `<div style="margin-top:4px; font-size:10px; font-weight:700; color:#1d4ed8; background:#eff6ff; padding:2px 6px; border-radius:4px; display:inline-block; border:1px solid #bfdbfe;">
+                 ⇄ ${p.interchange_desc || 'INTERCHANGE HUB'}
+               </div>`
             : '';
+
           layer.bindTooltip(
-            `<div style="font-weight:700; color:#0f172a; font-size:12px;">${p.station_name || p.name}${interchangeBadge}</div>
-             <div style="font-size:10.5px; color:#64748b; margin-top:2px;">${p.line_name} • ${stype}</div>`,
+            `<div style="font-weight:700; color:#0f172a; font-size:12px;">${p.station_name || p.name}</div>
+             <div style="font-size:10.5px; color:#475569; margin-top:2px; font-weight:600;">
+               <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:${p.color || '#0284c7'}; margin-right:5px;"></span>${p.line_name}
+             </div>
+             <div style="display:flex; align-items:center; gap:6px; margin-top:4px;">
+               <span style="font-size:9.5px; font-weight:700; padding:1px 5px; border-radius:3px; background:${statusBadgeBg}; color:${statusBadgeColor};">${p.status}</span>
+               <span style="font-size:10px; color:#64748b;">${stype}</span>
+             </div>
+             ${p.ward_name ? `<div style="font-size:9.5px; color:#64748b; margin-top:3px;">Ward: <strong>${p.ward_name}</strong></div>` : ''}
+             ${interchangeBadge}`,
             { className: 'leaflet-tooltip-ward' }
           );
         } else {
+          const statusBadgeColor =
+            p.status === 'Operational' ? '#059669' : p.status?.includes('Construction') ? '#d97706' : '#2563eb';
+          const statusBadgeBg =
+            p.status === 'Operational' ? '#ecfdf5' : p.status?.includes('Construction') ? '#fffbeb' : '#eff6ff';
+
           layer.bindTooltip(
             `<div style="font-weight:700; color:${p.color || '#0284c7'}; font-size:12px;">${p.name || p.line_name}</div>
              <div style="font-size:10.5px; color:#475569; margin-top:2px;">${p.corridor || 'Corridor Alignment'}</div>
-             <div style="font-size:10px; color:#059669; font-weight:600; margin-top:2px;">${p.length_km ? `${p.length_km} km • ` : ''}${p.stations_count ? `${p.stations_count} Stations • ` : ''}${p.status || 'Operational'}</div>`,
+             <div style="display:flex; align-items:center; gap:6px; margin-top:4px;">
+               <span style="font-size:9.5px; font-weight:700; padding:1px 5px; border-radius:3px; background:${statusBadgeBg}; color:${statusBadgeColor};">${p.status || 'Active Corridor'}</span>
+               ${p.length_km ? `<span style="font-size:10px; color:#64748b; font-weight:600;">${p.length_km} km</span>` : ''}
+             </div>`,
             { className: 'leaflet-tooltip-ward', sticky: true }
           );
         }

@@ -323,7 +323,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               </div>
               <div>
                 <div className="layer-title-text">Metro Rail Network</div>
-                <div className="layer-subtext">Purple & Aqua Lines (29 Stations)</div>
+                <div className="layer-subtext">Lines 1, 2, 3 & 4 (95 Stations & Routes)</div>
               </div>
             </div>
             <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
@@ -340,6 +340,65 @@ export const Sidebar: React.FC<SidebarProps> = ({
               </label>
             </div>
           </div>
+
+          {visibility.metro && (
+            <div
+              style={{
+                marginTop: '6px',
+                padding: '8px 10px',
+                background: '#f8fafc',
+                borderRadius: '8px',
+                border: '1px solid #e2e8f0',
+                fontSize: '11px',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '5px',
+              }}
+            >
+              <div style={{ fontSize: '10px', fontWeight: 700, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.4px', marginBottom: '2px' }}>
+                Corridor Legend
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
+                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#7c3aed', flexShrink: 0 }} />
+                  Line 1: Purple Line
+                </span>
+                <span style={{ fontSize: '9.5px', color: '#059669', background: '#ecfdf5', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
+                  Operational
+                </span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
+                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#0284c7', flexShrink: 0 }} />
+                  Line 2: Aqua Line
+                </span>
+                <span style={{ fontSize: '9.5px', color: '#059669', background: '#ecfdf5', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
+                  Operational
+                </span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
+                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#ec4899', flexShrink: 0 }} />
+                  Line 3: Pink Line
+                </span>
+                <span style={{ fontSize: '9.5px', color: '#d97706', background: '#fffbeb', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
+                  Under Constr.
+                </span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
+                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#f97316', flexShrink: 0 }} />
+                  Line 4 & 4A/B
+                </span>
+                <span style={{ fontSize: '9.5px', color: '#2563eb', background: '#eff6ff', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
+                  Planned
+                </span>
+              </div>
+              <div style={{ fontSize: '9.5px', color: '#64748b', marginTop: '2px', borderTop: '1px dashed #e2e8f0', paddingTop: '4px' }}>
+                ○ <strong>Solid circle</strong>: Station • ◎ <strong>Larger badge</strong>: Transfer Hub
+              </div>
+            </div>
+          )}
         </div>
 
         {/* SECTION 4: ROAD NETWORK & ARTERIALS */}
