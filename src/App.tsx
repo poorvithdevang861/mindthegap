@@ -21,7 +21,8 @@ export const App: React.FC = () => {
   const [wardsData, setWardsData] = useState<FeatureCollection | null>(null);
   const [stopsData, setStopsData] = useState<FeatureCollection | null>(null);
   const [routesData, setRoutesData] = useState<FeatureCollection | null>(null);
-  const [metroData, setMetroData] = useState<FeatureCollection | null>(null);
+  const [metroRoutesData, setMetroRoutesData] = useState<FeatureCollection | null>(null);
+  const [metroStationsData, setMetroStationsData] = useState<FeatureCollection | null>(null);
   const [majorRoadsData, setMajorRoadsData] = useState<FeatureCollection | null>(null);
   const [allRoadsData, setAllRoadsData] = useState<FeatureCollection | null>(null);
 
@@ -37,7 +38,8 @@ export const App: React.FC = () => {
     wards: true,
     stops: false,
     routes: false,
-    metro: false,
+    metroRoutes: false,
+    metroStations: false,
     majorRoads: false,
     allRoads: false,
   });
@@ -50,45 +52,35 @@ export const App: React.FC = () => {
   useEffect(() => {
     async function loadData() {
       try {
-        // Check preloaded window data first (from data.js if included)
-        const preloaded = (window as any).PUNE_SPATIAL_DATA;
-        if (preloaded) {
-          setLoadingMessage('Initializing spatial boundaries...');
-          setWardsData(preloaded.wards);
-          setStopsData(preloaded.stops);
-          setRoutesData(preloaded.routes);
-          setMajorRoadsData(preloaded.majorRoads);
-          setMetroData(preloaded.wards); // shares zone boundaries
-          setLoading(false);
-          return;
-        }
-
-        // Otherwise fetch via HTTP
         const base = import.meta.env.BASE_URL;
-        setLoadingMessage('Loading Pune Municipal Wards...');
-        const wardsRes = await fetch(`${base}Full_Pune_1 (1).geojson`);
-        const wardsJson = await wardsRes.json();
+        setLoadingMessage('Loading Pune municipal boundaries & transit layers...');
+
+        const [wardsRes, stopsRes, routesRes, roadsRes, metroRoutesRes, metroStationsRes] =
+          await Promise.all([
+            fetch(`${base}Full_Pune_1 (1).geojson`),
+            fetch(`${base}GTFS.geojson`),
+            fetch(`${base}GTFSRoutes.geojson`),
+            fetch(`${base}PuneRoads_Major.geojson`),
+            fetch(`${base}Metro_Routes.geojson`),
+            fetch(`${base}Metro_Stations.geojson`),
+          ]);
+
+        const [wardsJson, stopsJson, routesJson, roadsJson, metroRoutesJson, metroStationsJson] =
+          await Promise.all([
+            wardsRes.json(),
+            stopsRes.json(),
+            routesRes.json(),
+            roadsRes.json(),
+            metroRoutesRes.json(),
+            metroStationsRes.json(),
+          ]);
+
         setWardsData(wardsJson);
-
-        setLoadingMessage('Loading GTFS Bus Stops...');
-        const stopsRes = await fetch(`${base}GTFS.geojson`);
-        const stopsJson = await stopsRes.json();
         setStopsData(stopsJson);
-
-        setLoadingMessage('Loading Transit Routes...');
-        const routesRes = await fetch(`${base}GTFSRoutes.geojson`);
-        const routesJson = await routesRes.json();
         setRoutesData(routesJson);
-
-        setLoadingMessage('Loading Major Road Arteries...');
-        const roadsRes = await fetch(`${base}PuneRoads_Major.geojson`);
-        const roadsJson = await roadsRes.json();
         setMajorRoadsData(roadsJson);
-
-        setLoadingMessage('Loading Metro Boundaries...');
-        const metroRes = await fetch(`${base}Metro.geojson`);
-        const metroJson = await metroRes.json();
-        setMetroData(metroJson);
+        setMetroRoutesData(metroRoutesJson);
+        setMetroStationsData(metroStationsJson);
 
         setLoading(false);
       } catch (err: any) {
@@ -117,7 +109,21 @@ export const App: React.FC = () => {
         }
       }
 
-      setVisibility((prev) => ({ ...prev, [key]: !prev[key] }));
+      setVisibility((prev) => {
+        if (key === 'metro') {
+          const next = !(prev.metroStations || prev.metroRoutes);
+          return {
+            ...prev,
+            metro: next,
+            metroStations: next,
+            metroRoutes: next,
+          };
+        }
+        return {
+          ...prev,
+          [key]: !prev[key],
+        };
+      });
     },
     [visibility.allRoads, allRoadsData]
   );
@@ -185,6 +191,8 @@ export const App: React.FC = () => {
       stops: false,
       routes: false,
       metro: false,
+      metroRoutes: false,
+      metroStations: false,
       majorRoads: false,
       allRoads: false,
     });
@@ -237,7 +245,8 @@ export const App: React.FC = () => {
         wardsData={wardsData}
         stopsData={stopsData}
         routesData={routesData}
-        metroData={metroData}
+        metroRoutesData={metroRoutesData}
+        metroStationsData={metroStationsData}
         majorRoadsData={majorRoadsData}
         allRoadsData={allRoadsData}
         visibility={visibility}

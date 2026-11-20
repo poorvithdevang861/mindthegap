@@ -92,6 +92,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
     visibility.wards &&
     !visibility.stops &&
     !visibility.routes &&
+    !visibility.metroRoutes &&
+    !visibility.metroStations &&
     !visibility.metro &&
     !visibility.majorRoads &&
     !visibility.allRoads &&
@@ -106,6 +108,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
       if (!visibility.wards) onToggleLayer('wards');
       if (visibility.stops) onToggleLayer('stops');
       if (visibility.routes) onToggleLayer('routes');
+      if (visibility.metroRoutes) onToggleLayer('metroRoutes');
+      if (visibility.metroStations) onToggleLayer('metroStations');
       if (visibility.metro) onToggleLayer('metro');
       if (visibility.majorRoads) onToggleLayer('majorRoads');
       if (visibility.allRoads) onToggleLayer('allRoads');
@@ -312,36 +316,65 @@ export const Sidebar: React.FC<SidebarProps> = ({
             </div>
           </div>
 
-          {/* Metro Corridors */}
+          {/* Metro Corridors (Lines 1-4 Routes) */}
           <div
-            className={`layer-card ${visibility.metro ? 'active' : ''}`}
-            onClick={() => onToggleLayer('metro')}
+            className={`layer-card ${visibility.metroRoutes ? 'active' : ''}`}
+            onClick={() => onToggleLayer('metroRoutes')}
           >
             <div className="layer-info">
               <div className="layer-badge-icon" style={{ background: '#f5f3ff', color: '#7c3aed', border: '1px solid #ddd6fe' }}>
                 <TrainFront size={14} />
               </div>
               <div>
-                <div className="layer-title-text">Metro Rail Network</div>
-                <div className="layer-subtext">Lines 1, 2, 3 & 4 (95 Stations & Routes)</div>
+                <div className="layer-title-text">Metro Rail Corridors</div>
+                <div className="layer-subtext">Lines 1–4 Routes (229 Alignments)</div>
               </div>
             </div>
             <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
-              <span className={`status-pill ${visibility.metro ? 'pill-active' : ''}`}>
-                {visibility.metro ? 'ON' : 'OFF'}
+              <span className={`status-pill ${visibility.metroRoutes ? 'pill-active' : ''}`}>
+                {visibility.metroRoutes ? 'ON' : 'OFF'}
               </span>
               <label className="switch">
                 <input
                   type="checkbox"
-                  checked={visibility.metro}
-                  onChange={() => onToggleLayer('metro')}
+                  checked={visibility.metroRoutes}
+                  onChange={() => onToggleLayer('metroRoutes')}
                 />
                 <span className="slider" />
               </label>
             </div>
           </div>
 
-          {visibility.metro && (
+          {/* Metro Stations (95 Stations) */}
+          <div
+            className={`layer-card ${visibility.metroStations ? 'active' : ''}`}
+            onClick={() => onToggleLayer('metroStations')}
+          >
+            <div className="layer-info">
+              <div className="layer-badge-icon" style={{ background: '#eff6ff', color: '#0284c7', border: '1px solid #bfdbfe' }}>
+                <Milestone size={14} />
+              </div>
+              <div>
+                <div className="layer-title-text">Metro Stations</div>
+                <div className="layer-subtext">95 Stations & Transfer Hubs</div>
+              </div>
+            </div>
+            <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
+              <span className={`status-pill ${visibility.metroStations ? 'pill-active' : ''}`}>
+                {visibility.metroStations ? 'ON' : 'OFF'}
+              </span>
+              <label className="switch">
+                <input
+                  type="checkbox"
+                  checked={visibility.metroStations}
+                  onChange={() => onToggleLayer('metroStations')}
+                />
+                <span className="slider" />
+              </label>
+            </div>
+          </div>
+
+          {(visibility.metroRoutes || visibility.metroStations || visibility.metro) && (
             <div
               style={{
                 marginTop: '6px',

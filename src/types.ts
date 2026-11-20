@@ -38,7 +38,9 @@ export interface LayerVisibility {
   wards: boolean;
   stops: boolean;
   routes: boolean;
-  metro: boolean;
+  metro?: boolean;
+  metroRoutes: boolean;
+  metroStations: boolean;
   majorRoads: boolean;
   allRoads: boolean;
 }

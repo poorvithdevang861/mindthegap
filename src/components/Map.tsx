@@ -16,7 +16,9 @@ interface MapProps {
   wardsData: FeatureCollection | null;
   stopsData: FeatureCollection | null;
   routesData: FeatureCollection | null;
-  metroData: FeatureCollection | null;
+  metroData?: FeatureCollection | null;
+  metroRoutesData?: FeatureCollection | null;
+  metroStationsData?: FeatureCollection | null;
   majorRoadsData: FeatureCollection | null;
   allRoadsData: FeatureCollection | null;
   visibility: LayerVisibility;
@@ -33,6 +35,8 @@ export const GISMap: React.FC<MapProps> = ({
   stopsData,
   routesData,
   metroData,
+  metroRoutesData,
+  metroStationsData,
   majorRoadsData,
   allRoadsData,
   visibility,
@@ -50,7 +54,8 @@ export const GISMap: React.FC<MapProps> = ({
   const wardsLayerRef = useRef<L.GeoJSON | null>(null);
   const stopsLayerRef = useRef<L.LayerGroup | null>(null);
   const routesLayerRef = useRef<L.GeoJSON | null>(null);
-  const metroLayerRef = useRef<L.GeoJSON | null>(null);
+  const metroRoutesLayerRef = useRef<L.GeoJSON | null>(null);
+  const metroStationsLayerRef = useRef<L.GeoJSON | null>(null);
   const majorRoadsLayerRef = useRef<L.GeoJSON | null>(null);
   const allRoadsLayerRef = useRef<L.GeoJSON | null>(null);
 
@@ -307,38 +312,77 @@ export const GISMap: React.FC<MapProps> = ({
     routesLayerRef.current = routesLayer;
   }, [routesData, visibility.routes]);
 
-  // 6. Render Metro Layer
+  // 6. Render Metro Rail Corridors (Lines 1-4 Alignments)
   useEffect(() => {
     const map = mapRef.current;
-    if (!map || !metroData) return;
+    const data = metroRoutesData || metroData;
+    if (!map || !data) return;
 
-    if (metroLayerRef.current) {
-      map.removeLayer(metroLayerRef.current);
+    if (metroRoutesLayerRef.current) {
+      map.removeLayer(metroRoutesLayerRef.current);
     }
 
-    const metroLayer = L.geoJSON(metroData, {
-      style: (feature) => {
+    const isVisible = Boolean(visibility.metroRoutes ?? visibility.metro);
+
+    const routesLayer = L.geoJSON(data, {
+      filter: (feature) => {
         const geomType = feature?.geometry?.type;
-        if (geomType === 'LineString' || geomType === 'MultiLineString') {
-          const p = feature?.properties || {};
-          const color = p.color || '#0284c7';
-          const isSiding = Boolean(p.is_siding);
-          const weight = p.weight || (isSiding ? 2.2 : 4.5);
-          const opacity = isSiding ? 0.65 : 0.95;
-          const dashArray = p.dash_array || undefined;
-          return {
-            color,
-            weight,
-            opacity,
-            dashArray,
-          };
-        }
+        return geomType === 'LineString' || geomType === 'MultiLineString';
+      },
+      style: (feature) => {
+        const p = feature?.properties || {};
+        const color = p.color || '#0284c7';
+        const isSiding = Boolean(p.is_siding);
+        const weight = p.weight || (isSiding ? 2.2 : 4.5);
+        const opacity = isSiding ? 0.65 : 0.95;
+        const dashArray = p.dash_array || undefined;
         return {
-          color: '#0284c7',
-          weight: 2,
-          fillColor: '#38bdf8',
-          fillOpacity: 0.08,
+          color,
+          weight,
+          opacity,
+          dashArray,
         };
+      },
+      onEachFeature: (feature, layer) => {
+        const p = feature?.properties || {};
+        const statusBadgeColor =
+          p.status === 'Operational' ? '#059669' : p.status?.includes('Construction') ? '#d97706' : '#2563eb';
+        const statusBadgeBg =
+          p.status === 'Operational' ? '#ecfdf5' : p.status?.includes('Construction') ? '#fffbeb' : '#eff6ff';
+
+        layer.bindTooltip(
+          `<div style="font-weight:700; color:${p.color || '#0284c7'}; font-size:12px;">${p.name || p.line_name}</div>
+           <div style="font-size:10.5px; color:#475569; margin-top:2px;">${p.corridor || 'Corridor Alignment'}</div>
+           <div style="display:flex; align-items:center; gap:6px; margin-top:4px;">
+             <span style="font-size:9.5px; font-weight:700; padding:1px 5px; border-radius:3px; background:${statusBadgeBg}; color:${statusBadgeColor};">${p.status || 'Active Corridor'}</span>
+             ${p.length_km ? `<span style="font-size:10px; color:#64748b; font-weight:600;">${p.length_km} km</span>` : ''}
+           </div>`,
+          { className: 'leaflet-tooltip-ward', sticky: true }
+        );
+      },
+    });
+
+    if (isVisible) {
+      routesLayer.addTo(map);
+    }
+    metroRoutesLayerRef.current = routesLayer;
+  }, [metroRoutesData, metroData, visibility.metroRoutes, visibility.metro]);
+
+  // 7. Render Metro Stations Layer (95 Stations)
+  useEffect(() => {
+    const map = mapRef.current;
+    const data = metroStationsData || metroData;
+    if (!map || !data) return;
+
+    if (metroStationsLayerRef.current) {
+      map.removeLayer(metroStationsLayerRef.current);
+    }
+
+    const isVisible = Boolean(visibility.metroStations ?? visibility.metro);
+
+    const stationsLayer = L.geoJSON(data, {
+      filter: (feature) => {
+        return feature?.geometry?.type === 'Point';
       },
       pointToLayer: (feature, latlng) => {
         const p = feature?.properties || {};
@@ -355,57 +399,38 @@ export const GISMap: React.FC<MapProps> = ({
       },
       onEachFeature: (feature, layer) => {
         const p = feature?.properties || {};
-        const isPoint = feature?.geometry?.type === 'Point';
+        const stype = p.station_type || 'Elevated Station';
+        const statusBadgeColor =
+          p.status === 'Operational' ? '#059669' : p.status === 'Under Construction' ? '#d97706' : '#2563eb';
+        const statusBadgeBg =
+          p.status === 'Operational' ? '#ecfdf5' : p.status === 'Under Construction' ? '#fffbeb' : '#eff6ff';
+        const interchangeBadge = p.is_interchange
+          ? `<div style="margin-top:4px; font-size:10px; font-weight:700; color:#1d4ed8; background:#eff6ff; padding:2px 6px; border-radius:4px; display:inline-block; border:1px solid #bfdbfe;">
+               ⇄ ${p.interchange_desc || 'INTERCHANGE HUB'}
+             </div>`
+          : '';
 
-        if (isPoint) {
-          const stype = p.station_type || 'Elevated Station';
-          const statusBadgeColor =
-            p.status === 'Operational' ? '#059669' : p.status === 'Under Construction' ? '#d97706' : '#2563eb';
-          const statusBadgeBg =
-            p.status === 'Operational' ? '#ecfdf5' : p.status === 'Under Construction' ? '#fffbeb' : '#eff6ff';
-          const interchangeBadge = p.is_interchange
-            ? `<div style="margin-top:4px; font-size:10px; font-weight:700; color:#1d4ed8; background:#eff6ff; padding:2px 6px; border-radius:4px; display:inline-block; border:1px solid #bfdbfe;">
-                 ⇄ ${p.interchange_desc || 'INTERCHANGE HUB'}
-               </div>`
-            : '';
-
-          layer.bindTooltip(
-            `<div style="font-weight:700; color:#0f172a; font-size:12px;">${p.station_name || p.name}</div>
-             <div style="font-size:10.5px; color:#475569; margin-top:2px; font-weight:600;">
-               <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:${p.color || '#0284c7'}; margin-right:5px;"></span>${p.line_name}
-             </div>
-             <div style="display:flex; align-items:center; gap:6px; margin-top:4px;">
-               <span style="font-size:9.5px; font-weight:700; padding:1px 5px; border-radius:3px; background:${statusBadgeBg}; color:${statusBadgeColor};">${p.status}</span>
-               <span style="font-size:10px; color:#64748b;">${stype}</span>
-             </div>
-             ${p.ward_name ? `<div style="font-size:9.5px; color:#64748b; margin-top:3px;">Ward: <strong>${p.ward_name}</strong></div>` : ''}
-             ${interchangeBadge}`,
-            { className: 'leaflet-tooltip-ward' }
-          );
-        } else {
-          const statusBadgeColor =
-            p.status === 'Operational' ? '#059669' : p.status?.includes('Construction') ? '#d97706' : '#2563eb';
-          const statusBadgeBg =
-            p.status === 'Operational' ? '#ecfdf5' : p.status?.includes('Construction') ? '#fffbeb' : '#eff6ff';
-
-          layer.bindTooltip(
-            `<div style="font-weight:700; color:${p.color || '#0284c7'}; font-size:12px;">${p.name || p.line_name}</div>
-             <div style="font-size:10.5px; color:#475569; margin-top:2px;">${p.corridor || 'Corridor Alignment'}</div>
-             <div style="display:flex; align-items:center; gap:6px; margin-top:4px;">
-               <span style="font-size:9.5px; font-weight:700; padding:1px 5px; border-radius:3px; background:${statusBadgeBg}; color:${statusBadgeColor};">${p.status || 'Active Corridor'}</span>
-               ${p.length_km ? `<span style="font-size:10px; color:#64748b; font-weight:600;">${p.length_km} km</span>` : ''}
-             </div>`,
-            { className: 'leaflet-tooltip-ward', sticky: true }
-          );
-        }
+        layer.bindTooltip(
+          `<div style="font-weight:700; color:#0f172a; font-size:12px;">${p.station_name || p.name}</div>
+           <div style="font-size:10.5px; color:#475569; margin-top:2px; font-weight:600;">
+             <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:${p.color || '#0284c7'}; margin-right:5px;"></span>${p.line_name}
+           </div>
+           <div style="display:flex; align-items:center; gap:6px; margin-top:4px;">
+             <span style="font-size:9.5px; font-weight:700; padding:1px 5px; border-radius:3px; background:${statusBadgeBg}; color:${statusBadgeColor};">${p.status}</span>
+             <span style="font-size:10px; color:#64748b;">${stype}</span>
+           </div>
+           ${p.ward_name ? `<div style="font-size:9.5px; color:#64748b; margin-top:3px;">Ward: <strong>${p.ward_name}</strong></div>` : ''}
+           ${interchangeBadge}`,
+          { className: 'leaflet-tooltip-ward' }
+        );
       },
     });
 
-    if (visibility.metro) {
-      metroLayer.addTo(map);
+    if (isVisible) {
+      stationsLayer.addTo(map);
     }
-    metroLayerRef.current = metroLayer;
-  }, [metroData, visibility.metro]);
+    metroStationsLayerRef.current = stationsLayer;
+  }, [metroStationsData, metroData, visibility.metroStations, visibility.metro]);
 
   // 7. Render Major Roads
   useEffect(() => {
