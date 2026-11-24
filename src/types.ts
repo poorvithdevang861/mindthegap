@@ -43,6 +43,7 @@ export interface LayerVisibility {
   metroStations: boolean;
   majorRoads: boolean;
   allRoads: boolean;
+  transitDesert: boolean;
 }
 
 export type ThematicOption = 'corp' | 'pop' | 'transit' | 'vuln';

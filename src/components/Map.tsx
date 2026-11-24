@@ -21,6 +21,7 @@ interface MapProps {
   metroStationsData?: FeatureCollection | null;
   majorRoadsData: FeatureCollection | null;
   allRoadsData: FeatureCollection | null;
+  transitDesertGridData?: any | null;
   visibility: LayerVisibility;
   thematic: ThematicOption;
   corpFilter: CorpFilter;
@@ -39,6 +40,7 @@ export const GISMap: React.FC<MapProps> = ({
   metroStationsData,
   majorRoadsData,
   allRoadsData,
+  transitDesertGridData,
   visibility,
   thematic,
   corpFilter,
@@ -58,6 +60,7 @@ export const GISMap: React.FC<MapProps> = ({
   const metroStationsLayerRef = useRef<L.GeoJSON | null>(null);
   const majorRoadsLayerRef = useRef<L.GeoJSON | null>(null);
   const allRoadsLayerRef = useRef<L.GeoJSON | null>(null);
+  const transitDesertOverlayRef = useRef<L.ImageOverlay | null>(null);
 
   // Track ward layers by ID
   const wardFeatureLayersRef = useRef<Map<string | number, L.Layer>>(new Map());
@@ -78,6 +81,9 @@ export const GISMap: React.FC<MapProps> = ({
     // always render permanently above ward shapefiles and road polygons.
     const wardsPane = map.createPane('wardsPane');
     wardsPane.style.zIndex = '400';
+
+    const transitDesertPane = map.createPane('transitDesertPane');
+    transitDesertPane.style.zIndex = '410';
 
     const roadsPane = map.createPane('roadsPane');
     roadsPane.style.zIndex = '420';
@@ -573,7 +579,101 @@ export const GISMap: React.FC<MapProps> = ({
     allRoadsLayerRef.current = allRoadsLayer;
   }, [allRoadsData, visibility.allRoads]);
 
-  // 9. Handle Map Navigation Actions
+  // 10. Render Transit Desert Continuous Heatmap Surface (100m Grid, 70,598 Points)
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map) return;
+
+    if (transitDesertOverlayRef.current) {
+      map.removeLayer(transitDesertOverlayRef.current);
+      transitDesertOverlayRef.current = null;
+    }
+
+    if (!visibility.transitDesert) return;
+
+    const bounds: L.LatLngBoundsExpression = [
+      [18.404674, 73.710851], // SW
+      [18.707847, 74.012685], // NE
+    ];
+
+    const base = import.meta.env.BASE_URL;
+    const overlay = L.imageOverlay(`${base}transit_desert_surface.png`, bounds, {
+      pane: 'transitDesertPane',
+      opacity: 0.82,
+      interactive: false,
+    });
+
+    overlay.addTo(map);
+    transitDesertOverlayRef.current = overlay;
+  }, [visibility.transitDesert]);
+
+  // 11. Click Inspector for 100m Transit Desert Grid Cells
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map) return;
+
+    const handleMapClick = (e: L.LeafletMouseEvent) => {
+      if (!visibility.transitDesert || !transitDesertGridData) return;
+      const { lat, lng } = e.latlng;
+      const { minLat, maxLat, minLon, maxLon, dx, dy, cols, rows, values } = transitDesertGridData;
+      if (lat < minLat || lat > maxLat || lng < minLon || lng > maxLon) return;
+
+      const col = Math.floor((lng - minLon) / dx);
+      const row = Math.floor((maxLat - lat) / dy);
+
+      if (col >= 0 && col < cols && row >= 0 && row < rows) {
+        const val = values[row * cols + col];
+        if (val !== null && val !== undefined) {
+          let statusText = 'Transit Oasis (Supply > Demand)';
+          let statusColor = '#059669';
+          let statusBg = '#ecfdf5';
+
+          if (val < -0.45) {
+            statusText = 'Critical Transit Desert (Severe Deficit)';
+            statusColor = '#dc2626';
+            statusBg = '#fef2f2';
+          } else if (val < -0.15) {
+            statusText = 'High Transit Desert (Deficit)';
+            statusColor = '#ea580c';
+            statusBg = '#fff7ed';
+          } else if (val < 0.0) {
+            statusText = 'Moderate Transit Deficit';
+            statusColor = '#d97706';
+            statusBg = '#fffbeb';
+          } else if (val < 0.15) {
+            statusText = 'Marginal / Balanced Service';
+            statusColor = '#10b981';
+            statusBg = '#f0fdf4';
+          }
+
+          L.popup({ offset: [0, -4] })
+            .setLatLng(e.latlng)
+            .setContent(
+              `<div style="font-family:system-ui,-apple-system,sans-serif; min-width:190px; padding:2px;">
+                <div style="font-size:10px; font-weight:700; color:#64748b; text-transform:uppercase; letter-spacing:0.5px;">100m Grid Cell Inspector</div>
+                <div style="font-size:13px; font-weight:800; color:#0f172a; margin-top:3px;">
+                  Transit Gap Index: <span style="color:${statusColor}; font-size:14px;">${val.toFixed(3)}</span>
+                </div>
+                <div style="display:inline-block; margin-top:5px; padding:2px 7px; border-radius:4px; font-size:10px; font-weight:700; color:${statusColor}; background:${statusBg}; border:1px solid ${statusColor}33;">
+                  ${statusText}
+                </div>
+                <div style="font-size:9.5px; color:#64748b; margin-top:6px; border-top:1px dashed #e2e8f0; paddingTop:4px;">
+                  Coord: <strong>${lat.toFixed(4)}°N, ${lng.toFixed(4)}°E</strong>
+                </div>
+              </div>`
+            )
+            .openOn(map);
+        }
+      }
+    };
+
+    map.on('click', handleMapClick);
+    return () => {
+      map.off('click', handleMapClick);
+    };
+  }, [visibility.transitDesert, transitDesertGridData]);
+
+  // 12. Handle Map Navigation Actions
   useEffect(() => {
     const map = mapRef.current;
     if (!map || !mapAction) return;

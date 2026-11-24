@@ -12,6 +12,7 @@ import {
   Route,
   Milestone,
   Network,
+  Flame,
 } from 'lucide-react';
 import type { LayerVisibility, ThematicOption, CorpFilter } from '../types';
 import { CustomDropdown, type DropdownOption } from './CustomDropdown';
@@ -97,6 +98,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
     !visibility.metro &&
     !visibility.majorRoads &&
     !visibility.allRoads &&
+    !visibility.transitDesert &&
     thematic === 'corp' &&
     corpFilter === 'all';
 
@@ -113,6 +115,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
       if (visibility.metro) onToggleLayer('metro');
       if (visibility.majorRoads) onToggleLayer('majorRoads');
       if (visibility.allRoads) onToggleLayer('allRoads');
+      if (visibility.transitDesert) onToggleLayer('transitDesert');
       onChangeThematic('corp');
       onChangeCorpFilter('all');
     }
@@ -434,7 +437,100 @@ export const Sidebar: React.FC<SidebarProps> = ({
           )}
         </div>
 
-        {/* SECTION 4: ROAD NETWORK & ARTERIALS */}
+        {/* SECTION 4: TRANSIT GAP & DESERT ANALYSIS */}
+        <div className="sidebar-section">
+          <div className="section-label">Transit Desert & Gap Analysis</div>
+
+          {/* Transit Desert Surface (100m Grid) */}
+          <div
+            className={`layer-card ${visibility.transitDesert ? 'active' : ''}`}
+            onClick={() => onToggleLayer('transitDesert')}
+          >
+            <div className="layer-info">
+              <div className="layer-badge-icon" style={{ background: '#fef2f2', color: '#dc2626', border: '1px solid #fecaca' }}>
+                <Flame size={14} />
+              </div>
+              <div>
+                <div className="layer-title-text">Transit Desert Heatmap</div>
+                <div className="layer-subtext">100m Grid Index (70,598 Points)</div>
+              </div>
+            </div>
+            <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
+              <span className={`status-pill ${visibility.transitDesert ? 'pill-active' : ''}`}>
+                {visibility.transitDesert ? 'ON' : 'OFF'}
+              </span>
+              <label className="switch">
+                <input
+                  type="checkbox"
+                  checked={visibility.transitDesert}
+                  onChange={() => onToggleLayer('transitDesert')}
+                />
+                <span className="slider" />
+              </label>
+            </div>
+          </div>
+
+          {visibility.transitDesert && (
+            <div
+              style={{
+                marginTop: '6px',
+                padding: '8px 10px',
+                background: '#f8fafc',
+                borderRadius: '8px',
+                border: '1px solid #e2e8f0',
+                fontSize: '11px',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '5px',
+              }}
+            >
+              <div style={{ fontSize: '10px', fontWeight: 700, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.4px', marginBottom: '2px' }}>
+                Transit Gap Index (Supply − Demand)
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
+                  <span style={{ width: '10px', height: '10px', borderRadius: '2px', background: '#dc2626', flexShrink: 0 }} />
+                  Critical Desert (&lt; -0.45)
+                </span>
+                <span style={{ fontSize: '9.5px', color: '#dc2626', background: '#fef2f2', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
+                  Severe Deficit
+                </span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
+                  <span style={{ width: '10px', height: '10px', borderRadius: '2px', background: '#f97316', flexShrink: 0 }} />
+                  High Deficit (-0.45 to -0.15)
+                </span>
+                <span style={{ fontSize: '9.5px', color: '#ea580c', background: '#fff7ed', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
+                  Deficit
+                </span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
+                  <span style={{ width: '10px', height: '10px', borderRadius: '2px', background: '#facc15', flexShrink: 0 }} />
+                  Moderate Deficit (-0.15 to 0.0)
+                </span>
+                <span style={{ fontSize: '9.5px', color: '#ca8a04', background: '#fefce8', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
+                  Moderate
+                </span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
+                  <span style={{ width: '10px', height: '10px', borderRadius: '2px', background: '#10b981', flexShrink: 0 }} />
+                  Transit Oasis (&gt; 0.0)
+                </span>
+                <span style={{ fontSize: '9.5px', color: '#059669', background: '#ecfdf5', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
+                  Surplus
+                </span>
+              </div>
+              <div style={{ fontSize: '9.5px', color: '#64748b', marginTop: '2px', borderTop: '1px dashed #e2e8f0', paddingTop: '4px' }}>
+                💡 Click anywhere on the map to inspect the exact 100m grid cell value
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* SECTION 5: ROAD NETWORK & ARTERIALS */}
         <div className="sidebar-section">
           <div className="section-label">Street & Highway Network</div>
 

@@ -25,6 +25,7 @@ export const App: React.FC = () => {
   const [metroStationsData, setMetroStationsData] = useState<FeatureCollection | null>(null);
   const [majorRoadsData, setMajorRoadsData] = useState<FeatureCollection | null>(null);
   const [allRoadsData, setAllRoadsData] = useState<FeatureCollection | null>(null);
+  const [transitDesertGridData, setTransitDesertGridData] = useState<any | null>(null);
 
   // App UI State
   const [loading, setLoading] = useState(true);
@@ -42,6 +43,7 @@ export const App: React.FC = () => {
     metroStations: false,
     majorRoads: false,
     allRoads: false,
+    transitDesert: false,
   });
 
   const [thematic, setThematic] = useState<ThematicOption>('corp');
@@ -92,7 +94,7 @@ export const App: React.FC = () => {
     loadData();
   }, []);
 
-  // Lazy load 50MB allRoads layer when toggled
+  // Lazy load 50MB allRoads layer or 780KB transit desert grid when toggled
   const handleToggleLayer = useCallback(
     async (key: keyof LayerVisibility) => {
       if (key === 'allRoads' && !visibility.allRoads && !allRoadsData) {
@@ -106,6 +108,16 @@ export const App: React.FC = () => {
           alert('Could not load full road network: ' + err.message);
         } finally {
           setLoading(false);
+        }
+      }
+
+      if (key === 'transitDesert' && !visibility.transitDesert && !transitDesertGridData) {
+        try {
+          const res = await fetch(`${import.meta.env.BASE_URL}transit_desert_grid.json`);
+          const data = await res.json();
+          setTransitDesertGridData(data);
+        } catch (err: any) {
+          console.error('Could not load transit desert grid data:', err);
         }
       }
 
@@ -125,7 +137,7 @@ export const App: React.FC = () => {
         };
       });
     },
-    [visibility.allRoads, allRoadsData]
+    [visibility.allRoads, visibility.transitDesert, allRoadsData, transitDesertGridData]
   );
 
   // Extract all normalized wards for search & stats
@@ -195,6 +207,7 @@ export const App: React.FC = () => {
       metroStations: false,
       majorRoads: false,
       allRoads: false,
+      transitDesert: false,
     });
     setThematic('corp');
     setCorpFilter('all');
@@ -249,6 +262,7 @@ export const App: React.FC = () => {
         metroStationsData={metroStationsData}
         majorRoadsData={majorRoadsData}
         allRoadsData={allRoadsData}
+        transitDesertGridData={transitDesertGridData}
         visibility={visibility}
         thematic={thematic}
         corpFilter={corpFilter}
