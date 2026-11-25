@@ -20,6 +20,9 @@ export interface WardMeta {
   areaSqM: number;
   growthPct: string; // % growth between 2020 WorldPop and 2026 Census
   transitDensity: string; // Bus stops per sq km
+  transitDesertScore: string; // Mean 100m grid transit gap score
+  transitDesertStatus: string; // Deficit classification
+  transitDesertColor: string; // Theme color for status
   lengthKm: string;
   lengthM: number;
   vulnLevel: string;

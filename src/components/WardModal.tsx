@@ -61,11 +61,6 @@ export const WardModal: React.FC<WardModalProps> = ({
           : 'Not recorded',
     },
     {
-      label: 'Projected Population Growth (2020 → 2026)',
-      value: ward.growthPct !== 'N/A' ? `+${ward.growthPct}` : 'N/A',
-      color: '#059669',
-    },
-    {
       label: 'Geographic Land Area',
       value: `${ward.areaKm2} km²`,
     },
@@ -86,7 +81,7 @@ export const WardModal: React.FC<WardModalProps> = ({
     {
       label: 'Public Bus Transit Stops',
       value: `${ward.busStopsCount} stops`,
-      color: '#2563eb',
+      color: '#0f172a',
     },
     {
       label: 'Metro Rapid Transit Stations',
@@ -94,8 +89,13 @@ export const WardModal: React.FC<WardModalProps> = ({
       color: ward.metroStopsCount > 0 ? '#7c3aed' : '#64748b',
     },
     {
-      label: 'Transit Stop Density',
-      value: `${ward.transitDensity} stops per km²`,
+      label: 'Transit Desert Classification',
+      value: ward.transitDesertStatus,
+      color: ward.transitDesertColor,
+    },
+    {
+      label: 'Transit Gap Index (100m Supply-Demand)',
+      value: `${ward.transitDesertScore} (Deficit Score)`,
     },
   ];
 
@@ -173,7 +173,9 @@ export const WardModal: React.FC<WardModalProps> = ({
             <div className="kpi-val">
               {ward.busStopsCount} bus • {ward.metroStopsCount} metro
             </div>
-            <div className="kpi-sub">{ward.transitDensity} stops / km²</div>
+            <div className="kpi-sub" style={{ color: ward.transitDesertColor, fontWeight: 600 }}>
+              {ward.transitDesertStatus}
+            </div>
           </div>
         </div>
 

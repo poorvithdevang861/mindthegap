@@ -275,7 +275,7 @@ export const GISMap: React.FC<MapProps> = ({
         return L.circleMarker(latlng, {
           pane: 'busStopsPane',
           radius: 3.5,
-          fillColor: '#2563eb',
+          fillColor: '#0f172a',
           color: '#ffffff',
           weight: 1.2,
           opacity: 0.9,
@@ -288,7 +288,7 @@ export const GISMap: React.FC<MapProps> = ({
         const id = p.GTFSStops_XYTableToPoint_stop_id || p.OBJECTID;
         layer.bindTooltip(
           `<div style="font-weight:700; color:#0f172a; font-size:12px;">${name}</div>
-           <div style="font-size:10px; color:#2563eb; font-weight:600; margin-top:2px;">GTFS Bus Stop • ID ${id}</div>`,
+           <div style="font-size:10px; color:#0f172a; font-weight:600; margin-top:2px;">GTFS Bus Stop • ID ${id}</div>`,
           { className: 'leaflet-tooltip-ward' }
         );
       },

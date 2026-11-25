@@ -9,7 +9,10 @@
     "worldPop2020": 34507,
     "areaKm2": 6.688,
     "popDensityCensus": 16017,
-    "popDensityWorldPop": 5160
+    "popDensityWorldPop": 5160,
+    "transitDesertScore": -0.497,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PCMC_2": {
     "wardName": "Triveninagar",
@@ -21,7 +24,10 @@
     "worldPop2020": 59306,
     "areaKm2": 10.901,
     "popDensityCensus": 8680,
-    "popDensityWorldPop": 5440
+    "popDensityWorldPop": 5440,
+    "transitDesertScore": -0.495,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PCMC_3": {
     "wardName": "Chikhali",
@@ -33,7 +39,10 @@
     "worldPop2020": 71127,
     "areaKm2": 41.693,
     "popDensityCensus": 2031,
-    "popDensityWorldPop": 1706
+    "popDensityWorldPop": 1706,
+    "transitDesertScore": -0.211,
+    "transitDesertStatus": "Transit Accessible (Low Deficit)",
+    "transitDesertColor": "#16a34a"
   },
   "PCMC_4": {
     "wardName": "Krishnanagar",
@@ -45,7 +54,10 @@
     "worldPop2020": 17202,
     "areaKm2": 4.113,
     "popDensityCensus": 22145,
-    "popDensityWorldPop": 4182
+    "popDensityWorldPop": 4182,
+    "transitDesertScore": -0.442,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PCMC_5": {
     "wardName": "Kudalwadi - Jadhavwadi",
@@ -57,7 +69,10 @@
     "worldPop2020": 10664,
     "areaKm2": 1.219,
     "popDensityCensus": 65989,
-    "popDensityWorldPop": 8748
+    "popDensityWorldPop": 8748,
+    "transitDesertScore": -0.549,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PCMC_6": {
     "wardName": "Moshi",
@@ -69,7 +84,10 @@
     "worldPop2020": 15364,
     "areaKm2": 3.021,
     "popDensityCensus": 28536,
-    "popDensityWorldPop": 5086
+    "popDensityWorldPop": 5086,
+    "transitDesertScore": -0.443,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PCMC_7": {
     "wardName": "Charholi",
@@ -81,7 +99,10 @@
     "worldPop2020": 17002,
     "areaKm2": 1.692,
     "popDensityCensus": 51974,
-    "popDensityWorldPop": 10048
+    "popDensityWorldPop": 10048,
+    "transitDesertScore": -0.482,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PCMC_8": {
     "wardName": "Vidyanagar",
@@ -93,7 +114,10 @@
     "worldPop2020": 85607,
     "areaKm2": 10.901,
     "popDensityCensus": 7547,
-    "popDensityWorldPop": 7853
+    "popDensityWorldPop": 7853,
+    "transitDesertScore": -0.401,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   },
   "PCMC_9": {
     "wardName": "Sambhajinagar",
@@ -105,7 +129,10 @@
     "worldPop2020": 65943,
     "areaKm2": 7.289,
     "popDensityCensus": 13363,
-    "popDensityWorldPop": 9047
+    "popDensityWorldPop": 9047,
+    "transitDesertScore": -0.518,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PCMC_10": {
     "wardName": "Tuljaivasti - Ajinthanagar",
@@ -117,7 +144,10 @@
     "worldPop2020": 46170,
     "areaKm2": 4.531,
     "popDensityCensus": 20160,
-    "popDensityWorldPop": 10190
+    "popDensityWorldPop": 10190,
+    "transitDesertScore": -0.458,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PCMC_11": {
     "wardName": "Yamunanagar",
@@ -129,7 +159,10 @@
     "worldPop2020": 33562,
     "areaKm2": 4.067,
     "popDensityCensus": 21323,
-    "popDensityWorldPop": 8252
+    "popDensityWorldPop": 8252,
+    "transitDesertScore": -0.429,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   },
   "PCMC_12": {
     "wardName": "Late Madhukar Pawale High School",
@@ -141,7 +174,10 @@
     "worldPop2020": 39823,
     "areaKm2": 7.562,
     "popDensityCensus": 10658,
-    "popDensityWorldPop": 5266
+    "popDensityWorldPop": 5266,
+    "transitDesertScore": -0.453,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PCMC_13": {
     "wardName": "Nigdi Gaothan",
@@ -153,7 +189,10 @@
     "worldPop2020": 16317,
     "areaKm2": 1.429,
     "popDensityCensus": 63206,
-    "popDensityWorldPop": 11418
+    "popDensityWorldPop": 11418,
+    "transitDesertScore": -0.392,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   },
   "PCMC_14": {
     "wardName": "Bhakti Shakti Udyan",
@@ -165,7 +204,10 @@
     "worldPop2020": 62726,
     "areaKm2": 5.214,
     "popDensityCensus": 17748,
-    "popDensityWorldPop": 12030
+    "popDensityWorldPop": 12030,
+    "transitDesertScore": -0.532,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PCMC_15": {
     "wardName": "Dattawadi",
@@ -177,7 +219,10 @@
     "worldPop2020": 46731,
     "areaKm2": 4.459,
     "popDensityCensus": 19072,
-    "popDensityWorldPop": 10480
+    "popDensityWorldPop": 10480,
+    "transitDesertScore": -0.413,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   },
   "PCMC_16": {
     "wardName": "Akurdi Gaothan",
@@ -189,7 +234,10 @@
     "worldPop2020": 70650,
     "areaKm2": 16.579,
     "popDensityCensus": 5869,
-    "popDensityWorldPop": 4261
+    "popDensityWorldPop": 4261,
+    "transitDesertScore": -0.292,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   },
   "PCMC_17": {
     "wardName": "Sant Tukaram Udyan",
@@ -201,7 +249,10 @@
     "worldPop2020": 34999,
     "areaKm2": 4.277,
     "popDensityCensus": 22657,
-    "popDensityWorldPop": 8183
+    "popDensityWorldPop": 8183,
+    "transitDesertScore": -0.498,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PCMC_18": {
     "wardName": "Kiwale",
@@ -213,7 +264,10 @@
     "worldPop2020": 22580,
     "areaKm2": 2.302,
     "popDensityCensus": 39192,
-    "popDensityWorldPop": 9809
+    "popDensityWorldPop": 9809,
+    "transitDesertScore": -0.471,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PCMC_19": {
     "wardName": "Walhekarwadi",
@@ -225,7 +279,10 @@
     "worldPop2020": 37182,
     "areaKm2": 3.294,
     "popDensityCensus": 27268,
-    "popDensityWorldPop": 11288
+    "popDensityWorldPop": 11288,
+    "transitDesertScore": -0.482,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PCMC_20": {
     "wardName": "Chinchwadnagar",
@@ -237,7 +294,10 @@
     "worldPop2020": 63114,
     "areaKm2": 6.542,
     "popDensityCensus": 13424,
-    "popDensityWorldPop": 9648
+    "popDensityWorldPop": 9648,
+    "transitDesertScore": -0.44,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   },
   "PCMC_21": {
     "wardName": "Dalvinagar",
@@ -249,7 +309,10 @@
     "worldPop2020": 18752,
     "areaKm2": 1.783,
     "popDensityCensus": 52245,
-    "popDensityWorldPop": 10517
+    "popDensityWorldPop": 10517,
+    "transitDesertScore": -0.576,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PCMC_22": {
     "wardName": "Chinchwad Gaothan",
@@ -261,7 +324,10 @@
     "worldPop2020": 16448,
     "areaKm2": 1.611,
     "popDensityCensus": 59767,
-    "popDensityWorldPop": 10210
+    "popDensityWorldPop": 10210,
+    "transitDesertScore": -0.574,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PCMC_23": {
     "wardName": "Keshavnagar",
@@ -273,7 +339,10 @@
     "worldPop2020": 13577,
     "areaKm2": 1.611,
     "popDensityCensus": 50745,
-    "popDensityWorldPop": 8428
+    "popDensityWorldPop": 8428,
+    "transitDesertScore": -0.545,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PCMC_24": {
     "wardName": "Prof. Ramkrishna More Prekshagruha",
@@ -285,7 +354,10 @@
     "worldPop2020": 13417,
     "areaKm2": 2.821,
     "popDensityCensus": 27631,
-    "popDensityWorldPop": 4756
+    "popDensityWorldPop": 4756,
+    "transitDesertScore": -0.322,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   },
   "PCMC_25": {
     "wardName": "Chinchwad Station - Anandnagar",
@@ -297,7 +369,10 @@
     "worldPop2020": 41732,
     "areaKm2": 18.699,
     "popDensityCensus": 4620,
-    "popDensityWorldPop": 2232
+    "popDensityWorldPop": 2232,
+    "transitDesertScore": -0.168,
+    "transitDesertStatus": "Transit Accessible (Low Deficit)",
+    "transitDesertColor": "#16a34a"
   },
   "PCMC_26": {
     "wardName": "Kalbhor Nagar",
@@ -309,7 +384,10 @@
     "worldPop2020": 29973,
     "areaKm2": 6.324,
     "popDensityCensus": 12927,
-    "popDensityWorldPop": 4740
+    "popDensityWorldPop": 4740,
+    "transitDesertScore": -0.28,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   },
   "PCMC_27": {
     "wardName": "Morwadi",
@@ -321,7 +399,10 @@
     "worldPop2020": 22437,
     "areaKm2": 2.193,
     "popDensityCensus": 37632,
-    "popDensityWorldPop": 10231
+    "popDensityWorldPop": 10231,
+    "transitDesertScore": -0.598,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PCMC_28": {
     "wardName": "Masulkar Colony",
@@ -333,7 +414,10 @@
     "worldPop2020": 40359,
     "areaKm2": 3.831,
     "popDensityCensus": 22068,
-    "popDensityWorldPop": 10535
+    "popDensityWorldPop": 10535,
+    "transitDesertScore": -0.634,
+    "transitDesertStatus": "Critical Transit Desert (Severe Deficit)",
+    "transitDesertColor": "#b91c1c"
   },
   "PCMC_29": {
     "wardName": "Indrayaninagar",
@@ -345,7 +429,10 @@
     "worldPop2020": 18067,
     "areaKm2": 2.293,
     "popDensityCensus": 35150,
-    "popDensityWorldPop": 7879
+    "popDensityWorldPop": 7879,
+    "transitDesertScore": -0.491,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PCMC_30": {
     "wardName": "Chakrapani Vasahat",
@@ -357,7 +444,10 @@
     "worldPop2020": 27881,
     "areaKm2": 2.939,
     "popDensityCensus": 31809,
-    "popDensityWorldPop": 9487
+    "popDensityWorldPop": 9487,
+    "transitDesertScore": -0.436,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   },
   "PCMC_31": {
     "wardName": "Dighi",
@@ -369,7 +459,10 @@
     "worldPop2020": 13872,
     "areaKm2": 1.611,
     "popDensityCensus": 52782,
-    "popDensityWorldPop": 8611
+    "popDensityWorldPop": 8611,
+    "transitDesertScore": -0.521,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PCMC_32": {
     "wardName": "Sandvik Colony",
@@ -381,7 +474,10 @@
     "worldPop2020": 18044,
     "areaKm2": 1.865,
     "popDensityCensus": 48025,
-    "popDensityWorldPop": 9675
+    "popDensityWorldPop": 9675,
+    "transitDesertScore": -0.613,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PMC_1": {
     "wardName": "Kalas - Dhanori - Lohegaon",
@@ -393,7 +489,10 @@
     "worldPop2020": 82437,
     "areaKm2": 25.751,
     "popDensityCensus": 5900,
-    "popDensityWorldPop": 3201
+    "popDensityWorldPop": 3201,
+    "transitDesertScore": -0.312,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   },
   "PMC_2": {
     "wardName": "Phulenagar - Nagpur Chawl",
@@ -405,7 +504,10 @@
     "worldPop2020": 156261,
     "areaKm2": 7.698,
     "popDensityCensus": 19736,
-    "popDensityWorldPop": 20299
+    "popDensityWorldPop": 20299,
+    "transitDesertScore": -0.631,
+    "transitDesertStatus": "Critical Transit Desert (Severe Deficit)",
+    "transitDesertColor": "#b91c1c"
   },
   "PMC_3": {
     "wardName": "Viman Nagar - Lohegaon",
@@ -417,7 +519,10 @@
     "worldPop2020": 245149,
     "areaKm2": 44.25,
     "popDensityCensus": 3425,
-    "popDensityWorldPop": 5540
+    "popDensityWorldPop": 5540,
+    "transitDesertScore": -0.323,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   },
   "PMC_4": {
     "wardName": "Kharadi - Wagholi",
@@ -429,7 +534,10 @@
     "worldPop2020": 236504,
     "areaKm2": 28.79,
     "popDensityCensus": 5536,
-    "popDensityWorldPop": 8215
+    "popDensityWorldPop": 8215,
+    "transitDesertScore": -0.387,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   },
   "PMC_5": {
     "wardName": "Kalyani Nagar - Vadgaon Sheri",
@@ -441,7 +549,10 @@
     "worldPop2020": 258740,
     "areaKm2": 8.235,
     "popDensityCensus": 18199,
-    "popDensityWorldPop": 31420
+    "popDensityWorldPop": 31420,
+    "transitDesertScore": -0.66,
+    "transitDesertStatus": "Critical Transit Desert (Severe Deficit)",
+    "transitDesertColor": "#b91c1c"
   },
   "PMC_6": {
     "wardName": "Yerawada - Gandhinagar",
@@ -453,7 +564,10 @@
     "worldPop2020": 80999,
     "areaKm2": 2.894,
     "popDensityCensus": 43979,
-    "popDensityWorldPop": 27989
+    "popDensityWorldPop": 27989,
+    "transitDesertScore": -0.586,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PMC_7": {
     "wardName": "Gokhalenagar - Wakdewadi",
@@ -465,7 +579,10 @@
     "worldPop2020": 188217,
     "areaKm2": 11.72,
     "popDensityCensus": 12588,
-    "popDensityWorldPop": 16059
+    "popDensityWorldPop": 16059,
+    "transitDesertScore": -0.503,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PMC_8": {
     "wardName": "Aundh - Bopodi",
@@ -477,7 +594,10 @@
     "worldPop2020": 128950,
     "areaKm2": 11.693,
     "popDensityCensus": 12580,
-    "popDensityWorldPop": 11028
+    "popDensityWorldPop": 11028,
+    "transitDesertScore": -0.521,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PMC_9": {
     "wardName": "Sus - Baner - Pashan",
@@ -489,7 +609,10 @@
     "worldPop2020": 130092,
     "areaKm2": 44.332,
     "popDensityCensus": 3363,
-    "popDensityWorldPop": 2934
+    "popDensityWorldPop": 2934,
+    "transitDesertScore": -0.18,
+    "transitDesertStatus": "Transit Accessible (Low Deficit)",
+    "transitDesertColor": "#16a34a"
   },
   "PMC_10": {
     "wardName": "Bavdhan - Bhusari Colony",
@@ -501,7 +624,10 @@
     "worldPop2020": 44820,
     "areaKm2": 16.806,
     "popDensityCensus": 8209,
-    "popDensityWorldPop": 2667
+    "popDensityWorldPop": 2667,
+    "transitDesertScore": -0.212,
+    "transitDesertStatus": "Transit Accessible (Low Deficit)",
+    "transitDesertColor": "#16a34a"
   },
   "PMC_11": {
     "wardName": "Rambaug Colony - Shivtirthnagar",
@@ -513,7 +639,10 @@
     "worldPop2020": 23998,
     "areaKm2": 4.905,
     "popDensityCensus": 25479,
-    "popDensityWorldPop": 4893
+    "popDensityWorldPop": 4893,
+    "transitDesertScore": -0.463,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PMC_12": {
     "wardName": "Chhatrapati Shivajinagar - Model Colony",
@@ -525,7 +654,10 @@
     "worldPop2020": 212472,
     "areaKm2": 5.951,
     "popDensityCensus": 21404,
-    "popDensityWorldPop": 35704
+    "popDensityWorldPop": 35704,
+    "transitDesertScore": -0.421,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   },
   "PMC_13": {
     "wardName": "Pune Station - Jai Jawan Nagar",
@@ -537,7 +669,10 @@
     "worldPop2020": 179021,
     "areaKm2": 5.05,
     "popDensityCensus": 28763,
-    "popDensityWorldPop": 35450
+    "popDensityWorldPop": 35450,
+    "transitDesertScore": -0.469,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PMC_14": {
     "wardName": "Koregaon Park - Ghorpade - Mundhwa",
@@ -549,7 +684,10 @@
     "worldPop2020": 310813,
     "areaKm2": 11.292,
     "popDensityCensus": 13375,
-    "popDensityWorldPop": 27525
+    "popDensityWorldPop": 27525,
+    "transitDesertScore": -0.672,
+    "transitDesertStatus": "Critical Transit Desert (Severe Deficit)",
+    "transitDesertColor": "#b91c1c"
   },
   "PMC_15": {
     "wardName": "Manjari Budruk - Keshavnagar - Sadesatra Nali",
@@ -561,7 +699,10 @@
     "worldPop2020": 219843,
     "areaKm2": 33.121,
     "popDensityCensus": 4386,
-    "popDensityWorldPop": 6638
+    "popDensityWorldPop": 6638,
+    "transitDesertScore": -0.434,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   },
   "PMC_16": {
     "wardName": "Hadapsar - Satavwadi",
@@ -573,7 +714,10 @@
     "worldPop2020": 46033,
     "areaKm2": 4.85,
     "popDensityCensus": 31188,
-    "popDensityWorldPop": 9491
+    "popDensityWorldPop": 9491,
+    "transitDesertScore": -0.431,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   },
   "PMC_17": {
     "wardName": "Ramtekadi - Malwadi - Vaiduwadi",
@@ -585,7 +729,10 @@
     "worldPop2020": 125895,
     "areaKm2": 6.415,
     "popDensityCensus": 23735,
-    "popDensityWorldPop": 19625
+    "popDensityWorldPop": 19625,
+    "transitDesertScore": -0.651,
+    "transitDesertStatus": "Critical Transit Desert (Severe Deficit)",
+    "transitDesertColor": "#b91c1c"
   },
   "PMC_18": {
     "wardName": "Wanawadi - Salunkhe Vihar",
@@ -597,7 +744,10 @@
     "worldPop2020": 226026,
     "areaKm2": 8.69,
     "popDensityCensus": 15997,
-    "popDensityWorldPop": 26010
+    "popDensityWorldPop": 26010,
+    "transitDesertScore": -0.668,
+    "transitDesertStatus": "Critical Transit Desert (Severe Deficit)",
+    "transitDesertColor": "#b91c1c"
   },
   "PMC_19": {
     "wardName": "Kondhwa Khurd - Kausarbag",
@@ -609,7 +759,10 @@
     "worldPop2020": 118980,
     "areaKm2": 4.713,
     "popDensityCensus": 29445,
-    "popDensityWorldPop": 25245
+    "popDensityWorldPop": 25245,
+    "transitDesertScore": -0.693,
+    "transitDesertStatus": "Critical Transit Desert (Severe Deficit)",
+    "transitDesertColor": "#b91c1c"
   },
   "PMC_20": {
     "wardName": "Shankar Maharaj Math - Bibwewadi",
@@ -621,7 +774,10 @@
     "worldPop2020": 142764,
     "areaKm2": 4.204,
     "popDensityCensus": 30810,
-    "popDensityWorldPop": 33959
+    "popDensityWorldPop": 33959,
+    "transitDesertScore": -0.607,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PMC_21": {
     "wardName": "Mukund Nagar - Salisbury Park",
@@ -633,7 +789,10 @@
     "worldPop2020": 193592,
     "areaKm2": 5.915,
     "popDensityCensus": 22204,
-    "popDensityWorldPop": 32729
+    "popDensityWorldPop": 32729,
+    "transitDesertScore": -0.588,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PMC_22": {
     "wardName": "Kashewadi - Dias Plot",
@@ -645,7 +804,10 @@
     "worldPop2020": 64978,
     "areaKm2": 1.456,
     "popDensityCensus": 89775,
-    "popDensityWorldPop": 44628
+    "popDensityWorldPop": 44628,
+    "transitDesertScore": -0.559,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PMC_23": {
     "wardName": "Ravivar Peth - Nana Peth",
@@ -657,7 +819,10 @@
     "worldPop2020": 39870,
     "areaKm2": 1.238,
     "popDensityCensus": 101982,
-    "popDensityWorldPop": 32205
+    "popDensityWorldPop": 32205,
+    "transitDesertScore": -0.47,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PMC_24": {
     "wardName": "Kasba Ganpati - Kamla Nehru Hospital - K.E.M. Hospital",
@@ -669,7 +834,10 @@
     "worldPop2020": 64628,
     "areaKm2": 1.692,
     "popDensityCensus": 73890,
-    "popDensityWorldPop": 38196
+    "popDensityWorldPop": 38196,
+    "transitDesertScore": -0.431,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   },
   "PMC_25": {
     "wardName": "Shaniwar Peth - Mahatma Phule Mandai",
@@ -681,7 +849,10 @@
     "worldPop2020": 98053,
     "areaKm2": 2.266,
     "popDensityCensus": 55194,
-    "popDensityWorldPop": 43271
+    "popDensityWorldPop": 43271,
+    "transitDesertScore": -0.362,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   },
   "PMC_26": {
     "wardName": "Ghorpade Peth - Guruwar Peth - Samatabhoomi",
@@ -693,7 +864,10 @@
     "worldPop2020": 53938,
     "areaKm2": 1.41,
     "popDensityCensus": 88704,
-    "popDensityWorldPop": 38254
+    "popDensityWorldPop": 38254,
+    "transitDesertScore": -0.531,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PMC_27": {
     "wardName": "Navi Peth - Parvati",
@@ -705,7 +879,10 @@
     "worldPop2020": 114816,
     "areaKm2": 3.094,
     "popDensityCensus": 40343,
-    "popDensityWorldPop": 37109
+    "popDensityWorldPop": 37109,
+    "transitDesertScore": -0.409,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   },
   "PMC_28": {
     "wardName": "Janata Vasahat - Hingne Khurd",
@@ -717,7 +894,10 @@
     "worldPop2020": 35927,
     "areaKm2": 2.875,
     "popDensityCensus": 43667,
-    "popDensityWorldPop": 12496
+    "popDensityWorldPop": 12496,
+    "transitDesertScore": -0.401,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   },
   "PMC_29": {
     "wardName": "Deccan Gymkhana - Happy Colony",
@@ -729,7 +909,10 @@
     "worldPop2020": 119235,
     "areaKm2": 5.642,
     "popDensityCensus": 22148,
-    "popDensityWorldPop": 21133
+    "popDensityWorldPop": 21133,
+    "transitDesertScore": -0.475,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PMC_30": {
     "wardName": "Karve Nagar - Hingne Home Colony",
@@ -741,7 +924,10 @@
     "worldPop2020": 35520,
     "areaKm2": 3.421,
     "popDensityCensus": 36867,
-    "popDensityWorldPop": 10383
+    "popDensityWorldPop": 10383,
+    "transitDesertScore": -0.522,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PMC_31": {
     "wardName": "Mayur Colony - Kothrud",
@@ -753,7 +939,10 @@
     "worldPop2020": 40249,
     "areaKm2": 3.685,
     "popDensityCensus": 36983,
-    "popDensityWorldPop": 10922
+    "popDensityWorldPop": 10922,
+    "transitDesertScore": -0.468,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PMC_32": {
     "wardName": "Warje - Popular Nagar",
@@ -765,7 +954,10 @@
     "worldPop2020": 41961,
     "areaKm2": 9.345,
     "popDensityCensus": 14485,
-    "popDensityWorldPop": 4490
+    "popDensityWorldPop": 4490,
+    "transitDesertScore": -0.394,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   },
   "PMC_33": {
     "wardName": "Shivane - Khadakwasla - Dhayari Part",
@@ -777,7 +969,10 @@
     "worldPop2020": 89887,
     "areaKm2": 62.785,
     "popDensityCensus": 2294,
-    "popDensityWorldPop": 1432
+    "popDensityWorldPop": 1432,
+    "transitDesertScore": -0.235,
+    "transitDesertStatus": "Transit Accessible (Low Deficit)",
+    "transitDesertColor": "#16a34a"
   },
   "PMC_34": {
     "wardName": "Narhe - Vadgaon Budruk - Dhayari",
@@ -789,7 +984,10 @@
     "worldPop2020": 74958,
     "areaKm2": 14.104,
     "popDensityCensus": 9752,
-    "popDensityWorldPop": 5315
+    "popDensityWorldPop": 5315,
+    "transitDesertScore": -0.355,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   },
   "PMC_35": {
     "wardName": "Suncity - Manik Baug",
@@ -801,7 +999,10 @@
     "worldPop2020": 47425,
     "areaKm2": 7.298,
     "popDensityCensus": 17639,
-    "popDensityWorldPop": 6498
+    "popDensityWorldPop": 6498,
+    "transitDesertScore": -0.495,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PMC_36": {
     "wardName": "Sahakarnagar - Padmavati",
@@ -813,7 +1014,10 @@
     "worldPop2020": 112029,
     "areaKm2": 4.613,
     "popDensityCensus": 30098,
-    "popDensityWorldPop": 24285
+    "popDensityWorldPop": 24285,
+    "transitDesertScore": -0.559,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PMC_37": {
     "wardName": "Dhankawadi - Katraj Dairy",
@@ -825,7 +1029,10 @@
     "worldPop2020": 39363,
     "areaKm2": 2.83,
     "popDensityCensus": 51143,
-    "popDensityWorldPop": 13909
+    "popDensityWorldPop": 13909,
+    "transitDesertScore": -0.447,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PMC_38": {
     "wardName": "Balajinagar - Ambegaon - Katraj",
@@ -837,7 +1044,10 @@
     "worldPop2020": 105363,
     "areaKm2": 38.799,
     "popDensityCensus": 5241,
-    "popDensityWorldPop": 2716
+    "popDensityWorldPop": 2716,
+    "transitDesertScore": -0.232,
+    "transitDesertStatus": "Transit Accessible (Low Deficit)",
+    "transitDesertColor": "#16a34a"
   },
   "PMC_39": {
     "wardName": "Upper Super Indiranagar",
@@ -849,7 +1059,10 @@
     "worldPop2020": 66585,
     "areaKm2": 2.111,
     "popDensityCensus": 61239,
-    "popDensityWorldPop": 31542
+    "popDensityWorldPop": 31542,
+    "transitDesertScore": -0.605,
+    "transitDesertStatus": "High Transit Deficit",
+    "transitDesertColor": "#ea580c"
   },
   "PMC_40": {
     "wardName": "Kondhwa Budruk - Yewalewadi",
@@ -861,7 +1074,10 @@
     "worldPop2020": 163183,
     "areaKm2": 18.19,
     "popDensityCensus": 6897,
-    "popDensityWorldPop": 8971
+    "popDensityWorldPop": 8971,
+    "transitDesertScore": -0.386,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   },
   "PMC_41": {
     "wardName": "Mohammadwadi - Undri",
@@ -873,6 +1089,9 @@
     "worldPop2020": 153156,
     "areaKm2": 42.83,
     "popDensityCensus": 3330,
-    "popDensityWorldPop": 3576
+    "popDensityWorldPop": 3576,
+    "transitDesertScore": -0.312,
+    "transitDesertStatus": "Moderate Deficit",
+    "transitDesertColor": "#d97706"
   }
 }

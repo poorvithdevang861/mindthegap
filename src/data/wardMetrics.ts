@@ -11,6 +11,9 @@ export interface WardMetricEntry {
   areaKm2: number;
   popDensityCensus: number;
   popDensityWorldPop: number;
+  transitDesertScore?: number;
+  transitDesertStatus?: string;
+  transitDesertColor?: string;
 }
 
 export const WARD_METRICS_MAP: Record<string, WardMetricEntry> = metricsJson as Record<

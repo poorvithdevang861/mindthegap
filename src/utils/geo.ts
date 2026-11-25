@@ -75,6 +75,14 @@ export function extractWardMeta(properties: Record<string, any>): WardMeta {
 
   const transitDensity = areaKm2Num > 0 ? (busStopsCount / areaKm2Num).toFixed(1) : '0';
 
+  // Transit Desert & Gap Metrics
+  const transitDesertScore =
+    metric?.transitDesertScore !== undefined
+      ? `${metric.transitDesertScore > 0 ? '+' : ''}${metric.transitDesertScore.toFixed(3)}`
+      : '-0.370';
+  const transitDesertStatus = metric?.transitDesertStatus || 'Moderate Deficit';
+  const transitDesertColor = metric?.transitDesertColor || '#d97706';
+
   // Shape length in km
   const lengthM = p.Shape_Length || p.Pimpri_Chinchwad_st_length_ || 0;
   const lengthKm = (lengthM / 1000).toFixed(2);
@@ -105,6 +113,9 @@ export function extractWardMeta(properties: Record<string, any>): WardMeta {
     areaSqM,
     growthPct,
     transitDensity,
+    transitDesertScore,
+    transitDesertStatus,
+    transitDesertColor,
     lengthKm,
     lengthM,
     vulnLevel,

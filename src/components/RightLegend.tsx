@@ -47,7 +47,7 @@ export const RightLegend: React.FC<RightLegendProps> = ({
           title="Show map legend"
           aria-label="Show map legend"
         >
-          <Layers size={13} className="legend-icon-accent" />
+          <Layers size={14} strokeWidth={2.4} color="#0f172a" />
           <span className="legend-pill-text">Map legend</span>
           {activeCount > 0 && (
             <span className="legend-pill-count">{activeCount}</span>
@@ -64,9 +64,7 @@ export const RightLegend: React.FC<RightLegendProps> = ({
       {/* Legend Header with Explicit Hide Button */}
       <div className="right-legend-header">
         <div className="right-legend-title-group">
-          <div className="right-legend-icon-badge">
-            <Layers size={13} />
-          </div>
+          <Layers size={16} strokeWidth={2.4} color="#0f172a" />
           <div className="right-legend-title-text">
             <h2>Map legend</h2>
             <span className="right-legend-subtitle">Cartographic symbology</span>
@@ -340,7 +338,7 @@ export const RightLegend: React.FC<RightLegendProps> = ({
 
                       {visibility.stops && (
                         <div className="legend-line-row">
-                          <span className="bus-stop-swatch" style={{ background: '#2563eb' }} />
+                          <span className="bus-stop-swatch" style={{ background: '#0f172a' }} />
                           <div className="legend-row-text">
                             <span className="legend-row-title">Bus stops</span>
                             <span className="legend-row-detail">3,319 verified GTFS stops</span>

@@ -60,10 +60,10 @@ export function downloadTableAsExcel(ward: WardMeta, rows: TableRow[]): void {
   </Style>
   <Style ss:ID="ColHeader">
    <Font ss:FontName="Segoe UI" ss:Size="10" ss:Bold="1" ss:Color="#FFFFFF"/>
-   <Interior ss:Color="#2563EB" ss:Pattern="Solid"/>
+   <Interior ss:Color="#0F172A" ss:Pattern="Solid"/>
    <Alignment ss:Vertical="Center" ss:Horizontal="Left"/>
    <Borders>
-    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#1D4ED8"/>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#0F172A"/>
    </Borders>
   </Style>
   <Style ss:ID="RowEven">
@@ -139,52 +139,52 @@ export function downloadTableAsPdf(ward: WardMeta, rows: TableRow[]): void {
 
   const stream: string[] = [];
 
-  // Top header banner (Navy)
+  // Top header banner (Clean Navy / Slate)
   stream.push('0.06 0.09 0.16 rg 0 740 612 52 re f');
   stream.push('1 1 1 rg');
-  stream.push(`BT /F1 14 Tf 40 762 Td (${escapePdfText(title)}) Tj ET`);
-  stream.push('0.6 0.75 0.98 rg');
+  stream.push(`BT /F1 13 Tf 40 762 Td (${escapePdfText(title)}) Tj ET`);
+  stream.push('0.85 0.90 0.95 rg');
   stream.push(`BT /F2 9.5 Tf 40 748 Td (${escapePdfText(subtitle)}) Tj ET`);
 
-  // KPI Summary Bar (Light blue box)
-  stream.push('0.96 0.98 1 rg 40 682 532 44 re f');
-  stream.push('0.8 0.88 0.98 RG 0.8 w 40 682 532 44 re S');
+  // KPI Summary Bar (Clean, plain neutral box)
+  stream.push('0.98 0.98 0.99 rg 40 682 532 44 re f');
+  stream.push('0.88 0.90 0.93 RG 0.6 w 40 682 532 44 re S');
 
-  stream.push('0.4 0.45 0.55 rg');
+  stream.push('0.45 0.50 0.58 rg');
   stream.push('BT /F2 7.5 Tf 55 712 Td (CENSUS 2026 POP) Tj ET');
   stream.push('0.06 0.09 0.16 rg');
   stream.push(`BT /F1 11 Tf 55 696 Td (${ward.censusPop2026.toLocaleString()}) Tj ET`);
 
-  stream.push('0.4 0.45 0.55 rg');
+  stream.push('0.45 0.50 0.58 rg');
   stream.push('BT /F2 7.5 Tf 190 712 Td (WORLDPOP 2020) Tj ET');
-  stream.push('0.26 0.22 0.79 rg');
+  stream.push('0.06 0.09 0.16 rg');
   stream.push(`BT /F1 11 Tf 190 696 Td (${ward.worldPop2020.toLocaleString()}) Tj ET`);
 
-  stream.push('0.4 0.45 0.55 rg');
+  stream.push('0.45 0.50 0.58 rg');
   stream.push('BT /F2 7.5 Tf 320 712 Td (LAND AREA) Tj ET');
   stream.push('0.06 0.09 0.16 rg');
   stream.push(`BT /F1 11 Tf 320 696 Td (${ward.areaKm2} km2) Tj ET`);
 
-  stream.push('0.4 0.45 0.55 rg');
+  stream.push('0.45 0.50 0.58 rg');
   stream.push('BT /F2 7.5 Tf 435 712 Td (TRANSIT ACCESS) Tj ET');
-  stream.push('0.02 0.59 0.41 rg');
+  stream.push('0.06 0.09 0.16 rg');
   stream.push(`BT /F1 11 Tf 435 696 Td (${ward.busStopsCount} Bus / ${ward.metroStopsCount} Metro) Tj ET`);
 
-  // Table Column Header (Blue)
+  // Table Column Header (Clean Plain Slate Header)
   const tableTopY = 654;
-  stream.push(`0.15 0.39 0.92 rg 40 ${tableTopY - 5} 532 20 re f`);
+  stream.push(`0.06 0.09 0.16 rg 40 ${tableTopY - 5} 532 20 re f`);
   stream.push('1 1 1 rg');
   stream.push(`BT /F1 9 Tf 55 ${tableTopY} Td (PARAMETER / INDICATOR) Tj 310 ${tableTopY} Td (AUTHORITATIVE VALUE) Tj ET`);
 
   // Table Data Rows
   let curY = tableTopY - 24;
   rows.forEach((r, i) => {
-    const bg = i % 2 === 0 ? '0.96 0.97 0.99' : '1 1 1';
+    const bg = i % 2 === 0 ? '0.98 0.98 0.99' : '1 1 1';
     stream.push(`${bg} rg 40 ${curY - 4} 532 19 re f`);
-    stream.push(`0.89 0.92 0.96 RG 0.5 w 40 ${curY - 4} 532 19 re S`);
+    stream.push(`0.90 0.92 0.94 RG 0.5 w 40 ${curY - 4} 532 19 re S`);
 
     // Parameter label
-    stream.push('0.2 0.25 0.35 rg');
+    stream.push('0.15 0.18 0.25 rg');
     stream.push(`BT /F1 8.5 Tf 55 ${curY + 2} Td (${escapePdfText(r.label)}) Tj ET`);
 
     // Value

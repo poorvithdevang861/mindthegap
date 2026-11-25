@@ -1820,12 +1820,12 @@ input:checked + .slider:before {
 }
 
 .right-legend-icon-badge {
-  width: 24px;
-  height: 24px;
-  border-radius: 6px;
-  background: #eff6ff;
-  color: #2563eb;
-  border: 1px solid #bfdbfe;
+  width: auto;
+  height: auto;
+  background: transparent;
+  color: #0f172a;
+  border: none;
+  box-shadow: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2256,7 +2256,8 @@ input:checked + .slider:before {
   height: 7px;
   border-radius: 50%;
   border: 1px solid #ffffff;
-  box-shadow: 0 0 0 1px #2563eb;
+  box-shadow: 0 0 0 1px #0f172a;
+  background: #0f172a;
   flex-shrink: 0;
 }
 
@@ -2358,15 +2359,15 @@ input:checked + .slider:before {
 }
 
 .legend-icon-accent {
-  color: #2563eb;
+  color: #0f172a;
 }
 
 .legend-pill-count {
   font-size: 9.5px;
   font-weight: 700;
-  color: #2563eb;
-  background: #eff6ff;
-  border: 1px solid #bfdbfe;
+  color: #0f172a;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
   padding: 1px 5px;
   border-radius: 4px;
   line-height: 1.2;
