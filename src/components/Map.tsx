@@ -597,7 +597,7 @@ export const GISMap: React.FC<MapProps> = ({
     ];
 
     const base = import.meta.env.BASE_URL;
-    const overlay = L.imageOverlay(`${base}transit_desert_surface.png`, bounds, {
+    const overlay = L.imageOverlay(`${base}transit_desert_surface.png?v=2`, bounds, {
       pane: 'transitDesertPane',
       opacity: 0.82,
       interactive: false,
@@ -624,26 +624,26 @@ export const GISMap: React.FC<MapProps> = ({
       if (col >= 0 && col < cols && row >= 0 && row < rows) {
         const val = values[row * cols + col];
         if (val !== null && val !== undefined) {
-          let statusText = 'Transit Oasis (Supply > Demand)';
-          let statusColor = '#059669';
+          let statusText = 'Transit Oasis (High Supply / Corridor)';
+          let statusColor = '#047857';
           let statusBg = '#ecfdf5';
 
-          if (val < -0.45) {
+          if (val < -0.62) {
             statusText = 'Critical Transit Desert (Severe Deficit)';
-            statusColor = '#dc2626';
+            statusColor = '#b91c1c';
             statusBg = '#fef2f2';
-          } else if (val < -0.15) {
-            statusText = 'High Transit Desert (Deficit)';
+          } else if (val < -0.44) {
+            statusText = 'High Transit Deficit';
             statusColor = '#ea580c';
             statusBg = '#fff7ed';
-          } else if (val < 0.0) {
-            statusText = 'Moderate Transit Deficit';
+          } else if (val < -0.27) {
+            statusText = 'Moderate Deficit / Developing';
             statusColor = '#d97706';
             statusBg = '#fffbeb';
-          } else if (val < 0.15) {
-            statusText = 'Marginal / Balanced Service';
-            statusColor = '#10b981';
-            statusBg = '#f0fdf4';
+          } else if (val < -0.07) {
+            statusText = 'Transit Accessible / Low Deficit';
+            statusColor = '#65a30d';
+            statusBg = '#f7fee7';
           }
 
           L.popup({ offset: [0, -4] })

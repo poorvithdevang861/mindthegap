@@ -489,26 +489,26 @@ export const Sidebar: React.FC<SidebarProps> = ({
               </div>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
-                  <span style={{ width: '10px', height: '10px', borderRadius: '2px', background: '#dc2626', flexShrink: 0 }} />
-                  Critical Desert (&lt; -0.45)
+                  <span style={{ width: '10px', height: '10px', borderRadius: '2px', background: '#b91c1c', flexShrink: 0 }} />
+                  Critical Desert (&lt; -0.62)
                 </span>
-                <span style={{ fontSize: '9.5px', color: '#dc2626', background: '#fef2f2', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
+                <span style={{ fontSize: '9.5px', color: '#b91c1c', background: '#fef2f2', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
                   Severe Deficit
                 </span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
                   <span style={{ width: '10px', height: '10px', borderRadius: '2px', background: '#f97316', flexShrink: 0 }} />
-                  High Deficit (-0.45 to -0.15)
+                  High Deficit (-0.62 to -0.44)
                 </span>
                 <span style={{ fontSize: '9.5px', color: '#ea580c', background: '#fff7ed', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
-                  Deficit
+                  High Deficit
                 </span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
-                  <span style={{ width: '10px', height: '10px', borderRadius: '2px', background: '#facc15', flexShrink: 0 }} />
-                  Moderate Deficit (-0.15 to 0.0)
+                  <span style={{ width: '10px', height: '10px', borderRadius: '2px', background: '#eab308', flexShrink: 0 }} />
+                  Moderate Deficit (-0.44 to -0.27)
                 </span>
                 <span style={{ fontSize: '9.5px', color: '#ca8a04', background: '#fefce8', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
                   Moderate
@@ -516,11 +516,20 @@ export const Sidebar: React.FC<SidebarProps> = ({
               </div>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
-                  <span style={{ width: '10px', height: '10px', borderRadius: '2px', background: '#10b981', flexShrink: 0 }} />
-                  Transit Oasis (&gt; 0.0)
+                  <span style={{ width: '10px', height: '10px', borderRadius: '2px', background: '#65a30d', flexShrink: 0 }} />
+                  Accessible (-0.27 to -0.07)
                 </span>
-                <span style={{ fontSize: '9.5px', color: '#059669', background: '#ecfdf5', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
-                  Surplus
+                <span style={{ fontSize: '9.5px', color: '#65a30d', background: '#f7fee7', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
+                  Low Deficit (27%)
+                </span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
+                  <span style={{ width: '10px', height: '10px', borderRadius: '2px', background: '#047857', flexShrink: 0 }} />
+                  Transit Oasis (&gt; -0.07)
+                </span>
+                <span style={{ fontSize: '9.5px', color: '#047857', background: '#ecfdf5', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
+                  High Supply (9%)
                 </span>
               </div>
               <div style={{ fontSize: '9.5px', color: '#64748b', marginTop: '2px', borderTop: '1px dashed #e2e8f0', paddingTop: '4px' }}>
