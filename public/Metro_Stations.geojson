@@ -1,6 +1,6 @@
 {
   "type": "FeatureCollection",
-  "name": "Pune_Metro_Stations_28",
+  "name": "Pune_Metro_Stations_92",
   "features": [
     {
       "type": "Feature",
@@ -8,23 +8,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          73.85751930000004,
-          18.499730200000045
+          73.93255290000008,
+          18.530287474000033
         ]
       },
       "properties": {
         "OBJECTID": 1,
-        "name": "Swargate",
-        "station_name": "Swargate",
-        "line_id": "line1",
-        "line_name": "Purple Line (Line 1)",
-        "color": "#7c3aed",
-        "corridor": "PCMC \u21c4 Swargate",
-        "status": "Operational",
-        "station_type": "Underground Station",
-        "is_interchange": false,
-        "interchange_desc": "",
-        "ward_name": "Navi Peth - Parvati"
+        "Name": "Hadapsar Railway Station",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Hadapsar Railway Station",
+        "station_name": "Hadapsar Railway Station",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": true,
+        "interchange_desc": "Lines 4 & 4B Rail Junction",
+        "ward_name": "Manjari Budruk - Keshavnagar - Sadesatra Nali"
       }
     },
     {
@@ -33,23 +42,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          73.80522690000004,
-          18.507174400000054
+          73.84857110000007,
+          18.53047470000007
         ]
       },
       "properties": {
         "OBJECTID": 2,
-        "name": "Vanaz",
-        "station_name": "Vanaz",
-        "line_id": "line2",
-        "line_name": "Aqua Line (Line 2)",
-        "color": "#0284c7",
-        "corridor": "Vanaz \u21c4 Ramwadi",
+        "Name": "Shivajinagar",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Shivajinagar",
+        "station_name": "Shivajinagar",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
         "status": "Operational",
-        "station_type": "Elevated Station",
-        "is_interchange": false,
-        "interchange_desc": "",
-        "ward_name": "Mayur Colony - Kothrud"
+        "station_type": "Underground Station",
+        "is_interchange": true,
+        "interchange_desc": "Lines 1, 2 & 3 Transfer Interchange",
+        "ward_name": "Chhatrapati Shivajinagar - Model Colony"
       }
     },
     {
@@ -58,23 +76,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          73.82878890000006,
-          18.507341000000054
+          73.76154180000003,
+          18.579709200000025
         ]
       },
       "properties": {
         "OBJECTID": 3,
-        "name": "SNDT College",
-        "station_name": "SNDT College",
-        "line_id": "line2",
-        "line_name": "Aqua Line (Line 2)",
-        "color": "#0284c7",
-        "corridor": "Vanaz \u21c4 Ramwadi",
-        "status": "Operational",
+        "Name": "Mitcon Balewadi",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Mitcon Balewadi",
+        "station_name": "Mitcon Balewadi",
+        "line_id": "line3",
+        "line_name": "Pink Line (Line 3)",
+        "color": "#ec4899",
+        "corridor": "Shivajinagar \u21c4 Hinjawadi IT Park",
+        "status": "Under Construction",
         "station_type": "Elevated Station",
         "is_interchange": false,
         "interchange_desc": "",
-        "ward_name": "Deccan Gymkhana - Happy Colony"
+        "ward_name": "Sus - Baner - Pashan"
       }
     },
     {
@@ -83,112 +110,21 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          73.82212540000006,
-          18.508877100000063
-        ]
-      },
-      "properties": {
-        "OBJECTID": 4,
-        "name": "Paud Phata",
-        "station_name": "Paud Phata",
-        "line_id": "line2",
-        "line_name": "Aqua Line (Line 2)",
-        "color": "#0284c7",
-        "corridor": "Vanaz \u21c4 Ramwadi",
-        "status": "Operational",
-        "station_type": "Elevated Station",
-        "is_interchange": false,
-        "interchange_desc": "",
-        "ward_name": "Rambaug Colony - Shivtirthnagar"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 5,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          73.81407930000006,
-          18.50955280000005
-        ]
-      },
-      "properties": {
-        "OBJECTID": 5,
-        "name": "Anandnagar",
-        "station_name": "Anandnagar",
-        "line_id": "line2",
-        "line_name": "Aqua Line (Line 2)",
-        "color": "#0284c7",
-        "corridor": "Vanaz \u21c4 Ramwadi",
-        "status": "Operational",
-        "station_type": "Elevated Station",
-        "is_interchange": false,
-        "interchange_desc": "",
-        "ward_name": "Mayur Colony - Kothrud"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 6,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          73.83806160000006,
-          18.511973700000055
-        ]
-      },
-      "properties": {
-        "OBJECTID": 6,
-        "name": "Garware College",
-        "station_name": "Garware College",
-        "line_id": "line2",
-        "line_name": "Aqua Line (Line 2)",
-        "color": "#0284c7",
-        "corridor": "Vanaz \u21c4 Ramwadi",
-        "status": "Operational",
-        "station_type": "Elevated Station",
-        "is_interchange": false,
-        "interchange_desc": "",
-        "ward_name": "Deccan Gymkhana - Happy Colony"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 7,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          73.85707960000008,
-          18.512918900000045
-        ]
-      },
-      "properties": {
-        "OBJECTID": 7,
-        "name": "Mahatma Phule Mandai",
-        "station_name": "Mahatma Phule Mandai",
-        "line_id": "line1",
-        "line_name": "Purple Line (Line 1)",
-        "color": "#7c3aed",
-        "corridor": "PCMC \u21c4 Swargate",
-        "status": "Operational",
-        "station_type": "Underground Station",
-        "is_interchange": false,
-        "interchange_desc": "",
-        "ward_name": "Shaniwar Peth - Mahatma Phule Mandai"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 8,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           73.84445800000003,
           18.51642570000007
         ]
       },
       "properties": {
-        "OBJECTID": 8,
+        "OBJECTID": 4,
+        "Name": "Deccan Gymkhana",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
         "name": "Deccan Gymkhana",
         "station_name": "Deccan Gymkhana",
         "line_id": "line2",
@@ -204,18 +140,163 @@
     },
     {
       "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.84148670000008,
+          18.533006000000057
+        ]
+      },
+      "properties": {
+        "OBJECTID": 5,
+        "Name": "Agriculture College",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Agriculture College",
+        "station_name": "Agriculture College",
+        "line_id": "line3",
+        "line_name": "Pink Line (Line 3)",
+        "color": "#ec4899",
+        "corridor": "Shivajinagar \u21c4 Hinjawadi IT Park",
+        "status": "Under Construction",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Chhatrapati Shivajinagar - Model Colony"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.83669190000006,
+          18.536370700000077
+        ]
+      },
+      "properties": {
+        "OBJECTID": 6,
+        "Name": "Bhosalenagar RBI",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Bhosalenagar RBI",
+        "station_name": "Bhosalenagar RBI",
+        "line_id": "line3",
+        "line_name": "Pink Line (Line 3)",
+        "color": "#ec4899",
+        "corridor": "Shivajinagar \u21c4 Hinjawadi IT Park",
+        "status": "Under Construction",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Gokhalenagar - Wakdewadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.75755870000006,
+          18.59029860000004
+        ]
+      },
+      "properties": {
+        "OBJECTID": 7,
+        "Name": "Shree Shiv Chhatrapati Sports Complex Mahalunge",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Shree Shiv Chhatrapati Sports Complex Mahalunge",
+        "station_name": "Shree Shiv Chhatrapati Sports Complex Mahalunge",
+        "line_id": "line3",
+        "line_name": "Pink Line (Line 3)",
+        "color": "#ec4899",
+        "corridor": "Shivajinagar \u21c4 Hinjawadi IT Park",
+        "status": "Under Construction",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Chinchwad Station - Anandnagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.79295250000007,
+          18.508126400000037
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8,
+        "Name": "Kothrud Bus Depot",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Kothrud Bus Depot",
+        "station_name": "Kothrud Bus Depot",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Chandani Chowk (Extension 2A)",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Bavdhan - Bhusari Colony"
+      }
+    },
+    {
+      "type": "Feature",
       "id": 9,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          73.84697120000004,
-          18.519659200000035
+          73.83806160000006,
+          18.511973700000055
         ]
       },
       "properties": {
         "OBJECTID": 9,
-        "name": "Chhatrapati Sambhaji Udyan",
-        "station_name": "Chhatrapati Sambhaji Udyan",
+        "Name": "Garware College",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Garware College",
+        "station_name": "Garware College",
         "line_id": "line2",
         "line_name": "Aqua Line (Line 2)",
         "color": "#0284c7",
@@ -224,7 +305,7 @@
         "station_type": "Elevated Station",
         "is_interchange": false,
         "interchange_desc": "",
-        "ward_name": "Chhatrapati Shivajinagar - Model Colony"
+        "ward_name": "Deccan Gymkhana - Happy Colony"
       }
     },
     {
@@ -233,23 +314,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          73.85968270000006,
-          18.521362800000077
+          73.80522690000004,
+          18.507174400000054
         ]
       },
       "properties": {
         "OBJECTID": 10,
-        "name": "Kasaba Peth",
-        "station_name": "Kasaba Peth",
-        "line_id": "line1",
-        "line_name": "Purple Line (Line 1)",
-        "color": "#7c3aed",
-        "corridor": "PCMC \u21c4 Swargate",
+        "Name": "Vanaz",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Vanaz",
+        "station_name": "Vanaz",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
         "status": "Operational",
-        "station_type": "Underground Station",
+        "station_type": "Elevated Station",
         "is_interchange": false,
         "interchange_desc": "",
-        "ward_name": "Kasba Ganpati - Kamla Nehru Hospital - K.E.M. Hospital"
+        "ward_name": "Mayur Colony - Kothrud"
       }
     },
     {
@@ -258,14 +348,23 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          73.85282260000008,
-          18.522497200000032
+          73.81407930000006,
+          18.50955280000005
         ]
       },
       "properties": {
         "OBJECTID": 11,
-        "name": "PMC",
-        "station_name": "PMC",
+        "Name": "Anandnagar",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Anandnagar",
+        "station_name": "Anandnagar",
         "line_id": "line2",
         "line_name": "Aqua Line (Line 2)",
         "color": "#0284c7",
@@ -274,7 +373,7 @@
         "station_type": "Elevated Station",
         "is_interchange": false,
         "interchange_desc": "",
-        "ward_name": "Chhatrapati Shivajinagar - Model Colony"
+        "ward_name": "Mayur Colony - Kothrud"
       }
     },
     {
@@ -283,23 +382,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          73.85755690000008,
-          18.526413900000023
+          73.82212540000006,
+          18.508877100000063
         ]
       },
       "properties": {
         "OBJECTID": 12,
-        "name": "District Court (Aqua Line)",
-        "station_name": "District Court (Aqua Line)",
+        "Name": "Paud Phata",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Paud Phata",
+        "station_name": "Paud Phata",
         "line_id": "line2",
         "line_name": "Aqua Line (Line 2)",
         "color": "#0284c7",
-        "corridor": "Vanaz \u21c4 Ramwadi",
-        "status": "Operational",
-        "station_type": "Underground Station",
-        "is_interchange": true,
-        "interchange_desc": "PURPLE \u21c4 AQUA INTERCHANGE",
-        "ward_name": "Chhatrapati Shivajinagar - Model Colony"
+        "corridor": "Vanaz \u21c4 Chandani Chowk (Extension 2A)",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Rambaug Colony - Shivtirthnagar"
       }
     },
     {
@@ -308,23 +416,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          73.85691490000005,
-          18.526849500000026
+          73.82878890000006,
+          18.507341000000054
         ]
       },
       "properties": {
         "OBJECTID": 13,
-        "name": "District Court (Purple Line)",
-        "station_name": "District Court (Purple Line)",
-        "line_id": "line1",
-        "line_name": "Purple Line (Line 1)",
-        "color": "#7c3aed",
-        "corridor": "PCMC \u21c4 Swargate",
+        "Name": "SNDT College",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "SNDT College",
+        "station_name": "SNDT College",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
         "status": "Operational",
-        "station_type": "Underground Station",
-        "is_interchange": true,
-        "interchange_desc": "PURPLE \u21c4 AQUA INTERCHANGE",
-        "ward_name": "Chhatrapati Shivajinagar - Model Colony"
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Deccan Gymkhana - Happy Colony"
       }
     },
     {
@@ -333,23 +450,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          73.87259700000004,
-          18.529723400000023
+          73.80330090000007,
+          18.629329700000028
         ]
       },
       "properties": {
         "OBJECTID": 14,
-        "name": "Pune Railway Station",
-        "station_name": "Pune Railway Station",
-        "line_id": "line2",
-        "line_name": "Aqua Line (Line 2)",
-        "color": "#0284c7",
-        "corridor": "Vanaz \u21c4 Ramwadi",
+        "Name": "PCMC",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "PCMC",
+        "station_name": "PCMC",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
         "status": "Operational",
         "station_type": "Elevated Station",
         "is_interchange": false,
         "interchange_desc": "",
-        "ward_name": "Pune Station - Jai Jawan Nagar"
+        "ward_name": "Tuljaivasti - Ajinthanagar"
       }
     },
     {
@@ -358,312 +484,21 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          73.86505830000004,
-          18.53005200000007
-        ]
-      },
-      "properties": {
-        "OBJECTID": 15,
-        "name": "RTO (Pune)",
-        "station_name": "RTO (Pune)",
-        "line_id": "line2",
-        "line_name": "Aqua Line (Line 2)",
-        "color": "#0284c7",
-        "corridor": "Vanaz \u21c4 Ramwadi",
-        "status": "Operational",
-        "station_type": "Elevated Station",
-        "is_interchange": false,
-        "interchange_desc": "",
-        "ward_name": "Pune Station - Jai Jawan Nagar"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 16,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          73.84972600000003,
-          18.532182500000033
-        ]
-      },
-      "properties": {
-        "OBJECTID": 16,
-        "name": "Shivaji Nagar",
-        "station_name": "Shivaji Nagar",
-        "line_id": "line1",
-        "line_name": "Purple Line (Line 1)",
-        "color": "#7c3aed",
-        "corridor": "PCMC \u21c4 Swargate",
-        "status": "Operational",
-        "station_type": "Underground Station",
-        "is_interchange": false,
-        "interchange_desc": "",
-        "ward_name": "Gokhalenagar - Wakdewadi"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 17,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          73.87776330000008,
-          18.532706800000028
-        ]
-      },
-      "properties": {
-        "OBJECTID": 17,
-        "name": "Ruby Hall Clinic",
-        "station_name": "Ruby Hall Clinic",
-        "line_id": "line2",
-        "line_name": "Aqua Line (Line 2)",
-        "color": "#0284c7",
-        "corridor": "Vanaz \u21c4 Ramwadi",
-        "status": "Operational",
-        "station_type": "Elevated Station",
-        "is_interchange": false,
-        "interchange_desc": "",
-        "ward_name": "Pune Station - Jai Jawan Nagar"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 18,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          73.88345440000006,
-          18.540580200000022
-        ]
-      },
-      "properties": {
-        "OBJECTID": 18,
-        "name": "Bund Garden",
-        "station_name": "Bund Garden",
-        "line_id": "line2",
-        "line_name": "Aqua Line (Line 2)",
-        "color": "#0284c7",
-        "corridor": "Vanaz \u21c4 Ramwadi",
-        "status": "Operational",
-        "station_type": "Elevated Station",
-        "is_interchange": false,
-        "interchange_desc": "",
-        "ward_name": "Pune Station - Jai Jawan Nagar"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 19,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          73.90571220000004,
-          18.544449300000053
-        ]
-      },
-      "properties": {
-        "OBJECTID": 19,
-        "name": "Kalyani Nagar",
-        "station_name": "Kalyani Nagar",
-        "line_id": "line2",
-        "line_name": "Aqua Line (Line 2)",
-        "color": "#0284c7",
-        "corridor": "Vanaz \u21c4 Ramwadi",
-        "status": "Operational",
-        "station_type": "Elevated Station",
-        "is_interchange": false,
-        "interchange_desc": "",
-        "ward_name": "Kalyani Nagar - Vadgaon Sheri"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 20,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          73.88662390000007,
-          18.54528220000003
-        ]
-      },
-      "properties": {
-        "OBJECTID": 20,
-        "name": "Yerawada",
-        "station_name": "Yerawada",
-        "line_id": "line2",
-        "line_name": "Aqua Line (Line 2)",
-        "color": "#0284c7",
-        "corridor": "Vanaz \u21c4 Ramwadi",
-        "status": "Operational",
-        "station_type": "Elevated Station",
-        "is_interchange": false,
-        "interchange_desc": "",
-        "ward_name": "Yerawada - Gandhinagar"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 21,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          73.90812490000008,
-          18.556727100000046
-        ]
-      },
-      "properties": {
-        "OBJECTID": 21,
-        "name": "Ramwadi",
-        "station_name": "Ramwadi",
-        "line_id": "line2",
-        "line_name": "Aqua Line (Line 2)",
-        "color": "#0284c7",
-        "corridor": "Vanaz \u21c4 Ramwadi",
-        "status": "Operational",
-        "station_type": "Elevated Station",
-        "is_interchange": false,
-        "interchange_desc": "",
-        "ward_name": "Kalyani Nagar - Vadgaon Sheri"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 22,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          73.83831460000005,
-          18.569166900000027
-        ]
-      },
-      "properties": {
-        "OBJECTID": 22,
-        "name": "Bopodi",
-        "station_name": "Bopodi",
-        "line_id": "line1",
-        "line_name": "Purple Line (Line 1)",
-        "color": "#7c3aed",
-        "corridor": "PCMC \u21c4 Swargate",
-        "status": "Operational",
-        "station_type": "Elevated Station",
-        "is_interchange": false,
-        "interchange_desc": "",
-        "ward_name": "Aundh - Bopodi"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 23,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          73.83379570000005,
-          18.58374710000004
-        ]
-      },
-      "properties": {
-        "OBJECTID": 23,
-        "name": "Dapodi",
-        "station_name": "Dapodi",
-        "line_id": "line1",
-        "line_name": "Purple Line (Line 1)",
-        "color": "#7c3aed",
-        "corridor": "PCMC \u21c4 Swargate",
-        "status": "Operational",
-        "station_type": "Elevated Station",
-        "is_interchange": false,
-        "interchange_desc": "",
-        "ward_name": "Chakrapani Vasahat"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 24,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          73.83116420000005,
-          18.591112000000066
-        ]
-      },
-      "properties": {
-        "OBJECTID": 24,
-        "name": "Phugewadi",
-        "station_name": "Phugewadi",
-        "line_id": "line1",
-        "line_name": "Purple Line (Line 1)",
-        "color": "#7c3aed",
-        "corridor": "PCMC \u21c4 Swargate",
-        "status": "Operational",
-        "station_type": "Elevated Station",
-        "is_interchange": false,
-        "interchange_desc": "",
-        "ward_name": "Chakrapani Vasahat"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 25,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          73.82727970000008,
-          18.599627300000066
-        ]
-      },
-      "properties": {
-        "OBJECTID": 25,
-        "name": "Kasarwadi",
-        "station_name": "Kasarwadi",
-        "line_id": "line1",
-        "line_name": "Purple Line (Line 1)",
-        "color": "#7c3aed",
-        "corridor": "PCMC \u21c4 Swargate",
-        "status": "Operational",
-        "station_type": "Elevated Station",
-        "is_interchange": false,
-        "interchange_desc": "",
-        "ward_name": "Chinchwadnagar"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 26,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          73.82011210000007,
-          18.609315200000026
-        ]
-      },
-      "properties": {
-        "OBJECTID": 26,
-        "name": "Nashik Phata",
-        "station_name": "Nashik Phata",
-        "line_id": "line1",
-        "line_name": "Purple Line (Line 1)",
-        "color": "#7c3aed",
-        "corridor": "PCMC \u21c4 Swargate",
-        "status": "Operational",
-        "station_type": "Elevated Station",
-        "is_interchange": false,
-        "interchange_desc": "",
-        "ward_name": "Chinchwadnagar"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 27,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           73.81575780000003,
           18.614536000000044
         ]
       },
       "properties": {
-        "OBJECTID": 27,
+        "OBJECTID": 15,
+        "Name": "Sant Tukaram Nagar",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
         "name": "Sant Tukaram Nagar",
         "station_name": "Sant Tukaram Nagar",
         "line_id": "line1",
@@ -679,18 +514,27 @@
     },
     {
       "type": "Feature",
-      "id": 28,
+      "id": 16,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          73.80330090000007,
-          18.629329700000028
+          73.83116420000005,
+          18.591112000000066
         ]
       },
       "properties": {
-        "OBJECTID": 28,
-        "name": "PCMC",
-        "station_name": "PCMC",
+        "OBJECTID": 16,
+        "Name": "Phugewadi",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Phugewadi",
+        "station_name": "Phugewadi",
         "line_id": "line1",
         "line_name": "Purple Line (Line 1)",
         "color": "#7c3aed",
@@ -699,7 +543,2591 @@
         "station_type": "Elevated Station",
         "is_interchange": false,
         "interchange_desc": "",
+        "ward_name": "Chakrapani Vasahat"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.82727970000008,
+          18.599627300000066
+        ]
+      },
+      "properties": {
+        "OBJECTID": 17,
+        "Name": "Kasarwadi",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Kasarwadi",
+        "station_name": "Kasarwadi",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Chinchwadnagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.82011210000007,
+          18.609315200000026
+        ]
+      },
+      "properties": {
+        "OBJECTID": 18,
+        "Name": "Nashik Phata",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Nashik Phata",
+        "station_name": "Nashik Phata",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Chinchwadnagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.85020546300007,
+          18.529921083000033
+        ]
+      },
+      "properties": {
+        "OBJECTID": 19,
+        "Name": "Shivaji Nagar",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Shivaji Nagar",
+        "station_name": "Shivaji Nagar",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
+        "status": "Operational",
+        "station_type": "Underground Station",
+        "is_interchange": true,
+        "interchange_desc": "Lines 1, 2 & 3 Transfer Interchange",
+        "ward_name": "Chhatrapati Shivajinagar - Model Colony"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.87776330000008,
+          18.532706800000028
+        ]
+      },
+      "properties": {
+        "OBJECTID": 20,
+        "Name": "Ruby Hall Clinic",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Ruby Hall Clinic",
+        "station_name": "Ruby Hall Clinic",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Pune Station - Jai Jawan Nagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.87259700000004,
+          18.529723400000023
+        ]
+      },
+      "properties": {
+        "OBJECTID": 21,
+        "Name": "Pune Railway Station",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Pune Railway Station",
+        "station_name": "Pune Railway Station",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Pune Station - Jai Jawan Nagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.86505830000004,
+          18.53005200000007
+        ]
+      },
+      "properties": {
+        "OBJECTID": 22,
+        "Name": "RTO (Pune)",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "RTO (Pune)",
+        "station_name": "RTO (Pune)",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Pune Station - Jai Jawan Nagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.84697120000004,
+          18.519659200000035
+        ]
+      },
+      "properties": {
+        "OBJECTID": 23,
+        "Name": "Chhatrapati Sambhaji Udyan",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Chhatrapati Sambhaji Udyan",
+        "station_name": "Chhatrapati Sambhaji Udyan",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Chhatrapati Shivajinagar - Model Colony"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.85767289800003,
+          18.52666107600004
+        ]
+      },
+      "properties": {
+        "OBJECTID": 24,
+        "Name": "District Court (Aqua Line)",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "District Court (Aqua Line)",
+        "station_name": "District Court (Aqua Line)",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
+        "status": "Operational",
+        "station_type": "Underground Station",
+        "is_interchange": true,
+        "interchange_desc": "Lines 1, 2 & 3 Transfer Interchange",
+        "ward_name": "Chhatrapati Shivajinagar - Model Colony"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.85282260000008,
+          18.522497200000032
+        ]
+      },
+      "properties": {
+        "OBJECTID": 25,
+        "Name": "PMC",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "PMC",
+        "station_name": "PMC",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Chhatrapati Shivajinagar - Model Colony"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.83379570000005,
+          18.58374710000004
+        ]
+      },
+      "properties": {
+        "OBJECTID": 26,
+        "Name": "Dapodi",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Dapodi",
+        "station_name": "Dapodi",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Chakrapani Vasahat"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.83831460000005,
+          18.569166900000027
+        ]
+      },
+      "properties": {
+        "OBJECTID": 27,
+        "Name": "Bopodi",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Bopodi",
+        "station_name": "Bopodi",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Aundh - Bopodi"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.88345440000006,
+          18.540580200000022
+        ]
+      },
+      "properties": {
+        "OBJECTID": 28,
+        "Name": "Bund Garden",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Bund Garden",
+        "station_name": "Bund Garden",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Pune Station - Jai Jawan Nagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.88662390000007,
+          18.54528220000003
+        ]
+      },
+      "properties": {
+        "OBJECTID": 29,
+        "Name": "Yerawada",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Yerawada",
+        "station_name": "Yerawada",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Yerawada - Gandhinagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.90571220000004,
+          18.544449300000053
+        ]
+      },
+      "properties": {
+        "OBJECTID": 30,
+        "Name": "Kalyani Nagar",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Kalyani Nagar",
+        "station_name": "Kalyani Nagar",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Kalyani Nagar - Vadgaon Sheri"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.90812490000008,
+          18.556727100000046
+        ]
+      },
+      "properties": {
+        "OBJECTID": 31,
+        "Name": "Ramwadi",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Ramwadi",
+        "station_name": "Ramwadi",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Kalyani Nagar - Vadgaon Sheri"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.85707960000008,
+          18.512918900000045
+        ]
+      },
+      "properties": {
+        "OBJECTID": 32,
+        "Name": "Mahatma Phule Mandai",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Mahatma Phule Mandai",
+        "station_name": "Mahatma Phule Mandai",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
+        "status": "Operational",
+        "station_type": "Underground Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Shaniwar Peth - Mahatma Phule Mandai"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.85968270000006,
+          18.521362800000077
+        ]
+      },
+      "properties": {
+        "OBJECTID": 33,
+        "Name": "Kasaba Peth",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Kasaba Peth",
+        "station_name": "Kasaba Peth",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
+        "status": "Operational",
+        "station_type": "Underground Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Kasba Ganpati - Kamla Nehru Hospital - K.E.M. Hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.85767257800006,
+          18.500686891000043
+        ]
+      },
+      "properties": {
+        "OBJECTID": 34,
+        "Name": "Swargate",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Swargate",
+        "station_name": "Swargate",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
+        "status": "Operational",
+        "station_type": "Underground Station",
+        "is_interchange": true,
+        "interchange_desc": "Lines 1 & 4 Multi-Modal Hub",
+        "ward_name": "Navi Peth - Parvati"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 35,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.82717290000005,
+          18.54234660000003
+        ]
+      },
+      "properties": {
+        "OBJECTID": 35,
+        "Name": "Savitribai Phule Pune University",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Savitribai Phule Pune University",
+        "station_name": "Savitribai Phule Pune University",
+        "line_id": "line3",
+        "line_name": "Pink Line (Line 3)",
+        "color": "#ec4899",
+        "corridor": "Shivajinagar \u21c4 Hinjawadi IT Park",
+        "status": "Under Construction",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Gokhalenagar - Wakdewadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.81966540000008,
+          18.546325100000047
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36,
+        "Name": "Sakalnagar",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Sakalnagar",
+        "station_name": "Sakalnagar",
+        "line_id": "line3",
+        "line_name": "Pink Line (Line 3)",
+        "color": "#ec4899",
+        "corridor": "Shivajinagar \u21c4 Hinjawadi IT Park",
+        "status": "Under Construction",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Gokhalenagar - Wakdewadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.80822700000004,
+          18.55026920000006
+        ]
+      },
+      "properties": {
+        "OBJECTID": 37,
+        "Name": "Aundh",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Aundh",
+        "station_name": "Aundh",
+        "line_id": "line3",
+        "line_name": "Pink Line (Line 3)",
+        "color": "#ec4899",
+        "corridor": "Shivajinagar \u21c4 Hinjawadi IT Park",
+        "status": "Under Construction",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Aundh - Bopodi"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 38,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.79793810000007,
+          18.55496430000005
+        ]
+      },
+      "properties": {
+        "OBJECTID": 38,
+        "Name": "Baner Pashan Link Road",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Baner Pashan Link Road",
+        "station_name": "Baner Pashan Link Road",
+        "line_id": "line3",
+        "line_name": "Pink Line (Line 3)",
+        "color": "#ec4899",
+        "corridor": "Shivajinagar \u21c4 Hinjawadi IT Park",
+        "status": "Under Construction",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Sus - Baner - Pashan"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 39,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.79059820000003,
+          18.559196100000065
+        ]
+      },
+      "properties": {
+        "OBJECTID": 39,
+        "Name": "Baner Gaon",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Baner Gaon",
+        "station_name": "Baner Gaon",
+        "line_id": "line3",
+        "line_name": "Pink Line (Line 3)",
+        "color": "#ec4899",
+        "corridor": "Shivajinagar \u21c4 Hinjawadi IT Park",
+        "status": "Under Construction",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Sus - Baner - Pashan"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.77976650000005,
+          18.56418590000004
+        ]
+      },
+      "properties": {
+        "OBJECTID": 40,
+        "Name": "Balewadi Phata",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Balewadi Phata",
+        "station_name": "Balewadi Phata",
+        "line_id": "line3",
+        "line_name": "Pink Line (Line 3)",
+        "color": "#ec4899",
+        "corridor": "Shivajinagar \u21c4 Hinjawadi IT Park",
+        "status": "Under Construction",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Sus - Baner - Pashan"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 41,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.77483820000003,
+          18.570512000000065
+        ]
+      },
+      "properties": {
+        "OBJECTID": 41,
+        "Name": "Balewadi High Street",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Balewadi High Street",
+        "station_name": "Balewadi High Street",
+        "line_id": "line3",
+        "line_name": "Pink Line (Line 3)",
+        "color": "#ec4899",
+        "corridor": "Shivajinagar \u21c4 Hinjawadi IT Park",
+        "status": "Under Construction",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Sus - Baner - Pashan"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.76606240000007,
+          18.57503360000004
+        ]
+      },
+      "properties": {
+        "OBJECTID": 42,
+        "Name": "R K Laxman Museum Balewadi",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "R K Laxman Museum Balewadi",
+        "station_name": "R K Laxman Museum Balewadi",
+        "line_id": "line3",
+        "line_name": "Pink Line (Line 3)",
+        "color": "#ec4899",
+        "corridor": "Shivajinagar \u21c4 Hinjawadi IT Park",
+        "status": "Under Construction",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Sus - Baner - Pashan"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.77457450000003,
+          18.662560600000063
+        ]
+      },
+      "properties": {
+        "OBJECTID": 43,
+        "Name": "Bhakti Shakti",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Bhakti Shakti",
+        "station_name": "Bhakti Shakti",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Nigdi (Extension 1B)",
+        "status": "Under Construction",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Nigdi Gaothan"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 44,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.77839800000004,
+          18.658398600000055
+        ]
+      },
+      "properties": {
+        "OBJECTID": 44,
+        "Name": "Nigdi",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Nigdi",
+        "station_name": "Nigdi",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Nigdi (Extension 1B)",
+        "status": "Under Construction",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Bhakti Shakti Udyan"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 45,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.78474670000008,
+          18.65116000000006
+        ]
+      },
+      "properties": {
+        "OBJECTID": 45,
+        "Name": "Akurdi",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Akurdi",
+        "station_name": "Akurdi",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Nigdi (Extension 1B)",
+        "status": "Under Construction",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Bhakti Shakti Udyan"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.79493140000005,
+          18.639173200000073
+        ]
+      },
+      "properties": {
+        "OBJECTID": 46,
+        "Name": "Chinchwad",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Chinchwad",
+        "station_name": "Chinchwad",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Nigdi (Extension 1B)",
+        "status": "Under Construction",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
         "ward_name": "Tuljaivasti - Ajinthanagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 47,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.00457390000008,
+          18.598036000000036
+        ]
+      },
+      "properties": {
+        "OBJECTID": 47,
+        "Name": "Vitthalwadi",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Vitthalwadi",
+        "station_name": "Vitthalwadi",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Ramwadi \u21c4 Wagholi (Extension 2B)",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Viman Nagar - Lohegaon"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 48,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.99780130000005,
+          18.590216200000043
+        ]
+      },
+      "properties": {
+        "OBJECTID": 48,
+        "Name": "Bakori Phata",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Bakori Phata",
+        "station_name": "Bakori Phata",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Ramwadi \u21c4 Wagholi (Extension 2B)",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Viman Nagar - Lohegaon"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 49,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.98870860000005,
+          18.582664300000033
+        ]
+      },
+      "properties": {
+        "OBJECTID": 49,
+        "Name": "Siddharth Nagar",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Siddharth Nagar",
+        "station_name": "Siddharth Nagar",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Ramwadi \u21c4 Wagholi (Extension 2B)",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Viman Nagar - Lohegaon"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 50,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.98364860000004,
+          18.580610000000036
+        ]
+      },
+      "properties": {
+        "OBJECTID": 50,
+        "Name": "Wagholi",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Wagholi",
+        "station_name": "Wagholi",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Ramwadi \u21c4 Wagholi (Extension 2B)",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Kharadi - Wagholi"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 51,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.97899900000004,
+          18.580695800000058
+        ]
+      },
+      "properties": {
+        "OBJECTID": 51,
+        "Name": "Wagheshwar Temple",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Wagheshwar Temple",
+        "station_name": "Wagheshwar Temple",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Ramwadi \u21c4 Wagholi (Extension 2B)",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Kharadi - Wagholi"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 52,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.96264060000004,
+          18.575657600000056
+        ]
+      },
+      "properties": {
+        "OBJECTID": 52,
+        "Name": "Upper Kharadi Rd",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Upper Kharadi Rd",
+        "station_name": "Upper Kharadi Rd",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Ramwadi \u21c4 Wagholi (Extension 2B)",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Viman Nagar - Lohegaon"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 53,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.95594040000003,
+          18.572609100000022
+        ]
+      },
+      "properties": {
+        "OBJECTID": 53,
+        "Name": "Ubale Nagar",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Ubale Nagar",
+        "station_name": "Ubale Nagar",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Ramwadi \u21c4 Wagholi (Extension 2B)",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Viman Nagar - Lohegaon"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 54,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.94683700000007,
+          18.56709680000006
+        ]
+      },
+      "properties": {
+        "OBJECTID": 54,
+        "Name": "Tulaja Bhavani",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Tulaja Bhavani",
+        "station_name": "Tulaja Bhavani",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Ramwadi \u21c4 Wagholi (Extension 2B)",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Kharadi - Wagholi"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.93780870000006,
+          18.56235860000004
+        ]
+      },
+      "properties": {
+        "OBJECTID": 55,
+        "Name": "Kharadi Bypass",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Kharadi Bypass",
+        "station_name": "Kharadi Bypass",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Ramwadi \u21c4 Wagholi (Extension 2B)",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Kharadi - Wagholi"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 56,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.92840080000008,
+          18.562864000000047
+        ]
+      },
+      "properties": {
+        "OBJECTID": 56,
+        "Name": "Somnath Nagar",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Somnath Nagar",
+        "station_name": "Somnath Nagar",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Ramwadi \u21c4 Wagholi (Extension 2B)",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Viman Nagar - Lohegaon"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 57,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.92038770000005,
+          18.561482300000023
+        ]
+      },
+      "properties": {
+        "OBJECTID": 57,
+        "Name": "Viman Nagar",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Viman Nagar",
+        "station_name": "Viman Nagar",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Ramwadi \u21c4 Wagholi (Extension 2B)",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Viman Nagar - Lohegaon"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 58,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.81781500000005,
+          18.502603200000067
+        ]
+      },
+      "properties": {
+        "OBJECTID": 58,
+        "Name": "Karve Putala",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Karve Putala",
+        "station_name": "Karve Putala",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Chandani Chowk (Extension 2A)",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Deccan Gymkhana - Happy Colony"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 59,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.82428450000003,
+          18.505487600000038
+        ]
+      },
+      "properties": {
+        "OBJECTID": 59,
+        "Name": "Nal Stop",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Nal Stop",
+        "station_name": "Nal Stop",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": true,
+        "interchange_desc": "Lines 2 & 4 Transfer Hub",
+        "ward_name": "Deccan Gymkhana - Happy Colony"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 60,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.81347960000005,
+          18.49598750000007
+        ]
+      },
+      "properties": {
+        "OBJECTID": 60,
+        "Name": "Dahanukar Colony",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Dahanukar Colony",
+        "station_name": "Dahanukar Colony",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Deccan Gymkhana - Happy Colony"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 61,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.81346050000008,
+          18.488076200000023
+        ]
+      },
+      "properties": {
+        "OBJECTID": 61,
+        "Name": "Karve Nagar",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Karve Nagar",
+        "station_name": "Karve Nagar",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Karve Nagar - Hingne Home Colony"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 62,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.80550780000004,
+          18.479960100000028
+        ]
+      },
+      "properties": {
+        "OBJECTID": 62,
+        "Name": "Warje",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Warje",
+        "station_name": "Warje",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Karve Nagar - Hingne Home Colony"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 63,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.81138460000005,
+          18.47261580000003
+        ]
+      },
+      "properties": {
+        "OBJECTID": 63,
+        "Name": "Daulat Nagar",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Daulat Nagar",
+        "station_name": "Daulat Nagar",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Suncity - Manik Baug"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 64,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.81795200000005,
+          18.467137800000046
+        ]
+      },
+      "properties": {
+        "OBJECTID": 64,
+        "Name": "Manik Baug",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Manik Baug",
+        "station_name": "Manik Baug",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Suncity - Manik Baug"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 65,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.79714300000006,
+          18.454998600000067
+        ]
+      },
+      "properties": {
+        "OBJECTID": 65,
+        "Name": "Dalvewadi",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Dalvewadi",
+        "station_name": "Dalvewadi",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Narhe - Vadgaon Budruk - Dhayari"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 66,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.80286880000006,
+          18.457184600000062
+        ]
+      },
+      "properties": {
+        "OBJECTID": 66,
+        "Name": "Nanded City",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Nanded City",
+        "station_name": "Nanded City",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Narhe - Vadgaon Budruk - Dhayari"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 67,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.80939560000007,
+          18.458919800000047
+        ]
+      },
+      "properties": {
+        "OBJECTID": 67,
+        "Name": "Dhayari Phata",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Dhayari Phata",
+        "station_name": "Dhayari Phata",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Narhe - Vadgaon Budruk - Dhayari"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 68,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.82580170000006,
+          18.48105570000007
+        ]
+      },
+      "properties": {
+        "OBJECTID": 68,
+        "Name": "Hingane Chowk",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Hingane Chowk",
+        "station_name": "Hingane Chowk",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Suncity - Manik Baug"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 69,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.82939790000006,
+          18.488103100000046
+        ]
+      },
+      "properties": {
+        "OBJECTID": 69,
+        "Name": "Rajaram Pul",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Rajaram Pul",
+        "station_name": "Rajaram Pul",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Janata Vasahat - Hingne Khurd"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 70,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.83704770000008,
+          18.494875000000036
+        ]
+      },
+      "properties": {
+        "OBJECTID": 70,
+        "Name": "Deshpande Udyan",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Deshpande Udyan",
+        "station_name": "Deshpande Udyan",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Janata Vasahat - Hingne Khurd"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.84518020000007,
+          18.500840400000072
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71,
+        "Name": "Dandekar Pul",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Dandekar Pul",
+        "station_name": "Dandekar Pul",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Janata Vasahat - Hingne Khurd"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.78669780000007,
+          18.507636400000024
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72,
+        "Name": "Chandani Chowk",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Chandani Chowk",
+        "station_name": "Chandani Chowk",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Chandani Chowk (Extension 2A)",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Bavdhan - Bhusari Colony"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.85751770000007,
+          18.487785900000063
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73,
+        "Name": "Market Yard",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Market Yard",
+        "station_name": "Market Yard",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "Swargate \u21c4 Katraj (Extension 1A)",
+        "status": "Approved / Planned",
+        "station_type": "Underground Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Shankar Maharaj Math - Bibwewadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.85624860000007,
+          18.475232900000037
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74,
+        "Name": "Bibwewadi",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Bibwewadi",
+        "station_name": "Bibwewadi",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "Swargate \u21c4 Katraj (Extension 1A)",
+        "status": "Approved / Planned",
+        "station_type": "Underground Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Sahakarnagar - Padmavati"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 75,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.85809730000005,
+          18.46100690000003
+        ]
+      },
+      "properties": {
+        "OBJECTID": 75,
+        "Name": "Padmavati",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Padmavati",
+        "station_name": "Padmavati",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "Swargate \u21c4 Katraj (Extension 1A)",
+        "status": "Approved / Planned",
+        "station_type": "Underground Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Balajinagar - Ambegaon - Katraj"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 76,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.85837930000008,
+          18.453226700000073
+        ]
+      },
+      "properties": {
+        "OBJECTID": 76,
+        "Name": "Balaji Nagar",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Balaji Nagar",
+        "station_name": "Balaji Nagar",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "Swargate \u21c4 Katraj (Extension 1A)",
+        "status": "Approved / Planned",
+        "station_type": "Underground Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Dhankawadi - Katraj Dairy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 77,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.85900890000005,
+          18.446573500000056
+        ]
+      },
+      "properties": {
+        "OBJECTID": 77,
+        "Name": "Katraj",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Katraj",
+        "station_name": "Katraj",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "Swargate \u21c4 Katraj (Extension 1A)",
+        "status": "Approved / Planned",
+        "station_type": "Underground Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Balajinagar - Ambegaon - Katraj"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 78,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.86961610000003,
+          18.501458100000036
+        ]
+      },
+      "properties": {
+        "OBJECTID": 78,
+        "Name": "Seven Loves Chowk",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Seven Loves Chowk",
+        "station_name": "Seven Loves Chowk",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Kashewadi - Dias Plot"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 79,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.91162780000008,
+          18.506307900000024
+        ]
+      },
+      "properties": {
+        "OBJECTID": 79,
+        "Name": "Ramtekadi",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Ramtekadi",
+        "station_name": "Ramtekadi",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Wanawadi - Salunkhe Vihar"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 80,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.92277460000008,
+          18.503670200000045
+        ]
+      },
+      "properties": {
+        "OBJECTID": 80,
+        "Name": "Hadapsar",
+        "FolderPath": "overpass-turbo.eu export",
+        "SymbolID": 0,
+        "AltMode": -1,
+        "Base": 0,
+        "Snippet": "",
+        "PopupInfo": "",
+        "HasLabel": -1,
+        "LabelID": 0,
+        "name": "Hadapsar",
+        "station_name": "Hadapsar",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": true,
+        "interchange_desc": "Lines 4 & 4B Rail Junction",
+        "ward_name": "Wanawadi - Salunkhe Vihar"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 81,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.92967051100004,
+          18.508287304000078
+        ]
+      },
+      "properties": {
+        "OBJECTID": 81,
+        "Name": "Magarpatta South",
+        "FolderPath": null,
+        "SymbolID": 0,
+        "AltMode": null,
+        "Base": null,
+        "Snippet": null,
+        "PopupInfo": null,
+        "HasLabel": null,
+        "LabelID": null,
+        "name": "Magarpatta South",
+        "station_name": "Magarpatta South",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Ramtekadi - Malwadi - Vaiduwadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 82,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.93186976700008,
+          18.522652778000065
+        ]
+      },
+      "properties": {
+        "OBJECTID": 82,
+        "Name": "Magarpatta North",
+        "FolderPath": null,
+        "SymbolID": 0,
+        "AltMode": null,
+        "Base": null,
+        "Snippet": null,
+        "PopupInfo": null,
+        "HasLabel": null,
+        "LabelID": null,
+        "name": "Magarpatta North",
+        "station_name": "Magarpatta North",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Koregaon Park - Ghorpade - Mundhwa"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 83,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.93492351100008,
+          18.541326755000057
+        ]
+      },
+      "properties": {
+        "OBJECTID": 83,
+        "Name": "Sainath Nagar",
+        "FolderPath": null,
+        "SymbolID": 0,
+        "AltMode": null,
+        "Base": null,
+        "Snippet": null,
+        "PopupInfo": null,
+        "HasLabel": null,
+        "LabelID": null,
+        "name": "Sainath Nagar",
+        "station_name": "Sainath Nagar",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Kharadi - Wagholi"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 84,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.93737491100006,
+          18.553113155000062
+        ]
+      },
+      "properties": {
+        "OBJECTID": 84,
+        "Name": "Kharadi Chowk",
+        "FolderPath": null,
+        "SymbolID": 0,
+        "AltMode": null,
+        "Base": null,
+        "Snippet": null,
+        "PopupInfo": null,
+        "HasLabel": null,
+        "LabelID": null,
+        "name": "Kharadi Chowk",
+        "station_name": "Kharadi Chowk",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": true,
+        "interchange_desc": "Lines 2 & 4 Junction",
+        "ward_name": "Kharadi - Wagholi"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 85,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.93265815500007,
+          18.501531278000073
+        ]
+      },
+      "properties": {
+        "OBJECTID": 85,
+        "Name": "Hadapsar Phata",
+        "FolderPath": null,
+        "SymbolID": 0,
+        "AltMode": null,
+        "Base": null,
+        "Snippet": null,
+        "PopupInfo": null,
+        "HasLabel": null,
+        "LabelID": null,
+        "name": "Hadapsar Phata",
+        "station_name": "Hadapsar Phata",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Ramtekadi - Malwadi - Vaiduwadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 86,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.93846928600004,
+          18.500877455000023
+        ]
+      },
+      "properties": {
+        "OBJECTID": 86,
+        "Name": "Hadapsar Bus Depot",
+        "FolderPath": null,
+        "SymbolID": 0,
+        "AltMode": null,
+        "Base": null,
+        "Snippet": null,
+        "PopupInfo": null,
+        "HasLabel": null,
+        "LabelID": null,
+        "name": "Hadapsar Bus Depot",
+        "station_name": "Hadapsar Bus Depot",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Ramtekadi - Malwadi - Vaiduwadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 87,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.94649037100004,
+          18.494368277000035
+        ]
+      },
+      "properties": {
+        "OBJECTID": 87,
+        "Name": "Hadapsar Gliding Club",
+        "FolderPath": null,
+        "SymbolID": 0,
+        "AltMode": null,
+        "Base": null,
+        "Snippet": null,
+        "PopupInfo": null,
+        "HasLabel": null,
+        "LabelID": null,
+        "name": "Hadapsar Gliding Club",
+        "station_name": "Hadapsar Gliding Club",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Hadapsar - Satavwadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 88,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.95038587600004,
+          18.499640584000076
+        ]
+      },
+      "properties": {
+        "OBJECTID": 88,
+        "Name": "Akashwani",
+        "FolderPath": null,
+        "SymbolID": 0,
+        "AltMode": null,
+        "Base": null,
+        "Snippet": null,
+        "PopupInfo": null,
+        "HasLabel": null,
+        "LabelID": null,
+        "name": "Akashwani",
+        "station_name": "Akashwani",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Ramtekadi - Malwadi - Vaiduwadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 89,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.95648100800008,
+          18.498429651000038
+        ]
+      },
+      "properties": {
+        "OBJECTID": 89,
+        "Name": "Laxmi Colony",
+        "FolderPath": null,
+        "SymbolID": 0,
+        "AltMode": null,
+        "Base": null,
+        "Snippet": null,
+        "PopupInfo": null,
+        "HasLabel": null,
+        "LabelID": null,
+        "name": "Laxmi Colony",
+        "station_name": "Laxmi Colony",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Hadapsar - Satavwadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 90,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.99107093700007,
+          18.493590634000043
+        ]
+      },
+      "properties": {
+        "OBJECTID": 90,
+        "Name": "Draksha Baug",
+        "FolderPath": null,
+        "SymbolID": 0,
+        "AltMode": null,
+        "Base": null,
+        "Snippet": null,
+        "PopupInfo": null,
+        "HasLabel": null,
+        "LabelID": null,
+        "name": "Draksha Baug",
+        "station_name": "Draksha Baug",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Manjari Budruk - Keshavnagar - Sadesatra Nali"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 91,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.97630215700008,
+          18.495711738000068
+        ]
+      },
+      "properties": {
+        "OBJECTID": 91,
+        "Name": "Manjari Phata",
+        "FolderPath": null,
+        "SymbolID": 0,
+        "AltMode": null,
+        "Base": null,
+        "Snippet": null,
+        "PopupInfo": null,
+        "HasLabel": null,
+        "LabelID": null,
+        "name": "Manjari Phata",
+        "station_name": "Manjari Phata",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Manjari Budruk - Keshavnagar - Sadesatra Nali"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 92,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.96653757800004,
+          18.49703617600005
+        ]
+      },
+      "properties": {
+        "OBJECTID": 92,
+        "Name": "Stud Farm",
+        "FolderPath": null,
+        "SymbolID": 0,
+        "AltMode": null,
+        "Base": null,
+        "Snippet": null,
+        "PopupInfo": null,
+        "HasLabel": null,
+        "LabelID": null,
+        "name": "Stud Farm",
+        "station_name": "Stud Farm",
+        "line_id": "line4",
+        "line_name": "Line 4 / 4A / 4B (Orange Line)",
+        "color": "#f97316",
+        "corridor": "Khadakwasla \u21c4 Swargate \u21c4 Hadapsar \u21c4 Kharadi",
+        "status": "Approved / Planned",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Manjari Budruk - Keshavnagar - Sadesatra Nali"
       }
     }
   ]

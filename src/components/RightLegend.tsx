@@ -206,7 +206,7 @@ export const RightLegend: React.FC<RightLegendProps> = ({
                 >
                   <div className="legend-section-title-wrap">
                     <h3 className="legend-section-title">Metro rail network</h3>
-                    <span className="legend-section-sub">MahaMetro Phase 1 corridors</span>
+                    <span className="legend-section-sub">MahaMetro Lines 1–4 planned &amp; active</span>
                   </div>
                   <div className="legend-section-header-right">
                     <span className="legend-section-tag tag-metro">Rail</span>
@@ -234,7 +234,7 @@ export const RightLegend: React.FC<RightLegendProps> = ({
                             <span className="metro-line-swatch" style={{ background: '#7c3aed' }} />
                             <div className="legend-row-text">
                               <span className="legend-row-title">Line 1: Purple Line</span>
-                              <span className="legend-row-detail">PCMC ⇄ Swargate (North-South)</span>
+                              <span className="legend-row-detail">PCMC ⇄ Swargate &amp; Ext. (North-South)</span>
                             </div>
                             <span className="metro-status-pill">Operational</span>
                           </div>
@@ -243,9 +243,27 @@ export const RightLegend: React.FC<RightLegendProps> = ({
                             <span className="metro-line-swatch" style={{ background: '#0284c7' }} />
                             <div className="legend-row-text">
                               <span className="legend-row-title">Line 2: Aqua Line</span>
-                              <span className="legend-row-detail">Vanaz ⇄ Ramwadi (East-West)</span>
+                              <span className="legend-row-detail">Vanaz ⇄ Ramwadi &amp; Ext. (East-West)</span>
                             </div>
                             <span className="metro-status-pill">Operational</span>
+                          </div>
+
+                          <div className="legend-line-row">
+                            <span className="metro-line-swatch" style={{ background: '#ec4899' }} />
+                            <div className="legend-row-text">
+                              <span className="legend-row-title">Line 3: Pink Line</span>
+                              <span className="legend-row-detail">Shivajinagar ⇄ Hinjawadi IT Park</span>
+                            </div>
+                            <span className="metro-status-pill" style={{ color: '#d97706', background: '#fffbeb', borderColor: '#fef3c7' }}>Construction</span>
+                          </div>
+
+                          <div className="legend-line-row">
+                            <span className="metro-line-swatch" style={{ background: '#f97316' }} />
+                            <div className="legend-row-text">
+                              <span className="legend-row-title">Line 4 / 4A / 4B: Orange Line</span>
+                              <span className="legend-row-detail">Khadakwasla ⇄ Kharadi &amp; Hadapsar</span>
+                            </div>
+                            <span className="metro-status-pill" style={{ color: '#2563eb', background: '#eff6ff', borderColor: '#dbeafe' }}>Planned</span>
                           </div>
                         </>
                       )}
@@ -256,7 +274,7 @@ export const RightLegend: React.FC<RightLegendProps> = ({
                             <span className="metro-hub-symbol" />
                             <div className="legend-row-text">
                               <span className="legend-row-title">District Court interchange</span>
-                              <span className="legend-row-detail">Lines 1 &amp; 2 transfer hub</span>
+                              <span className="legend-row-detail">Lines 1, 2 &amp; 3 transfer hub</span>
                             </div>
                             <span className="metro-hub-pill">Transfer hub</span>
                           </div>
@@ -264,8 +282,8 @@ export const RightLegend: React.FC<RightLegendProps> = ({
                           <div className="legend-line-row">
                             <span className="metro-station-symbol" />
                             <div className="legend-row-text">
-                              <span className="legend-row-title">Operational stations</span>
-                              <span className="legend-row-detail">28 elevated &amp; underground stops</span>
+                              <span className="legend-row-title">Metro stations &amp; stops</span>
+                              <span className="legend-row-detail">92 planned &amp; operational stations</span>
                             </div>
                           </div>
                         </>

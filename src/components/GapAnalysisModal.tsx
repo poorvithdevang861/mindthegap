@@ -66,7 +66,7 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
                 </div>
                 <div>
                   <div className="gap-card-title">Transit Accessibility Gap</div>
-                  <div className="gap-card-subtitle">3,320 Bus Stops &amp; 29 Metro Stations (Purple &amp; Aqua)</div>
+                  <div className="gap-card-subtitle">3,319 Bus Stops &amp; 92 Metro Stations (Lines 1–4)</div>
                 </div>
               </div>
               <p className="gap-card-desc">
@@ -83,7 +83,7 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
                 </div>
                 <div>
                   <span className="metric-label">Metro Alignment</span>
-                  <span className="metric-val" style={{ color: '#7c3aed' }}>29 Stations</span>
+                  <span className="metric-val" style={{ color: '#7c3aed' }}>92 Stations</span>
                 </div>
               </div>
               <div style={{ fontSize: '11px', fontWeight: 700, color: '#475569', marginTop: '10px', marginBottom: '4px', textTransform: 'uppercase' }}>

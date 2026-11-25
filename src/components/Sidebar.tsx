@@ -295,7 +295,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               </div>
               <div>
                 <div className="layer-title-text">Metro Rail Corridors</div>
-                <div className="layer-subtext">Lines 1 & 2 (133 Alignments)</div>
+                <div className="layer-subtext">Lines 1–4 Routes (222 Alignments)</div>
               </div>
             </div>
             <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
@@ -324,7 +324,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               </div>
               <div>
                 <div className="layer-title-text">Metro Stations</div>
-                <div className="layer-subtext">28 Stations & District Court Hub</div>
+                <div className="layer-subtext">92 Planned & Active Stations</div>
               </div>
             </div>
             <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
@@ -347,10 +347,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
               <div className="micro-note-dots">
                 <span className="micro-dot" style={{ background: '#7c3aed' }} title="Line 1: Purple Line" />
                 <span className="micro-dot" style={{ background: '#0284c7' }} title="Line 2: Aqua Line" />
+                <span className="micro-dot" style={{ background: '#ec4899' }} title="Line 3: Pink Line" />
+                <span className="micro-dot" style={{ background: '#f97316' }} title="Line 4: Orange Line" />
                 <span className="micro-dot" style={{ background: '#1d4ed8', border: '1px solid #93c5fd' }} title="District Court Hub" />
               </div>
               <span className="micro-note-text">
-                Lines 1 &amp; 2 operational corridors
+                Lines 1–4 planned &amp; active network
               </span>
             </div>
           )}

@@ -457,9 +457,9 @@ export const GISMap: React.FC<MapProps> = ({
         const p = feature?.properties || {};
         const stype = p.station_type || 'Elevated Station';
         const statusBadgeColor =
-          p.status === 'Operational' ? '#059669' : p.status === 'Under Construction' ? '#d97706' : '#2563eb';
+          p.status === 'Operational' ? '#059669' : p.status?.includes('Construction') ? '#d97706' : '#2563eb';
         const statusBadgeBg =
-          p.status === 'Operational' ? '#ecfdf5' : p.status === 'Under Construction' ? '#fffbeb' : '#eff6ff';
+          p.status === 'Operational' ? '#ecfdf5' : p.status?.includes('Construction') ? '#fffbeb' : '#eff6ff';
         const interchangeBadge = p.is_interchange
           ? `<div style="margin-top:4px; font-size:10px; font-weight:700; color:#1d4ed8; background:#eff6ff; padding:2px 6px; border-radius:4px; display:inline-block; border:1px solid #bfdbfe;">
                ⇄ ${p.interchange_desc || 'INTERCHANGE HUB'}
@@ -467,9 +467,9 @@ export const GISMap: React.FC<MapProps> = ({
           : '';
 
         layer.bindTooltip(
-          `<div style="font-weight:700; color:#0f172a; font-size:12.5px;">${p.station_name || p.name}</div>
+          `<div style="font-weight:700; color:#0f172a; font-size:12.5px;">${p.station_name || p.name || p.Name}</div>
            <div style="font-size:11px; color:#475569; margin-top:2px; font-weight:600;">
-             <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:${p.color || '#0284c7'}; margin-right:5px;"></span>${p.line_name}
+             <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:${p.color || '#0284c7'}; margin-right:5px;"></span>${p.line_name || 'Metro Network'}
            </div>
            <div style="display:flex; align-items:center; gap:6px; margin-top:4px;">
              <span style="font-size:9.5px; font-weight:700; padding:1px 6px; border-radius:3px; background:${statusBadgeBg}; color:${statusBadgeColor};">${p.status}</span>
