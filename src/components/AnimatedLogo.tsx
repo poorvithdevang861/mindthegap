@@ -1,59 +1,54 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 
 interface AnimatedLogoProps {
   onOpenGapModal?: () => void;
 }
 
-interface LetterDef {
+interface LetterItem {
   char: string;
-  file: string;
-  globalIndex: number;
+  idx: number;
 }
 
-const WORD_1: LetterDef[] = [
-  { char: 'M', file: 'letter_0_M.png', globalIndex: 0 },
-  { char: 'i', file: 'letter_1_i.png', globalIndex: 1 },
-  { char: 'n', file: 'letter_2_n.png', globalIndex: 2 },
-  { char: 'd', file: 'letter_3_d.png', globalIndex: 3 },
-];
-
-const WORD_2: LetterDef[] = [
-  { char: 'T', file: 'letter_4_T.png', globalIndex: 4 },
-  { char: 'h', file: 'letter_5_h.png', globalIndex: 5 },
-  { char: 'e', file: 'letter_6_e.png', globalIndex: 6 },
-];
-
-const WORD_3: LetterDef[] = [
-  { char: 'G', file: 'letter_7_G.png', globalIndex: 7 },
-  { char: 'a', file: 'letter_8_a.png', globalIndex: 8 },
-  { char: 'p', file: 'letter_9_p.png', globalIndex: 9 },
+const WORDS: { word: string; letters: LetterItem[] }[] = [
+  {
+    word: 'Mind',
+    letters: [
+      { char: 'M', idx: 0 },
+      { char: 'i', idx: 1 },
+      { char: 'n', idx: 2 },
+      { char: 'd', idx: 3 },
+    ],
+  },
+  {
+    word: 'The',
+    letters: [
+      { char: 'T', idx: 4 },
+      { char: 'h', idx: 5 },
+      { char: 'e', idx: 6 },
+    ],
+  },
+  {
+    word: 'Gap',
+    letters: [
+      { char: 'G', idx: 7 },
+      { char: 'a', idx: 8 },
+      { char: 'p', idx: 9 },
+    ],
+  },
 ];
 
 export const AnimatedLogo: React.FC<AnimatedLogoProps> = ({ onOpenGapModal }) => {
-  const base = import.meta.env.BASE_URL;
+  const [isJumping, setIsJumping] = useState(false);
 
-  const renderWord = (letters: LetterDef[], wordKey: string) => (
-    <span className="jumpy-word" key={wordKey}>
-      {letters.map((l) => (
-        <span
-          key={l.file}
-          className="jumpy-letter-box"
-          style={{
-            animationDelay: `${l.globalIndex * 0.08}s`,
-            ['--letter-idx' as any]: l.globalIndex,
-          }}
-          title={l.char}
-        >
-          <img
-            src={`${base}letters/${l.file}`}
-            alt={l.char}
-            className="jumpy-letter-img"
-            draggable={false}
-          />
-        </span>
-      ))}
-    </span>
-  );
+  // Trigger jump cascade whenever user touches or hovers the text
+  const handleTouchOrHover = useCallback(() => {
+    setIsJumping(false);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        setIsJumping(true);
+      });
+    });
+  }, []);
 
   return (
     <div
@@ -124,12 +119,30 @@ export const AnimatedLogo: React.FC<AnimatedLogoProps> = ({ onOpenGapModal }) =>
         </svg>
       </div>
 
-      <div className="brand-text">
-        {/* Animated Jumpy Logo Letters */}
-        <div className="jumpy-title-container" aria-hidden="true">
-          {renderWord(WORD_1, 'mind')}
-          {renderWord(WORD_2, 'the')}
-          {renderWord(WORD_3, 'gap')}
+      <div
+        className="brand-text"
+        onMouseEnter={handleTouchOrHover}
+        onTouchStart={handleTouchOrHover}
+      >
+        {/* 100% Vector-Sharp Interactive Jumpy Title */}
+        <div className="brand-title-letters" aria-hidden="true">
+          {WORDS.map((w, wIdx) => (
+            <span key={w.word} className="brand-word">
+              {w.letters.map((l) => (
+                <span
+                  key={l.idx}
+                  className={`brand-letter ${isJumping ? 'jumping' : ''}`}
+                  style={{
+                    ['--letter-idx' as any]: l.idx,
+                  }}
+                  onAnimationEnd={l.idx === 9 ? () => setIsJumping(false) : undefined}
+                >
+                  {l.char}
+                </span>
+              ))}
+              {wIdx < WORDS.length - 1 && <span className="word-spacer" />}
+            </span>
+          ))}
         </div>
         <span className="sr-only">Mind the Gap</span>
         <span className="brand-subtitle">Pune Metropolitan Spatial Equity</span>
