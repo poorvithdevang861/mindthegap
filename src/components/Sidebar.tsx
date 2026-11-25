@@ -141,7 +141,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
       <div className="sidebar-header">
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <div className="sidebar-header-icon">
-            <Layers size={15} color="#2563eb" />
+            <Layers size={18} strokeWidth={2.4} color="#0f172a" />
           </div>
           <div>
             <h2>Layer Controls</h2>
@@ -160,7 +160,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           {/* Dropdown 1: Jurisdiction Filter */}
           <CustomDropdown
             label="Municipal Jurisdiction"
-            icon={<Building2 size={13} color="#2563eb" />}
+            icon={<Building2 size={14} strokeWidth={2.4} color="#0f172a" />}
             headerBadge={corpFilter === 'all' ? '73 Wards' : corpFilter === 'PMC' ? '41 Wards' : '32 Wards'}
             value={corpFilter}
             onChange={onChangeCorpFilter}
@@ -171,7 +171,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           <div style={{ marginTop: '10px' }}>
             <CustomDropdown
               label="Thematic Choropleth"
-              icon={<Palette size={13} color="#7c3aed" />}
+              icon={<Palette size={14} strokeWidth={2.4} color="#0f172a" />}
               value={thematic}
               onChange={onChangeThematic}
               options={THEMATIC_OPTIONS}
@@ -198,8 +198,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
             onClick={() => onToggleLayer('wards')}
           >
             <div className="layer-info">
-              <div className="layer-badge-icon" style={{ background: '#f0fdf4', color: '#059669', border: '1px solid #bbf7d0' }}>
-                <LandPlot size={14} />
+              <div className="layer-badge-icon">
+                <LandPlot size={17} strokeWidth={2.4} color="#0f172a" />
               </div>
               <div>
                 <div className="layer-title-text">Municipal Wards</div>
@@ -232,8 +232,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
             onClick={() => onToggleLayer('stops')}
           >
             <div className="layer-info">
-              <div className="layer-badge-icon" style={{ background: '#eff6ff', color: '#2563eb', border: '1px solid #bfdbfe' }}>
-                <BusFront size={14} />
+              <div className="layer-badge-icon">
+                <BusFront size={17} strokeWidth={2.4} color="#0f172a" />
               </div>
               <div>
                 <div className="layer-title-text">Bus Stops (GTFS)</div>
@@ -261,8 +261,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
             onClick={() => onToggleLayer('routes')}
           >
             <div className="layer-info">
-              <div className="layer-badge-icon" style={{ background: '#fdf2f8', color: '#db2777', border: '1px solid #fbcfe8' }}>
-                <Route size={14} />
+              <div className="layer-badge-icon">
+                <Route size={17} strokeWidth={2.4} color="#0f172a" />
               </div>
               <div>
                 <div className="layer-title-text">Bus Corridors</div>
@@ -290,8 +290,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
             onClick={() => onToggleLayer('metroRoutes')}
           >
             <div className="layer-info">
-              <div className="layer-badge-icon" style={{ background: '#f5f3ff', color: '#7c3aed', border: '1px solid #ddd6fe' }}>
-                <TrainFront size={14} />
+              <div className="layer-badge-icon">
+                <TrainFront size={17} strokeWidth={2.4} color="#0f172a" />
               </div>
               <div>
                 <div className="layer-title-text">Metro Rail Corridors</div>
@@ -319,8 +319,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
             onClick={() => onToggleLayer('metroStations')}
           >
             <div className="layer-info">
-              <div className="layer-badge-icon" style={{ background: '#eff6ff', color: '#0284c7', border: '1px solid #bfdbfe' }}>
-                <Milestone size={14} />
+              <div className="layer-badge-icon">
+                <Milestone size={17} strokeWidth={2.4} color="#0f172a" />
               </div>
               <div>
                 <div className="layer-title-text">Metro Stations</div>
@@ -368,8 +368,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
             onClick={() => onToggleLayer('transitDesert')}
           >
             <div className="layer-info">
-              <div className="layer-badge-icon" style={{ background: '#fef2f2', color: '#dc2626', border: '1px solid #fecaca' }}>
-                <Flame size={14} />
+              <div className="layer-badge-icon">
+                <Flame size={17} strokeWidth={2.4} color="#0f172a" />
               </div>
               <div>
                 <div className="layer-title-text">Transit Desert Heatmap</div>
@@ -417,8 +417,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
             onClick={() => onToggleLayer('majorRoads')}
           >
             <div className="layer-info">
-              <div className="layer-badge-icon" style={{ background: '#fffbeb', color: '#d97706', border: '1px solid #fde68a' }}>
-                <Milestone size={14} />
+              <div className="layer-badge-icon">
+                <Milestone size={17} strokeWidth={2.4} color="#0f172a" />
               </div>
               <div>
                 <div className="layer-title-text">Primary Arterials</div>
@@ -446,8 +446,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
             onClick={() => onToggleLayer('allRoads')}
           >
             <div className="layer-info">
-              <div className="layer-badge-icon" style={{ background: '#f8fafc', color: '#64748b', border: '1px solid #e2e8f0' }}>
-                <Network size={14} />
+              <div className="layer-badge-icon">
+                <Network size={17} strokeWidth={2.4} color="#0f172a" />
               </div>
               <div>
                 <div className="layer-title-text">All Local Streets</div>
