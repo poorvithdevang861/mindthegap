@@ -49,11 +49,11 @@ export const AnimatedLogo: React.FC<AnimatedLogoProps> = ({ onOpenGapModal }) =>
     >
       <div className="brand-mark" aria-hidden="true">
         <img
-          src={`${import.meta.env.BASE_URL}train_logo.png`}
-          alt="Mind The Gap Transit Train Icon"
+          src={`${import.meta.env.BASE_URL}transit_logo.png`}
+          alt="Mind The Gap Transit Icon"
           className="brand-train-icon"
-          width="28"
-          height="28"
+          width="43"
+          height="36"
         />
       </div>
 

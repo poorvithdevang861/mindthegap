@@ -64,7 +64,7 @@ export const Header: React.FC<HeaderProps> = ({
       {/* Ward Search Input */}
       <div className="search-container" ref={containerRef}>
         <div className="search-input-wrapper">
-          <Search size={15} className="search-icon" />
+          <Search size={17} className="search-icon" />
           <input
             ref={inputRef}
             type="text"
@@ -88,7 +88,7 @@ export const Header: React.FC<HeaderProps> = ({
               title="Clear search"
               type="button"
             >
-              <X size={14} />
+              <X size={15} />
             </button>
           )}
         </div>
@@ -128,7 +128,7 @@ export const Header: React.FC<HeaderProps> = ({
           title="Open municipal equity and transit gap analysis"
           type="button"
         >
-          <BarChart3 size={15} />
+          <BarChart3 size={17} />
           <span>Gap Analysis</span>
         </button>
 
@@ -138,7 +138,7 @@ export const Header: React.FC<HeaderProps> = ({
           title="Zoom to Pune Metropolitan Area"
           type="button"
         >
-          <Compass size={15} />
+          <Compass size={17} />
           <span>Pune View</span>
         </button>
       </div>

@@ -7,7 +7,7 @@
   --pmc-color: #6d28d9;
   --accent: #2563eb;
   --bg-app: #fcfcfd;
-  --header-height: 56px;
+  --header-height: 64px;
   --sidebar-width: 320px;
   --card-bg-glass: rgba(255, 255, 255, 0.98);
   --card-border-glass: #e2e8f0;
@@ -58,7 +58,7 @@ body, html, #root {
 }
 
 /* ============================================================
-   DISCIPLINED SINGLE-TIER CARTOGRAPHIC HEADER (56px)
+   DISCIPLINED SINGLE-TIER CARTOGRAPHIC HEADER (64px)
    ============================================================ */
 
 .top-nav {
@@ -71,53 +71,57 @@ body, html, #root {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 24px;
   background: #ffffff;
   border-bottom: 1px solid #e2e8f0;
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
   pointer-events: auto;
+  white-space: nowrap;
 }
 
 /* Brand Lockup */
 .brand-lockup {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   cursor: pointer;
   user-select: none;
   text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .brand-mark {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  width: auto;
+  height: auto;
+  flex-shrink: 0;
 }
 
 .brand-emblem-svg,
 .brand-train-icon {
   display: block;
-  width: 28px;
-  height: 28px;
+  height: 38px;
+  width: auto;
+  max-width: 52px;
   object-fit: contain;
   transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter: drop-shadow(0 1px 2px rgba(15, 23, 42, 0.08));
 }
 
 .brand-lockup:hover .brand-train-icon {
-  transform: scale(1.08) translateY(-1px);
+  transform: scale(1.06) translateY(-1px);
 }
 
 .brand-lockup:hover .brand-mark {
-  background: #f8fafc;
-  border-color: #cbd5e1;
-  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
 }
 
 .brand-datum {
@@ -132,6 +136,7 @@ body, html, #root {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  white-space: nowrap;
 }
 
 /* Cherry Bomb One Typography & Whole-Word Bounce */
@@ -139,9 +144,9 @@ body, html, #root {
   margin: 0;
   padding: 0;
   font-family: 'Cherry Bomb One', 'Plus Jakarta Sans', -apple-system, sans-serif;
-  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  font-size: clamp(1.2rem, 2.5vw, 1.55rem);
   font-weight: 400; /* Natural chunky weight of Cherry Bomb One */
-  line-height: 1.15;
+  line-height: 1.1;
   color: #1a3763; /* Brand navy */
   letter-spacing: 0.3px;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.95);
@@ -149,6 +154,7 @@ body, html, #root {
   text-shadow: 0 1px 2px rgba(26, 55, 99, 0.12);
   user-select: none;
   display: inline-block;
+  white-space: nowrap;
   will-change: transform;
   transform: translateZ(0);
 }
@@ -211,28 +217,30 @@ body, html, #root {
 }
 
 .brand-subtitle {
-  font-size: 10.5px;
+  font-size: 11.5px;
   font-weight: 500;
   color: var(--text-muted);
   line-height: 1.2;
+  white-space: nowrap;
+  letter-spacing: 0.1px;
 }
 
 /* Ward Search Input */
 .search-container {
   position: relative;
   flex: 1;
-  max-width: 400px;
-  margin: 0 20px;
+  max-width: 440px;
+  margin: 0 24px;
 }
 
 .search-input-wrapper {
   display: flex;
   align-items: center;
-  height: 36px;
+  height: 40px;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
-  border-radius: 6px;
-  padding: 0 10px;
+  border-radius: 8px;
+  padding: 0 12px;
   transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
 }
 
@@ -252,9 +260,9 @@ body, html, #root {
   background: transparent;
   outline: none;
   width: 100%;
-  font-size: 12px;
+  font-size: 13.5px;
   color: var(--text-main);
-  margin-left: 8px;
+  margin-left: 9px;
   font-family: inherit;
 }
 
@@ -354,23 +362,27 @@ body, html, #root {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  height: 36px;
-  padding: 0 12px;
-  border-radius: 6px;
-  font-size: 12px;
+  gap: 7px;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 8px;
+  font-size: 13px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.15s ease;
   user-select: none;
   font-family: inherit;
   border: 1px solid transparent;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .btn-primary {
@@ -1697,7 +1709,7 @@ input:checked + .slider:before {
 
 @media (max-width: 768px) {
   :root {
-    --header-height: 56px;
+    --header-height: 60px;
     --sidebar-width: min(300px, 85vw);
   }
   .top-nav {
