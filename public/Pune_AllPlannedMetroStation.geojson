@@ -1,0 +1,706 @@
+{
+  "type": "FeatureCollection",
+  "name": "Pune_Metro_Stations_28",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.85751930000004,
+          18.499730200000045
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1,
+        "name": "Swargate",
+        "station_name": "Swargate",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
+        "status": "Operational",
+        "station_type": "Underground Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Navi Peth - Parvati"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.80522690000004,
+          18.507174400000054
+        ]
+      },
+      "properties": {
+        "OBJECTID": 2,
+        "name": "Vanaz",
+        "station_name": "Vanaz",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Mayur Colony - Kothrud"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.82878890000006,
+          18.507341000000054
+        ]
+      },
+      "properties": {
+        "OBJECTID": 3,
+        "name": "SNDT College",
+        "station_name": "SNDT College",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Deccan Gymkhana - Happy Colony"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.82212540000006,
+          18.508877100000063
+        ]
+      },
+      "properties": {
+        "OBJECTID": 4,
+        "name": "Paud Phata",
+        "station_name": "Paud Phata",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Rambaug Colony - Shivtirthnagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.81407930000006,
+          18.50955280000005
+        ]
+      },
+      "properties": {
+        "OBJECTID": 5,
+        "name": "Anandnagar",
+        "station_name": "Anandnagar",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Mayur Colony - Kothrud"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.83806160000006,
+          18.511973700000055
+        ]
+      },
+      "properties": {
+        "OBJECTID": 6,
+        "name": "Garware College",
+        "station_name": "Garware College",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Deccan Gymkhana - Happy Colony"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.85707960000008,
+          18.512918900000045
+        ]
+      },
+      "properties": {
+        "OBJECTID": 7,
+        "name": "Mahatma Phule Mandai",
+        "station_name": "Mahatma Phule Mandai",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
+        "status": "Operational",
+        "station_type": "Underground Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Shaniwar Peth - Mahatma Phule Mandai"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.84445800000003,
+          18.51642570000007
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8,
+        "name": "Deccan Gymkhana",
+        "station_name": "Deccan Gymkhana",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Chhatrapati Shivajinagar - Model Colony"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.84697120000004,
+          18.519659200000035
+        ]
+      },
+      "properties": {
+        "OBJECTID": 9,
+        "name": "Chhatrapati Sambhaji Udyan",
+        "station_name": "Chhatrapati Sambhaji Udyan",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Chhatrapati Shivajinagar - Model Colony"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.85968270000006,
+          18.521362800000077
+        ]
+      },
+      "properties": {
+        "OBJECTID": 10,
+        "name": "Kasaba Peth",
+        "station_name": "Kasaba Peth",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
+        "status": "Operational",
+        "station_type": "Underground Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Kasba Ganpati - Kamla Nehru Hospital - K.E.M. Hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.85282260000008,
+          18.522497200000032
+        ]
+      },
+      "properties": {
+        "OBJECTID": 11,
+        "name": "PMC",
+        "station_name": "PMC",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Chhatrapati Shivajinagar - Model Colony"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.85755690000008,
+          18.526413900000023
+        ]
+      },
+      "properties": {
+        "OBJECTID": 12,
+        "name": "District Court (Aqua Line)",
+        "station_name": "District Court (Aqua Line)",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Underground Station",
+        "is_interchange": true,
+        "interchange_desc": "PURPLE \u21c4 AQUA INTERCHANGE",
+        "ward_name": "Chhatrapati Shivajinagar - Model Colony"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.85691490000005,
+          18.526849500000026
+        ]
+      },
+      "properties": {
+        "OBJECTID": 13,
+        "name": "District Court (Purple Line)",
+        "station_name": "District Court (Purple Line)",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
+        "status": "Operational",
+        "station_type": "Underground Station",
+        "is_interchange": true,
+        "interchange_desc": "PURPLE \u21c4 AQUA INTERCHANGE",
+        "ward_name": "Chhatrapati Shivajinagar - Model Colony"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.87259700000004,
+          18.529723400000023
+        ]
+      },
+      "properties": {
+        "OBJECTID": 14,
+        "name": "Pune Railway Station",
+        "station_name": "Pune Railway Station",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Pune Station - Jai Jawan Nagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.86505830000004,
+          18.53005200000007
+        ]
+      },
+      "properties": {
+        "OBJECTID": 15,
+        "name": "RTO (Pune)",
+        "station_name": "RTO (Pune)",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Pune Station - Jai Jawan Nagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.84972600000003,
+          18.532182500000033
+        ]
+      },
+      "properties": {
+        "OBJECTID": 16,
+        "name": "Shivaji Nagar",
+        "station_name": "Shivaji Nagar",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
+        "status": "Operational",
+        "station_type": "Underground Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Gokhalenagar - Wakdewadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.87776330000008,
+          18.532706800000028
+        ]
+      },
+      "properties": {
+        "OBJECTID": 17,
+        "name": "Ruby Hall Clinic",
+        "station_name": "Ruby Hall Clinic",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Pune Station - Jai Jawan Nagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.88345440000006,
+          18.540580200000022
+        ]
+      },
+      "properties": {
+        "OBJECTID": 18,
+        "name": "Bund Garden",
+        "station_name": "Bund Garden",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Pune Station - Jai Jawan Nagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.90571220000004,
+          18.544449300000053
+        ]
+      },
+      "properties": {
+        "OBJECTID": 19,
+        "name": "Kalyani Nagar",
+        "station_name": "Kalyani Nagar",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Kalyani Nagar - Vadgaon Sheri"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.88662390000007,
+          18.54528220000003
+        ]
+      },
+      "properties": {
+        "OBJECTID": 20,
+        "name": "Yerawada",
+        "station_name": "Yerawada",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Yerawada - Gandhinagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.90812490000008,
+          18.556727100000046
+        ]
+      },
+      "properties": {
+        "OBJECTID": 21,
+        "name": "Ramwadi",
+        "station_name": "Ramwadi",
+        "line_id": "line2",
+        "line_name": "Aqua Line (Line 2)",
+        "color": "#0284c7",
+        "corridor": "Vanaz \u21c4 Ramwadi",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Kalyani Nagar - Vadgaon Sheri"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.83831460000005,
+          18.569166900000027
+        ]
+      },
+      "properties": {
+        "OBJECTID": 22,
+        "name": "Bopodi",
+        "station_name": "Bopodi",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Aundh - Bopodi"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.83379570000005,
+          18.58374710000004
+        ]
+      },
+      "properties": {
+        "OBJECTID": 23,
+        "name": "Dapodi",
+        "station_name": "Dapodi",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Chakrapani Vasahat"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.83116420000005,
+          18.591112000000066
+        ]
+      },
+      "properties": {
+        "OBJECTID": 24,
+        "name": "Phugewadi",
+        "station_name": "Phugewadi",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Chakrapani Vasahat"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.82727970000008,
+          18.599627300000066
+        ]
+      },
+      "properties": {
+        "OBJECTID": 25,
+        "name": "Kasarwadi",
+        "station_name": "Kasarwadi",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Chinchwadnagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.82011210000007,
+          18.609315200000026
+        ]
+      },
+      "properties": {
+        "OBJECTID": 26,
+        "name": "Nashik Phata",
+        "station_name": "Nashik Phata",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Chinchwadnagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.81575780000003,
+          18.614536000000044
+        ]
+      },
+      "properties": {
+        "OBJECTID": 27,
+        "name": "Sant Tukaram Nagar",
+        "station_name": "Sant Tukaram Nagar",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Chinchwadnagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.80330090000007,
+          18.629329700000028
+        ]
+      },
+      "properties": {
+        "OBJECTID": 28,
+        "name": "PCMC",
+        "station_name": "PCMC",
+        "line_id": "line1",
+        "line_name": "Purple Line (Line 1)",
+        "color": "#7c3aed",
+        "corridor": "PCMC \u21c4 Swargate",
+        "status": "Operational",
+        "station_type": "Elevated Station",
+        "is_interchange": false,
+        "interchange_desc": "",
+        "ward_name": "Tuljaivasti - Ajinthanagar"
+      }
+    }
+  ]
+}

@@ -272,7 +272,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               </div>
               <div>
                 <div className="layer-title-text">Bus Stops (GTFS)</div>
-                <div className="layer-subtext">3,320 Transit Stops</div>
+                <div className="layer-subtext">3,319 Real Transit Stops</div>
               </div>
             </div>
             <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
@@ -319,7 +319,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             </div>
           </div>
 
-          {/* Metro Corridors (Lines 1-4 Routes) */}
+          {/* Metro Corridors (Lines 1 & 2 Routes) */}
           <div
             className={`layer-card ${visibility.metroRoutes ? 'active' : ''}`}
             onClick={() => onToggleLayer('metroRoutes')}
@@ -330,7 +330,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               </div>
               <div>
                 <div className="layer-title-text">Metro Rail Corridors</div>
-                <div className="layer-subtext">Lines 1–4 Routes (229 Alignments)</div>
+                <div className="layer-subtext">Lines 1 & 2 (133 Alignments)</div>
               </div>
             </div>
             <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
@@ -348,7 +348,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             </div>
           </div>
 
-          {/* Metro Stations (95 Stations) */}
+          {/* Metro Stations (28 Stations) */}
           <div
             className={`layer-card ${visibility.metroStations ? 'active' : ''}`}
             onClick={() => onToggleLayer('metroStations')}
@@ -359,7 +359,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               </div>
               <div>
                 <div className="layer-title-text">Metro Stations</div>
-                <div className="layer-subtext">95 Stations & Transfer Hubs</div>
+                <div className="layer-subtext">28 Stations & District Court Hub</div>
               </div>
             </div>
             <div className="layer-control-wrap" onClick={(e) => e.stopPropagation()}>
@@ -397,7 +397,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
                   <span style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#7c3aed', flexShrink: 0 }} />
-                  Line 1: Purple Line
+                  Line 1: Purple Line (PCMC ⇄ Swargate)
                 </span>
                 <span style={{ fontSize: '9.5px', color: '#059669', background: '#ecfdf5', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
                   Operational
@@ -406,7 +406,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
                   <span style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#0284c7', flexShrink: 0 }} />
-                  Line 2: Aqua Line
+                  Line 2: Aqua Line (Vanaz ⇄ Ramwadi)
                 </span>
                 <span style={{ fontSize: '9.5px', color: '#059669', background: '#ecfdf5', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
                   Operational
@@ -414,20 +414,11 @@ export const Sidebar: React.FC<SidebarProps> = ({
               </div>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
-                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#ec4899', flexShrink: 0 }} />
-                  Line 3: Pink Line
+                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#1d4ed8', border: '2px solid #93c5fd', flexShrink: 0 }} />
+                  District Court Interchange Hub
                 </span>
-                <span style={{ fontSize: '9.5px', color: '#d97706', background: '#fffbeb', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
-                  Under Constr.
-                </span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
-                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#f97316', flexShrink: 0 }} />
-                  Line 4 & 4A/B
-                </span>
-                <span style={{ fontSize: '9.5px', color: '#2563eb', background: '#eff6ff', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
-                  Planned
+                <span style={{ fontSize: '9.5px', color: '#1d4ed8', background: '#eff6ff', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
+                  Transfer Hub
                 </span>
               </div>
               <div style={{ fontSize: '9.5px', color: '#64748b', marginTop: '2px', borderTop: '1px dashed #e2e8f0', paddingTop: '4px' }}>

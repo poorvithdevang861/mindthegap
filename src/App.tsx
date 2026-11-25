@@ -151,11 +151,11 @@ export const App: React.FC = () => {
     return wardsList.reduce((acc, w) => acc + (w.censusPop2026 || 0), 0);
   }, [wardsList]);
 
-  // Aggregate Total Bus Stops (Authoritative: 3,320)
+  // Aggregate Total Bus Stops (Authoritative: 3,319 Real GTFS Stops)
   const totalBusStops = useMemo(() => {
     return wardsList.length > 0
       ? wardsList.reduce((acc, w) => acc + (w.busStopsCount || 0), 0)
-      : 3320;
+      : 3319;
   }, [wardsList]);
 
   // Calculate Bus Stops inside selected ward via point-in-polygon
@@ -279,7 +279,7 @@ export const App: React.FC = () => {
       <StatsBar
         wardCount={wardsList.length}
         totalPopulation={totalPopulation || 8542877}
-        stopCount={totalBusStops || 3320}
+        stopCount={totalBusStops || 3319}
         routeCount={routesData?.features.length || 555}
         roadCount={allRoadsData ? allRoadsData.features.length : majorRoadsData?.features.length || 6136}
       />
