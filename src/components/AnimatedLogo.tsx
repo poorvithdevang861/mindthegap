@@ -44,8 +44,8 @@ export const AnimatedLogo: React.FC<AnimatedLogoProps> = ({ onOpenGapModal }) =>
           onOpenGapModal?.();
         }
       }}
-      title="Mind The Gap - Municipal Spatial Equity (Click to open analysis)"
-      aria-label="Mind The Gap - Pune Metropolitan Spatial Equity"
+      title="Mind The Gap - Pune Transit Spatial Analysis (Click to open analysis)"
+      aria-label="Mind The Gap - Pune Transit Spatial Analysis"
     >
       <div className="brand-mark" aria-hidden="true">
         <img
@@ -61,7 +61,7 @@ export const AnimatedLogo: React.FC<AnimatedLogoProps> = ({ onOpenGapModal }) =>
         <h1 className={`brand-title-cherry ${hasAnimated ? 'bounce-in' : ''}`}>
           Mind The Gap
         </h1>
-        <span className="brand-subtitle">Pune Metropolitan Spatial Equity</span>
+        <span className="brand-subtitle">Pune Transit Spatial Analysis</span>
       </div>
     </div>
   );

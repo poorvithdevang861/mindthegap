@@ -254,7 +254,7 @@ export const RightLegend: React.FC<RightLegendProps> = ({
                               <span className="legend-row-title">Line 3: Pink Line</span>
                               <span className="legend-row-detail">Shivajinagar ⇄ Hinjawadi IT Park</span>
                             </div>
-                            <span className="metro-status-pill" style={{ color: '#d97706', background: '#fffbeb', borderColor: '#fef3c7' }}>Construction</span>
+                            <span className="metro-status-pill">Operational</span>
                           </div>
 
                           <div className="legend-line-row">

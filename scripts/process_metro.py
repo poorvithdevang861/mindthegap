@@ -134,7 +134,7 @@ for idx, feat in enumerate(stations_data['features']):
         line_id = 'line3'
         line_name = 'Pink Line (Line 3)'
         color = '#ec4899'
-        status = 'Under Construction'
+        status = 'Operational'
         corridor = 'Shivajinagar ⇄ Hinjawadi IT Park'
         station_type = 'Elevated Station'
     elif name in line4_orange_names:
@@ -276,7 +276,7 @@ for idx, feat in enumerate(routes_data['features']):
         line_name = 'Pink Line (Line 3)'
         color = '#ec4899'
         corridor = 'Shivajinagar ⇄ Hinjawadi IT Park'
-        status = 'Under Construction'
+        status = 'Operational'
         weight = 4.5
         is_siding = False
         dash_array = None
@@ -319,7 +319,7 @@ for idx, feat in enumerate(routes_data['features']):
             line_name = 'Pink Line (Maan Depot Track)'
             color = '#ec4899'
             corridor = 'Hinjawadi IT Park Depot Siding'
-            status = 'Under Construction'
+            status = 'Operational'
         elif avg_lon > 73.88 and 18.52 < avg_lat < 18.57:
             line_id = 'line2'
             line_name = 'Aqua Line (Kalyani Nagar / Ramwadi Turnout)'
