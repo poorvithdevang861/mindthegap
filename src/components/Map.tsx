@@ -106,7 +106,7 @@ export const GISMap: React.FC<MapProps> = ({
       maxZoom: 19,
     }).addTo(map);
 
-    L.control.zoom({ position: 'topright' }).addTo(map);
+    L.control.zoom({ position: 'bottomleft' }).addTo(map);
     L.control.scale({ imperial: false, position: 'bottomright' }).addTo(map);
 
     mapRef.current = map;

@@ -25,6 +25,8 @@ interface SidebarProps {
   corpFilter: CorpFilter;
   onChangeCorpFilter: (filter: CorpFilter) => void;
   onResetAll?: () => void;
+  isLegendOpen?: boolean;
+  onToggleLegend?: () => void;
 }
 
 const CORP_OPTIONS: DropdownOption[] = [
@@ -80,6 +82,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
   corpFilter,
   onChangeCorpFilter,
   onResetAll,
+  isLegendOpen = true,
+  onToggleLegend,
 }) => {
   // Respect user's collapse preference; only collapse by default on small mobile screens (< 768px)
   const [collapsed, setCollapsed] = useState(() => {
@@ -147,6 +151,26 @@ export const Sidebar: React.FC<SidebarProps> = ({
         <span className="badge-active-count">{activeCount} of 6 Active</span>
       </div>
 
+      {/* Right Map Legend Toggle Bar */}
+      {onToggleLegend && (
+        <div className="sidebar-legend-action-bar">
+          <button
+            type="button"
+            className={`sidebar-legend-toggle ${isLegendOpen ? 'active' : ''}`}
+            onClick={onToggleLegend}
+            title={isLegendOpen ? 'Hide right-side map legend' : 'Show right-side map legend'}
+          >
+            <div className="sidebar-legend-toggle-label">
+              <Layers size={13} className="sidebar-legend-icon" />
+              <span>Right map legend</span>
+            </div>
+            <span className={`legend-status-tag ${isLegendOpen ? 'open' : ''}`}>
+              {isLegendOpen ? 'Visible' : 'Hidden'}
+            </span>
+          </button>
+        </div>
+      )}
+
       {/* Sidebar Scrollable Body */}
       <div className="sidebar-content">
         {/* SECTION 1: JURISDICTION & THEMATIC VIEWS */}
@@ -174,53 +198,14 @@ export const Sidebar: React.FC<SidebarProps> = ({
             />
           </div>
 
-          {/* Intuitive Dynamic Legend for Currently Selected Thematic Theme */}
-          <div className="thematic-legend-card">
-            <div className="thematic-legend-title">Active Map Legend:</div>
-
-            {thematic === 'corp' && (
-              <div className="legend-items-grid">
-                <div className="legend-item">
-                  <span className="legend-swatch" style={{ background: '#7c3aed' }} />
-                  <span className="legend-text">PMC Wards (41)</span>
-                </div>
-                <div className="legend-item">
-                  <span className="legend-swatch" style={{ background: '#059669' }} />
-                  <span className="legend-text">PCMC Wards (32)</span>
-                </div>
-              </div>
-            )}
-
-            {thematic === 'pop' && (
-              <div>
-                <div className="legend-bar-container">
-                  <span className="legend-gradient-bar" />
-                </div>
-                <div className="legend-bar-labels">
-                  <span>Sparse (&lt; 85k)</span>
-                  <span>125k</span>
-                  <span>Dense (&gt; 150k)</span>
-                </div>
-              </div>
-            )}
-
-            {thematic === 'transit' && (
-              <div>
-                <div className="legend-bar-container">
-                  <span
-                    className="legend-gradient-bar"
-                    style={{
-                      background: 'linear-gradient(to right, #d1fae5, #6ee7b7, #10b981, #059669, #064e3b)',
-                    }}
-                  />
-                </div>
-                <div className="legend-bar-labels">
-                  <span>Gap (&lt; 2 / km²)</span>
-                  <span>6 / km²</span>
-                  <span>High (&gt; 12 / km²)</span>
-                </div>
-              </div>
-            )}
+          {/* Compact Thematic Indicator */}
+          <div className="sidebar-micro-note">
+            <span className="micro-note-dot-indicator" />
+            <span className="micro-note-text">
+              {thematic === 'corp' && 'PMC (41) & PCMC (32) boundaries • Legend on right'}
+              {thematic === 'pop' && 'Census 2026 density gradient • Legend on right'}
+              {thematic === 'transit' && 'Transit coverage gradient • Legend on right'}
+            </span>
           </div>
         </div>
 
@@ -378,52 +363,15 @@ export const Sidebar: React.FC<SidebarProps> = ({
           </div>
 
           {(visibility.metroRoutes || visibility.metroStations || visibility.metro) && (
-            <div
-              style={{
-                marginTop: '6px',
-                padding: '8px 10px',
-                background: '#f8fafc',
-                borderRadius: '8px',
-                border: '1px solid #e2e8f0',
-                fontSize: '11px',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '5px',
-              }}
-            >
-              <div style={{ fontSize: '10px', fontWeight: 700, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.4px', marginBottom: '2px' }}>
-                Corridor Legend
+            <div className="sidebar-micro-note">
+              <div className="micro-note-dots">
+                <span className="micro-dot" style={{ background: '#7c3aed' }} title="Line 1: Purple Line" />
+                <span className="micro-dot" style={{ background: '#0284c7' }} title="Line 2: Aqua Line" />
+                <span className="micro-dot" style={{ background: '#1d4ed8', border: '1px solid #93c5fd' }} title="District Court Hub" />
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
-                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#7c3aed', flexShrink: 0 }} />
-                  Line 1: Purple Line (PCMC ⇄ Swargate)
-                </span>
-                <span style={{ fontSize: '9.5px', color: '#059669', background: '#ecfdf5', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
-                  Operational
-                </span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
-                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#0284c7', flexShrink: 0 }} />
-                  Line 2: Aqua Line (Vanaz ⇄ Ramwadi)
-                </span>
-                <span style={{ fontSize: '9.5px', color: '#059669', background: '#ecfdf5', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
-                  Operational
-                </span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
-                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#1d4ed8', border: '2px solid #93c5fd', flexShrink: 0 }} />
-                  District Court Interchange Hub
-                </span>
-                <span style={{ fontSize: '9.5px', color: '#1d4ed8', background: '#eff6ff', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
-                  Transfer Hub
-                </span>
-              </div>
-              <div style={{ fontSize: '9.5px', color: '#64748b', marginTop: '2px', borderTop: '1px dashed #e2e8f0', paddingTop: '4px' }}>
-                ○ <strong>Solid circle</strong>: Station • ◎ <strong>Larger badge</strong>: Transfer Hub
-              </div>
+              <span className="micro-note-text">
+                Lines 1 &amp; 2 active • Detailed in right legend
+              </span>
             </div>
           )}
         </div>
@@ -462,70 +410,17 @@ export const Sidebar: React.FC<SidebarProps> = ({
           </div>
 
           {visibility.transitDesert && (
-            <div
-              style={{
-                marginTop: '6px',
-                padding: '8px 10px',
-                background: '#f8fafc',
-                borderRadius: '8px',
-                border: '1px solid #e2e8f0',
-                fontSize: '11px',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '5px',
-              }}
-            >
-              <div style={{ fontSize: '10px', fontWeight: 700, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.4px', marginBottom: '2px' }}>
-                Transit Gap Index (Supply − Demand)
+            <div className="sidebar-micro-note">
+              <div className="micro-note-ramp">
+                <span style={{ background: '#b91c1c' }} />
+                <span style={{ background: '#f97316' }} />
+                <span style={{ background: '#eab308' }} />
+                <span style={{ background: '#65a30d' }} />
+                <span style={{ background: '#047857' }} />
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
-                  <span style={{ width: '10px', height: '10px', borderRadius: '2px', background: '#b91c1c', flexShrink: 0 }} />
-                  Critical Desert (&lt; -0.62)
-                </span>
-                <span style={{ fontSize: '9.5px', color: '#b91c1c', background: '#fef2f2', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
-                  Severe Deficit
-                </span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
-                  <span style={{ width: '10px', height: '10px', borderRadius: '2px', background: '#f97316', flexShrink: 0 }} />
-                  High Deficit (-0.62 to -0.44)
-                </span>
-                <span style={{ fontSize: '9.5px', color: '#ea580c', background: '#fff7ed', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
-                  High Deficit
-                </span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
-                  <span style={{ width: '10px', height: '10px', borderRadius: '2px', background: '#eab308', flexShrink: 0 }} />
-                  Moderate Deficit (-0.44 to -0.27)
-                </span>
-                <span style={{ fontSize: '9.5px', color: '#ca8a04', background: '#fefce8', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
-                  Moderate
-                </span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
-                  <span style={{ width: '10px', height: '10px', borderRadius: '2px', background: '#65a30d', flexShrink: 0 }} />
-                  Accessible (-0.27 to -0.07)
-                </span>
-                <span style={{ fontSize: '9.5px', color: '#65a30d', background: '#f7fee7', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
-                  Low Deficit (27%)
-                </span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#1e293b', fontWeight: 600 }}>
-                  <span style={{ width: '10px', height: '10px', borderRadius: '2px', background: '#047857', flexShrink: 0 }} />
-                  Transit Oasis (&gt; -0.07)
-                </span>
-                <span style={{ fontSize: '9.5px', color: '#047857', background: '#ecfdf5', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>
-                  High Supply (9%)
-                </span>
-              </div>
-              <div style={{ fontSize: '9.5px', color: '#64748b', marginTop: '2px', borderTop: '1px dashed #e2e8f0', paddingTop: '4px' }}>
-                💡 Click anywhere on the map to inspect the exact 100m grid cell value
-              </div>
+              <span className="micro-note-text">
+                5 Natural Breaks bands • Detailed in right legend
+              </span>
             </div>
           )}
         </div>

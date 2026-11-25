@@ -15,6 +15,7 @@ import { HoverHUD } from './components/HoverHUD';
 import { WardModal } from './components/WardModal';
 import { StatsBar } from './components/StatsBar';
 import { GapAnalysisModal } from './components/GapAnalysisModal';
+import { RightLegend } from './components/RightLegend';
 
 export const App: React.FC = () => {
   // Spatial Data Collections
@@ -34,6 +35,7 @@ export const App: React.FC = () => {
   const [selectedWard, setSelectedWard] = useState<WardMeta | null>(null);
   const [selectedFeature, setSelectedFeature] = useState<any>(null);
   const [isGapModalOpen, setIsGapModalOpen] = useState(false);
+  const [isLegendOpen, setIsLegendOpen] = useState(true);
 
   const [visibility, setVisibility] = useState<LayerVisibility>({
     wards: true,
@@ -251,6 +253,8 @@ export const App: React.FC = () => {
         corpFilter={corpFilter}
         onChangeCorpFilter={setCorpFilter}
         onResetAll={handleResetAll}
+        isLegendOpen={isLegendOpen}
+        onToggleLegend={() => setIsLegendOpen((prev) => !prev)}
       />
 
       {/* Main GIS Map (OpenStreetMap) */}
@@ -270,6 +274,15 @@ export const App: React.FC = () => {
         onHoverWard={setHoveredWard}
         onSelectWard={handleSelectWard}
         mapAction={mapAction}
+      />
+
+      {/* Right Floating Cartographic Legend Panel */}
+      <RightLegend
+        isOpen={isLegendOpen}
+        onToggle={() => setIsLegendOpen((prev) => !prev)}
+        visibility={visibility}
+        thematic={thematic}
+        corpFilter={corpFilter}
       />
 
       {/* Real-time Hover HUD */}
