@@ -151,26 +151,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
         <span className="badge-active-count">{activeCount} of 6 Active</span>
       </div>
 
-      {/* Right Map Legend Toggle Bar */}
-      {onToggleLegend && (
-        <div className="sidebar-legend-action-bar">
-          <button
-            type="button"
-            className={`sidebar-legend-toggle ${isLegendOpen ? 'active' : ''}`}
-            onClick={onToggleLegend}
-            title={isLegendOpen ? 'Hide right-side map legend' : 'Show right-side map legend'}
-          >
-            <div className="sidebar-legend-toggle-label">
-              <Layers size={13} className="sidebar-legend-icon" />
-              <span>Right map legend</span>
-            </div>
-            <span className={`legend-status-tag ${isLegendOpen ? 'open' : ''}`}>
-              {isLegendOpen ? 'Visible' : 'Hidden'}
-            </span>
-          </button>
-        </div>
-      )}
-
       {/* Sidebar Scrollable Body */}
       <div className="sidebar-content">
         {/* SECTION 1: JURISDICTION & THEMATIC VIEWS */}
@@ -202,9 +182,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
           <div className="sidebar-micro-note">
             <span className="micro-note-dot-indicator" />
             <span className="micro-note-text">
-              {thematic === 'corp' && 'PMC (41) & PCMC (32) boundaries • Legend on right'}
-              {thematic === 'pop' && 'Census 2026 density gradient • Legend on right'}
-              {thematic === 'transit' && 'Transit coverage gradient • Legend on right'}
+              {thematic === 'corp' && 'PMC (41) & PCMC (32) unified boundaries'}
+              {thematic === 'pop' && 'Census 2026 population density gradient'}
+              {thematic === 'transit' && 'Public transit coverage density gradient'}
             </span>
           </div>
         </div>
@@ -370,7 +350,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 <span className="micro-dot" style={{ background: '#1d4ed8', border: '1px solid #93c5fd' }} title="District Court Hub" />
               </div>
               <span className="micro-note-text">
-                Lines 1 &amp; 2 active • Detailed in right legend
+                Lines 1 &amp; 2 operational corridors
               </span>
             </div>
           )}
@@ -419,7 +399,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 <span style={{ background: '#047857' }} />
               </div>
               <span className="micro-note-text">
-                5 Natural Breaks bands • Detailed in right legend
+                5 Natural Breaks deficit bands
               </span>
             </div>
           )}
