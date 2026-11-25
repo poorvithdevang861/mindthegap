@@ -1,58 +1,40 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 interface AnimatedLogoProps {
   onOpenGapModal?: () => void;
 }
 
-interface LetterItem {
-  char: string;
-  idx: number;
-}
-
-const WORDS: { word: string; letters: LetterItem[] }[] = [
-  {
-    word: 'Mind',
-    letters: [
-      { char: 'M', idx: 0 },
-      { char: 'i', idx: 1 },
-      { char: 'n', idx: 2 },
-      { char: 'd', idx: 3 },
-    ],
-  },
-  {
-    word: 'The',
-    letters: [
-      { char: 'T', idx: 4 },
-      { char: 'h', idx: 5 },
-      { char: 'e', idx: 6 },
-    ],
-  },
-  {
-    word: 'Gap',
-    letters: [
-      { char: 'G', idx: 7 },
-      { char: 'a', idx: 8 },
-      { char: 'p', idx: 9 },
-    ],
-  },
-];
-
 export const AnimatedLogo: React.FC<AnimatedLogoProps> = ({ onOpenGapModal }) => {
-  const [isJumping, setIsJumping] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
-  // Trigger jump cascade whenever user touches or hovers the text
-  const handleTouchOrHover = useCallback(() => {
-    setIsJumping(false);
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        setIsJumping(true);
-      });
-    });
+  // Trigger whole-word bounce animation once when hero enters viewport
+  useEffect(() => {
+    const node = containerRef.current;
+    if (!node || typeof IntersectionObserver === 'undefined') {
+      setHasAnimated(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          setHasAnimated(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
   }, []);
 
   return (
     <div
       className="brand-lockup"
+      ref={containerRef}
       onClick={onOpenGapModal}
       role="button"
       tabIndex={0}
@@ -62,8 +44,8 @@ export const AnimatedLogo: React.FC<AnimatedLogoProps> = ({ onOpenGapModal }) =>
           onOpenGapModal?.();
         }
       }}
-      title="Mind the Gap - Municipal Spatial Equity (Click to open analysis)"
-      aria-label="Mind the Gap - Pune Metropolitan Spatial Equity"
+      title="Mind The Gap - Municipal Spatial Equity (Click to open analysis)"
+      aria-label="Mind The Gap - Pune Metropolitan Spatial Equity"
     >
       <div className="brand-mark" aria-hidden="true">
         {/* Unified Transit-Ward GIS Emblem */}
@@ -119,32 +101,10 @@ export const AnimatedLogo: React.FC<AnimatedLogoProps> = ({ onOpenGapModal }) =>
         </svg>
       </div>
 
-      <div
-        className="brand-text"
-        onMouseEnter={handleTouchOrHover}
-        onTouchStart={handleTouchOrHover}
-      >
-        {/* 100% Vector-Sharp Interactive Jumpy Title */}
-        <div className="brand-title-letters" aria-hidden="true">
-          {WORDS.map((w, wIdx) => (
-            <span key={w.word} className="brand-word">
-              {w.letters.map((l) => (
-                <span
-                  key={l.idx}
-                  className={`brand-letter ${isJumping ? 'jumping' : ''}`}
-                  style={{
-                    ['--letter-idx' as any]: l.idx,
-                  }}
-                  onAnimationEnd={l.idx === 9 ? () => setIsJumping(false) : undefined}
-                >
-                  {l.char}
-                </span>
-              ))}
-              {wIdx < WORDS.length - 1 && <span className="word-spacer" />}
-            </span>
-          ))}
-        </div>
-        <span className="sr-only">Mind the Gap</span>
+      <div className="brand-text">
+        <h1 className={`brand-title-cherry ${hasAnimated ? 'bounce-in' : ''}`}>
+          Mind The Gap
+        </h1>
         <span className="brand-subtitle">Pune Metropolitan Spatial Equity</span>
       </div>
     </div>
