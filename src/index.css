@@ -1474,12 +1474,12 @@ input:checked + .slider:before {
   border-radius: 4px;
 }
 
-/* Gap Analysis Summary Cards & Table */
+/* Gap Analysis Summary Cards & Table - Unslopped */
 .gap-summary-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 @media (max-width: 640px) {
@@ -1489,79 +1489,87 @@ input:checked + .slider:before {
 }
 
 .gap-summary-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 12px 14px;
-  border-radius: 8px;
+  background: #ffffff;
   border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
 }
 
-.gap-summary-card.card-desert {
-  background: #fef2f2;
-  border-color: #fecaca;
-}
-
-.gap-summary-card.card-oasis {
-  background: #f0fdf4;
-  border-color: #bbf7d0;
-}
-
-.gap-summary-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 6px;
+.gap-summary-top {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
-.gap-summary-icon.icon-desert {
-  background: #ffffff;
-  color: #b91c1c;
-  border: 1px solid #fca5a5;
-}
-
-.gap-summary-icon.icon-oasis {
-  background: #ffffff;
-  color: #15803d;
-  border: 1px solid #86efac;
-}
-
-.gap-summary-meta {
-  flex: 1;
-}
-
-.gap-summary-num {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  display: block;
-}
-
-.card-desert .gap-summary-num {
-  color: #b91c1c;
-}
-
-.card-oasis .gap-summary-num {
-  color: #15803d;
+.gap-summary-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .gap-summary-title {
-  font-size: 14px;
-  font-weight: 800;
+  font-size: 13.5px;
+  font-weight: 700;
   color: #0f172a;
-  display: block;
+}
+
+.gap-summary-chip {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.gap-summary-chip.chip-worst {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.gap-summary-chip.chip-best {
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.gap-summary-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  background: #f8fafc;
+  border: 1px solid #f1f5f9;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+}
+
+.gap-stat-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-stat-label {
+  font-size: 9.5px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.gap-stat-val {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #0f172a;
+  font-variant-numeric: tabular-nums;
   margin-top: 1px;
 }
 
 .gap-summary-desc {
   font-size: 11px;
-  color: #475569;
-  line-height: 1.4;
-  margin: 4px 0 0 0;
+  color: #64748b;
+  line-height: 1.45;
+  margin: 0;
 }
 
 /* Gap Tabs */
@@ -1604,35 +1612,27 @@ input:checked + .slider:before {
 }
 
 .gap-tab-btn.active.active-worst {
-  border-color: #b91c1c;
-  color: #b91c1c;
+  border-color: #0f172a;
+  color: #0f172a;
 }
 
 .gap-tab-btn.active.active-best {
-  border-color: #15803d;
-  color: #15803d;
+  border-color: #0f172a;
+  color: #0f172a;
 }
 
-.gap-tab-badge {
+.gap-tab-count {
   font-size: 10px;
   font-weight: 700;
+  color: #64748b;
+  background: #e2e8f0;
   padding: 1px 6px;
   border-radius: 10px;
 }
 
-.gap-tab-badge.badge-worst {
-  background: #fee2e2;
-  color: #b91c1c;
-}
-
-.gap-tab-badge.badge-best {
-  background: #dcfce7;
-  color: #15803d;
-}
-
-.gap-tab-badge.badge-all {
-  background: #e2e8f0;
-  color: #475569;
+.gap-tab-btn.active .gap-tab-count {
+  background: #0f172a;
+  color: #ffffff;
 }
 
 /* Gap Table */
@@ -1682,27 +1682,15 @@ input:checked + .slider:before {
   background: #f8fafc;
 }
 
-.rank-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  font-size: 10.5px;
-  font-weight: 800;
+.gap-rank-mono {
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #64748b;
 }
 
-.rank-badge.rank-worst {
-  background: #fef2f2;
-  color: #b91c1c;
-  border: 1px solid #fecaca;
-}
-
-.rank-badge.rank-best {
-  background: #f0fdf4;
-  color: #15803d;
-  border: 1px solid #bbf7d0;
+.gap-table-row:hover .gap-rank-mono {
+  color: #0f172a;
 }
 
 .gap-ward-name {
@@ -1713,12 +1701,31 @@ input:checked + .slider:before {
 }
 
 .gap-ward-sub {
-  font-size: 10px;
+  font-size: 10.5px;
   color: #64748b;
   margin-top: 1px;
 }
 
-.gap-inspect-btn {
+.gap-status-tag {
+  font-size: 9.5px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.gap-status-tag.tag-critical {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.gap-status-tag.tag-oasis {
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.gap-inspect-link {
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -1726,17 +1733,16 @@ input:checked + .slider:before {
   font-size: 11px;
   font-weight: 600;
   color: #0f172a;
-  background: #f1f5f9;
-  border: 1px solid #cbd5e1;
+  background: transparent;
+  border: 1px solid transparent;
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.15s ease;
 }
 
-.gap-inspect-btn:hover {
-  background: #0f172a;
-  color: #ffffff;
-  border-color: #0f172a;
+.gap-table-row:hover .gap-inspect-link {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
 }
 
 .gap-action-box {
@@ -1747,6 +1753,7 @@ input:checked + .slider:before {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 16px;
 }
 
 /* Leaflet Tooltips - Premium Light Theme (No Camouflage) */

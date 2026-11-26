@@ -48,19 +48,16 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
   // Match each ranked item with its corresponding authoritative WardMeta
   const resolvedList = useMemo(() => {
     return RANKED_DATA.map((item) => {
-      // 1. Try matching by corp and wardNo
       let matched = wards.find(
         (w) => w.corp === item.corp && String(w.wardNo) === String(item.wardNo)
       );
 
-      // 2. Fallback matching by name
       if (!matched) {
         matched = wards.find((w) =>
           w.wardName.toLowerCase().includes(item.label.toLowerCase().slice(0, 10))
         );
       }
 
-      // 3. Fallback to authoritative wardMetrics database
       if (!matched) {
         const metric = getWardMetric(item.corp, item.wardNo);
         if (metric) {
@@ -123,57 +120,101 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
 
   return (
     <div className="modal-overlay active" onClick={(e) => e.target === e.currentTarget && onClose()}>
-      <div className="ward-modal" style={{ maxWidth: '920px' }}>
+      <div className="ward-modal" style={{ maxWidth: '940px' }}>
         {/* Header */}
         <div className="modal-header">
           <div className="modal-title-area">
-            <div className="gap-modal-badge">TRANSIT GAP ANALYSIS</div>
             <div>
-              <h2 style={{ fontSize: '18px', fontWeight: 800, color: '#0f172a' }}>
-                Pune Metropolitan Transit Gap Analysis
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '2px' }}>
+                <span style={{ fontSize: '11px', fontWeight: 700, color: '#64748b', letterSpacing: '0.4px', textTransform: 'uppercase' }}>
+                  Spatial Transit Gap Analysis
+                </span>
+                <span style={{ color: '#cbd5e1' }}>•</span>
+                <span style={{ fontSize: '11px', fontWeight: 600, color: '#64748b' }}>
+                  15 Benchmark Wards
+                </span>
+              </div>
+              <h2 style={{ fontSize: '18px', fontWeight: 700, color: '#0f172a', margin: 0, lineHeight: 1.25 }}>
+                Pune Metropolitan Transit Supply &amp; Deficit Ranking
               </h2>
-              <div style={{ fontSize: '12px', color: '#64748b' }}>
-                Supply–demand deficit ranking: 10 critical transit deserts vs. 5 overserved hubs across PMC and PCMC
+              <div style={{ fontSize: '12px', color: '#64748b', marginTop: '3px' }}>
+                Supply–demand deficit index calculated across 70,598 100m grid cells in Pune (PMC) and Pimpri Chinchwad (PCMC)
               </div>
             </div>
           </div>
           <button className="modal-close-btn" onClick={onClose} title="Close">
-            <X size={18} />
+            <X size={18} strokeWidth={2.4} />
           </button>
         </div>
 
         {/* Modal Body */}
         <div className="modal-body" style={{ background: '#ffffff', color: '#1e293b' }}>
-          {/* Key Metric Overview Cards */}
+          {/* Key Metric Overview Cards - Unwrapped, Calm, Craft-first */}
           <div className="gap-summary-grid">
-            <div className="gap-summary-card card-desert">
-              <div className="gap-summary-icon icon-desert">
-                <Flame size={18} />
+            <div className="gap-summary-card">
+              <div className="gap-summary-top">
+                <div className="gap-summary-title-row">
+                  <Flame size={16} strokeWidth={2.4} color="#b91c1c" />
+                  <span className="gap-summary-title">10 Critical Transit Deserts</span>
+                </div>
+                <span className="gap-summary-chip chip-worst">Severe Deficit</span>
               </div>
-              <div className="gap-summary-meta">
-                <span className="gap-summary-num">10 Wards</span>
-                <span className="gap-summary-title">Critical Transit Deserts</span>
-                <p className="gap-summary-desc">
-                  High-density peripheral and congested core zones facing severe bus frequency deficits with 0 operational metro connectivity.
-                </p>
+              <div className="gap-summary-stats">
+                <div className="gap-stat-col">
+                  <span className="gap-stat-label">Pop. Affected</span>
+                  <span className="gap-stat-val">1.08M citizens</span>
+                </div>
+                <div className="gap-stat-col">
+                  <span className="gap-stat-label">Avg Bus Stops</span>
+                  <span className="gap-stat-val">23 / ward</span>
+                </div>
+                <div className="gap-stat-col">
+                  <span className="gap-stat-label">Metro Stations</span>
+                  <span className="gap-stat-val">0 active</span>
+                </div>
+                <div className="gap-stat-col">
+                  <span className="gap-stat-label">Mean Deficit</span>
+                  <span className="gap-stat-val" style={{ color: '#b91c1c' }}>-0.582</span>
+                </div>
               </div>
+              <p className="gap-summary-desc">
+                High-density peripheral and congested inner-city sectors experiencing severe supply deficits relative to commuter demand.
+              </p>
             </div>
 
-            <div className="gap-summary-card card-oasis">
-              <div className="gap-summary-icon icon-oasis">
-                <CheckCircle2 size={18} />
+            <div className="gap-summary-card">
+              <div className="gap-summary-top">
+                <div className="gap-summary-title-row">
+                  <CheckCircle2 size={16} strokeWidth={2.4} color="#15803d" />
+                  <span className="gap-summary-title">5 Overserved Transit Hubs</span>
+                </div>
+                <span className="gap-summary-chip chip-best">High Supply</span>
               </div>
-              <div className="gap-summary-meta">
-                <span className="gap-summary-num">5 Wards</span>
-                <span className="gap-summary-title">Overserved Transit Hubs</span>
-                <p className="gap-summary-desc">
-                  Central arterial corridors with dense bus network coverage and direct access to Pune Metro Lines 1 &amp; 2.
-                </p>
+              <div className="gap-summary-stats">
+                <div className="gap-stat-col">
+                  <span className="gap-stat-label">Pop. Served</span>
+                  <span className="gap-stat-val">432K citizens</span>
+                </div>
+                <div className="gap-stat-col">
+                  <span className="gap-stat-label">Avg Bus Stops</span>
+                  <span className="gap-stat-val">34 / ward</span>
+                </div>
+                <div className="gap-stat-col">
+                  <span className="gap-stat-label">Metro Stations</span>
+                  <span className="gap-stat-val">3 stations</span>
+                </div>
+                <div className="gap-stat-col">
+                  <span className="gap-stat-label">Mean Deficit</span>
+                  <span className="gap-stat-val" style={{ color: '#15803d' }}>-0.429</span>
+                </div>
               </div>
+              <p className="gap-summary-desc">
+                Central arterial corridors with dense bus network coverage and direct access to Pune Metro Lines 1 &amp; 2.
+              </p>
             </div>
           </div>
 
-          {/* Tab Selector */}
+          {/* Tab Selector - No Box Wraps */}
           <div className="gap-tabs-container">
             <div className="gap-tabs">
               <button
@@ -181,9 +222,9 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
                 className={`gap-tab-btn ${activeTab === 'worst' ? 'active active-worst' : ''}`}
                 onClick={() => setActiveTab('worst')}
               >
-                <Flame size={14} />
+                <Flame size={14} strokeWidth={2.4} />
                 <span>10 Worst Deficit Wards</span>
-                <span className="gap-tab-badge badge-worst">10</span>
+                <span className="gap-tab-count">10</span>
               </button>
 
               <button
@@ -191,9 +232,9 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
                 className={`gap-tab-btn ${activeTab === 'best' ? 'active active-best' : ''}`}
                 onClick={() => setActiveTab('best')}
               >
-                <CheckCircle2 size={14} />
+                <CheckCircle2 size={14} strokeWidth={2.4} />
                 <span>5 Best Served Wards</span>
-                <span className="gap-tab-badge badge-best">5</span>
+                <span className="gap-tab-count">5</span>
               </button>
 
               <button
@@ -202,7 +243,7 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
                 onClick={() => setActiveTab('all')}
               >
                 <span>All 15 Key Wards</span>
-                <span className="gap-tab-badge badge-all">15</span>
+                <span className="gap-tab-count">15</span>
               </button>
             </div>
           </div>
@@ -212,14 +253,14 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
             <table className="gap-table">
               <thead>
                 <tr>
-                  <th style={{ width: '48px', textAlign: 'center' }}>Rank</th>
+                  <th style={{ width: '52px', textAlign: 'center' }}>Rank</th>
                   <th>Ward / Area Name</th>
                   <th style={{ width: '85px' }}>Corp</th>
-                  <th style={{ width: '95px' }}>Bus Stops</th>
+                  <th style={{ width: '100px' }}>Bus Stops</th>
                   <th style={{ width: '90px' }}>Metro</th>
-                  <th style={{ width: '125px' }}>Pop. (2026)</th>
+                  <th style={{ width: '130px' }}>Pop. (2026)</th>
                   <th style={{ width: '165px' }}>Transit Gap Index</th>
-                  <th style={{ width: '95px', textAlign: 'right' }}>Action</th>
+                  <th style={{ width: '90px', textAlign: 'right' }}>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -238,8 +279,8 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
                       className="gap-table-row"
                     >
                       <td style={{ textAlign: 'center' }}>
-                        <span className={`rank-badge ${isWorst ? 'rank-worst' : 'rank-best'}`}>
-                          #{item.rank}
+                        <span className="gap-rank-mono">
+                          {String(item.rank).padStart(2, '0')}
                         </span>
                       </td>
 
@@ -259,8 +300,10 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
 
                       <td>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-                          <BusFront size={12} color="#0f172a" />
-                          <span style={{ fontWeight: 700, color: '#0f172a' }}>{meta.busStopsCount}</span>
+                          <BusFront size={13} strokeWidth={2.4} color="#0f172a" />
+                          <span style={{ fontWeight: 700, color: '#0f172a', fontVariantNumeric: 'tabular-nums' }}>
+                            {meta.busStopsCount}
+                          </span>
                           <span style={{ fontSize: '10px', color: '#64748b' }}>stops</span>
                         </div>
                       </td>
@@ -268,28 +311,28 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
                       <td>
                         {meta.metroStopsCount > 0 ? (
                           <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                            <TrainFront size={12} color="#7c3aed" />
-                            <span style={{ fontWeight: 700, color: '#7c3aed' }}>
+                            <TrainFront size={13} strokeWidth={2.4} color="#7c3aed" />
+                            <span style={{ fontWeight: 700, color: '#7c3aed', fontVariantNumeric: 'tabular-nums' }}>
                               {meta.metroStopsCount} stns
                             </span>
                           </div>
                         ) : (
-                          <span style={{ color: '#94a3b8', fontSize: '11px' }}>0</span>
+                          <span style={{ color: '#94a3b8', fontSize: '11px' }}>—</span>
                         )}
                       </td>
 
                       <td>
-                        <span style={{ fontWeight: 600, color: '#1e293b' }}>
+                        <span style={{ fontWeight: 600, color: '#1e293b', fontVariantNumeric: 'tabular-nums' }}>
                           {meta.censusPop2026.toLocaleString()}
                         </span>
                       </td>
 
                       <td>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                           <span
                             style={{
-                              fontFamily: 'monospace',
-                              fontSize: '11px',
+                              fontFamily: 'ui-monospace, SFMono-Regular, monospace',
+                              fontSize: '11.5px',
                               fontWeight: 700,
                               color: meta.transitDesertColor,
                             }}
@@ -297,8 +340,7 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
                             {meta.transitDesertScore}
                           </span>
                           <span
-                            className={`desert-pill ${isWorst ? 'pill-critical' : 'pill-oasis'}`}
-                            style={{ fontSize: '9px', padding: '1px 5px' }}
+                            className={`gap-status-tag ${isWorst ? 'tag-critical' : 'tag-oasis'}`}
                           >
                             {isWorst ? 'Severe Deficit' : 'High Supply'}
                           </span>
@@ -308,7 +350,7 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
                       <td style={{ textAlign: 'right' }}>
                         <button
                           type="button"
-                          className="gap-inspect-btn"
+                          className="gap-inspect-link"
                           onClick={(e) => {
                             e.stopPropagation();
                             onSelectWard(meta);
@@ -317,7 +359,7 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
                           title="Inspect ward on map"
                         >
                           <span>Inspect</span>
-                          <ArrowRight size={12} />
+                          <ArrowRight size={11} strokeWidth={2.4} />
                         </button>
                       </td>
                     </tr>
@@ -328,18 +370,18 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
           </div>
 
           {/* Action Callout */}
-          <div className="gap-action-box" style={{ marginTop: '16px' }}>
+          <div className="gap-action-box">
             <div>
-              <strong style={{ color: '#0f172a', display: 'block', fontSize: '13px' }}>
+              <strong style={{ color: '#0f172a', display: 'block', fontSize: '13px', fontWeight: 600 }}>
                 Interactive Spatial Navigation
               </strong>
               <span style={{ fontSize: '12px', color: '#64748b' }}>
-                Click any ward above to zoom to its boundary and inspect local 100m grid cell deficit indices on the map.
+                Select any ward above to navigate to its boundary and inspect local 100m grid cell deficit indices on the map.
               </span>
             </div>
-            <button className="btn btn-primary" onClick={onClose}>
-              <span>Explore on Map</span>
-              <ArrowRight size={14} />
+            <button className="btn btn-primary" onClick={onClose} style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <span>Explore Map</span>
+              <ArrowRight size={14} strokeWidth={2.4} />
             </button>
           </div>
         </div>
