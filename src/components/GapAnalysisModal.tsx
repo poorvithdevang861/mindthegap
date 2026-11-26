@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { X, BusFront, TrainFront, Flame, CheckCircle2, ArrowRight } from 'lucide-react';
+import { X, BusFront, TrainFront, Sun, CheckCircle2, ArrowRight } from 'lucide-react';
 import type { WardMeta } from '../types';
 import { getWardMetric } from '../data/wardMetrics';
 
@@ -149,72 +149,7 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
 
         {/* Modal Body */}
         <div className="modal-body" style={{ background: '#ffffff', color: '#1e293b' }}>
-          {/* Key Metric Overview Cards - Unwrapped, Calm, Craft-first */}
-          <div className="gap-summary-grid">
-            <div className="gap-summary-card">
-              <div className="gap-summary-top">
-                <div className="gap-summary-title-row">
-                  <Flame size={16} strokeWidth={2.4} color="#b91c1c" />
-                  <span className="gap-summary-title">10 Critical Transit Deserts</span>
-                </div>
-                <span className="gap-summary-chip chip-worst">Severe Deficit</span>
-              </div>
-              <div className="gap-summary-stats">
-                <div className="gap-stat-col">
-                  <span className="gap-stat-label">Pop. Affected</span>
-                  <span className="gap-stat-val">1.08M citizens</span>
-                </div>
-                <div className="gap-stat-col">
-                  <span className="gap-stat-label">Avg Bus Stops</span>
-                  <span className="gap-stat-val">23 / ward</span>
-                </div>
-                <div className="gap-stat-col">
-                  <span className="gap-stat-label">Metro Stations</span>
-                  <span className="gap-stat-val">0 active</span>
-                </div>
-                <div className="gap-stat-col">
-                  <span className="gap-stat-label">Mean Deficit</span>
-                  <span className="gap-stat-val" style={{ color: '#b91c1c' }}>-0.582</span>
-                </div>
-              </div>
-              <p className="gap-summary-desc">
-                High-density peripheral and congested inner-city sectors experiencing severe supply deficits relative to commuter demand.
-              </p>
-            </div>
-
-            <div className="gap-summary-card">
-              <div className="gap-summary-top">
-                <div className="gap-summary-title-row">
-                  <CheckCircle2 size={16} strokeWidth={2.4} color="#15803d" />
-                  <span className="gap-summary-title">5 Overserved Transit Hubs</span>
-                </div>
-                <span className="gap-summary-chip chip-best">High Supply</span>
-              </div>
-              <div className="gap-summary-stats">
-                <div className="gap-stat-col">
-                  <span className="gap-stat-label">Pop. Served</span>
-                  <span className="gap-stat-val">432K citizens</span>
-                </div>
-                <div className="gap-stat-col">
-                  <span className="gap-stat-label">Avg Bus Stops</span>
-                  <span className="gap-stat-val">34 / ward</span>
-                </div>
-                <div className="gap-stat-col">
-                  <span className="gap-stat-label">Metro Stations</span>
-                  <span className="gap-stat-val">3 stations</span>
-                </div>
-                <div className="gap-stat-col">
-                  <span className="gap-stat-label">Mean Deficit</span>
-                  <span className="gap-stat-val" style={{ color: '#15803d' }}>-0.429</span>
-                </div>
-              </div>
-              <p className="gap-summary-desc">
-                Central arterial corridors with dense bus network coverage and direct access to Pune Metro Lines 1 &amp; 2.
-              </p>
-            </div>
-          </div>
-
-          {/* Tab Selector - No Box Wraps */}
+          {/* Tab Selector */}
           <div className="gap-tabs-container">
             <div className="gap-tabs">
               <button
@@ -222,8 +157,8 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
                 className={`gap-tab-btn ${activeTab === 'worst' ? 'active active-worst' : ''}`}
                 onClick={() => setActiveTab('worst')}
               >
-                <Flame size={14} strokeWidth={2.4} />
-                <span>10 Worst Deficit Wards</span>
+                <Sun size={14} strokeWidth={2.4} />
+                <span>10 Worst Transit Deserts</span>
                 <span className="gap-tab-count">10</span>
               </button>
 
@@ -255,19 +190,17 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
                 <tr>
                   <th style={{ width: '52px', textAlign: 'center' }}>Rank</th>
                   <th>Ward / Area Name</th>
-                  <th style={{ width: '85px' }}>Corp</th>
-                  <th style={{ width: '100px' }}>Bus Stops</th>
-                  <th style={{ width: '90px' }}>Metro</th>
-                  <th style={{ width: '130px' }}>Pop. (2026)</th>
-                  <th style={{ width: '165px' }}>Transit Gap Index</th>
-                  <th style={{ width: '90px', textAlign: 'right' }}>Action</th>
+                  <th style={{ width: '90px' }}>Corp</th>
+                  <th style={{ width: '120px' }}>Bus Stops</th>
+                  <th style={{ width: '100px' }}>Metro</th>
+                  <th style={{ width: '150px' }}>Population (2026)</th>
+                  <th style={{ width: '100px', textAlign: 'right' }}>Action</th>
                 </tr>
               </thead>
               <tbody>
                 {displayList.map((item) => {
                   const meta = item.meta;
                   if (!meta) return null;
-                  const isWorst = item.category === 'worst';
 
                   return (
                     <tr
@@ -304,7 +237,7 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
                           <span style={{ fontWeight: 700, color: '#0f172a', fontVariantNumeric: 'tabular-nums' }}>
                             {meta.busStopsCount}
                           </span>
-                          <span style={{ fontSize: '10px', color: '#64748b' }}>stops</span>
+                          <span style={{ fontSize: '11px', color: '#64748b' }}>stops</span>
                         </div>
                       </td>
 
@@ -317,34 +250,14 @@ export const GapAnalysisModal: React.FC<GapAnalysisModalProps> = ({
                             </span>
                           </div>
                         ) : (
-                          <span style={{ color: '#94a3b8', fontSize: '11px' }}>—</span>
+                          <span style={{ color: '#94a3b8', fontSize: '12px' }}>—</span>
                         )}
                       </td>
 
                       <td>
                         <span style={{ fontWeight: 600, color: '#1e293b', fontVariantNumeric: 'tabular-nums' }}>
-                          {meta.censusPop2026.toLocaleString()}
+                          {meta.censusPop2026.toLocaleString()} citizens
                         </span>
-                      </td>
-
-                      <td>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                          <span
-                            style={{
-                              fontFamily: 'ui-monospace, SFMono-Regular, monospace',
-                              fontSize: '11.5px',
-                              fontWeight: 700,
-                              color: meta.transitDesertColor,
-                            }}
-                          >
-                            {meta.transitDesertScore}
-                          </span>
-                          <span
-                            className={`gap-status-tag ${isWorst ? 'tag-critical' : 'tag-oasis'}`}
-                          >
-                            {isWorst ? 'Severe Deficit' : 'High Supply'}
-                          </span>
-                        </div>
                       </td>
 
                       <td style={{ textAlign: 'right' }}>

@@ -12,7 +12,7 @@ import {
   Route,
   Milestone,
   Network,
-  Flame,
+  Sun,
 } from 'lucide-react';
 import type { LayerVisibility, ThematicOption, CorpFilter } from '../types';
 import { CustomDropdown, type DropdownOption } from './CustomDropdown';
@@ -369,7 +369,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           >
             <div className="layer-info">
               <div className="layer-badge-icon">
-                <Flame size={17} strokeWidth={2.4} color="#0f172a" />
+                <Sun size={17} strokeWidth={2.4} color="#0f172a" />
               </div>
               <div>
                 <div className="layer-title-text">Transit Desert Heatmap</div>
