@@ -10,7 +10,7 @@ import type {
   BasemapOption,
   BusStop,
 } from '../types';
-import { extractWardMeta } from '../utils/geo';
+import { extractWardMeta, isPointInPolygonGeom } from '../utils/geo';
 
 interface MapProps {
   wardsData: FeatureCollection | null;
@@ -624,6 +624,17 @@ export const GISMap: React.FC<MapProps> = ({
       if (col >= 0 && col < cols && row >= 0 && row < rows) {
         const val = values[row * cols + col];
         if (val !== null && val !== undefined) {
+          // Identify which ward contains this point
+          let containingWard: WardMeta | null = null;
+          if (wardsData?.features) {
+            for (const feat of wardsData.features) {
+              if (isPointInPolygonGeom([lng, lat], feat.geometry)) {
+                containingWard = extractWardMeta(feat.properties || {});
+                break;
+              }
+            }
+          }
+
           let statusText = 'Transit Oasis (High Supply / Corridor)';
           let statusColor = '#047857';
           let statusBg = '#ecfdf5';
@@ -646,10 +657,25 @@ export const GISMap: React.FC<MapProps> = ({
             statusBg = '#f7fee7';
           }
 
+          const wardBlock = containingWard
+            ? `<div style="margin-top:7px; padding:6px 9px; background:#f8fafc; border-radius:6px; border:1px solid #e2e8f0;">
+                <div style="font-size:9.5px; font-weight:700; color:#64748b; text-transform:uppercase; letter-spacing:0.5px;">Ward Location</div>
+                <div style="font-size:12.5px; font-weight:800; color:#0f172a; margin-top:2px; line-height:1.25;">
+                  ${containingWard.wardName}
+                </div>
+                <div style="font-size:10px; color:#475569; font-weight:600; margin-top:3px; display:flex; align-items:center; gap:6px;">
+                  <span style="display:inline-block; padding:1px 5px; border-radius:3px; font-size:9.5px; font-weight:700; background:${containingWard.corp === 'PCMC' ? '#e0f2fe' : '#fef3c7'}; color:${containingWard.corp === 'PCMC' ? '#0369a1' : '#b45309'}; border:1px solid ${containingWard.corp === 'PCMC' ? '#bae6fd' : '#fde68a'};">
+                    ${containingWard.corp}
+                  </span>
+                  <span>Ward No. ${containingWard.wardNo || 'N/A'}</span>
+                </div>
+              </div>`
+            : `<div style="margin-top:6px; font-size:10px; color:#94a3b8; font-style:italic;">Outside defined ward boundary</div>`;
+
           L.popup({ offset: [0, -4] })
             .setLatLng(e.latlng)
             .setContent(
-              `<div style="font-family:system-ui,-apple-system,sans-serif; min-width:190px; padding:2px;">
+              `<div style="font-family:system-ui,-apple-system,sans-serif; min-width:210px; padding:2px;">
                 <div style="font-size:10px; font-weight:700; color:#64748b; text-transform:uppercase; letter-spacing:0.5px;">100m Grid Cell Inspector</div>
                 <div style="font-size:13px; font-weight:800; color:#0f172a; margin-top:3px;">
                   Transit Gap Index: <span style="color:${statusColor}; font-size:14px;">${val.toFixed(3)}</span>
@@ -657,6 +683,7 @@ export const GISMap: React.FC<MapProps> = ({
                 <div style="display:inline-block; margin-top:5px; padding:2px 7px; border-radius:4px; font-size:10px; font-weight:700; color:${statusColor}; background:${statusBg}; border:1px solid ${statusColor}33;">
                   ${statusText}
                 </div>
+                ${wardBlock}
                 <div style="font-size:9.5px; color:#64748b; margin-top:6px; border-top:1px dashed #e2e8f0; paddingTop:4px;">
                   Coord: <strong>${lat.toFixed(4)}°N, ${lng.toFixed(4)}°E</strong>
                 </div>
@@ -671,7 +698,7 @@ export const GISMap: React.FC<MapProps> = ({
     return () => {
       map.off('click', handleMapClick);
     };
-  }, [visibility.transitDesert, transitDesertGridData]);
+  }, [visibility.transitDesert, transitDesertGridData, wardsData]);
 
   // 12. Handle Map Navigation Actions
   useEffect(() => {
